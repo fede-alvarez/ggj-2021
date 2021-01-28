@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/room_bg.png-c00e9ad571da4a30ba1fe96a95eda29f.stex"
+path="res://.import/4_virus_covid.png-075f56a5edc417d0d6b151bafffcdd1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/room_bg.png"
-dest_files=[ "res://.import/room_bg.png-c00e9ad571da4a30ba1fe96a95eda29f.stex" ]
+source_file="res://assets/elements/news_images/4_virus_covid.png"
+dest_files=[ "res://.import/4_virus_covid.png-075f56a5edc417d0d6b151bafffcdd1f.stex" ]
 
 [params]
 

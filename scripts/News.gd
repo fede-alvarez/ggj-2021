@@ -13,6 +13,9 @@ func set_data(news_id, title, date, image):
 	$Base/Titulo.text = title.to_upper()
 	$Base/Fecha.text = date
 	
+	if image:
+		$Base/Foto.texture = load("res://assets/elements/news_images/" + image + ".png")
+	
 	rand.randomize()
 	likes.text = String(rand.randi_range(0,50))
 	comments.text = String(rand.randi_range(0,30))
