@@ -1,9 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/backgrounds/room_bg.png" type="Texture" id=2]
-[ext_resource path="res://assets/pc_screen.png" type="Texture" id=3]
-[ext_resource path="res://entities/Noticia.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/ui/monitor.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/goog_search_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/ui/goog_search_button_hover.png" type="Texture" id=6]
+[ext_resource path="res://assets/elements/portrait.png" type="Texture" id=7]
+[ext_resource path="res://assets/elements/persiana d.png" type="Texture" id=8]
+[ext_resource path="res://assets/elements/persiana i.png" type="Texture" id=9]
+[ext_resource path="res://assets/elements/posters.png" type="Texture" id=10]
+[ext_resource path="res://assets/elements/velador.png" type="Texture" id=11]
+[ext_resource path="res://assets/elements/books.png" type="Texture" id=12]
+[ext_resource path="res://assets/elements/calendary.png" type="Texture" id=13]
+[ext_resource path="res://assets/elements/desk.png" type="Texture" id=14]
+[ext_resource path="res://assets/elements/tv on.png" type="Texture" id=15]
+[ext_resource path="res://assets/elements/lamp.png" type="Texture" id=16]
+[ext_resource path="res://assets/elements/windows.png" type="Texture" id=17]
+[ext_resource path="res://assets/elements/archive.png" type="Texture" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 46.9977, 31.9723 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,6 +28,62 @@ script = ExtResource( 1 )
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 centered = false
+
+[node name="Elements" type="Position2D" parent="."]
+
+[node name="posters" type="Sprite" parent="Elements"]
+position = Vector2( 122.161, 45.7326 )
+texture = ExtResource( 10 )
+
+[node name="windows" type="Sprite" parent="Elements"]
+position = Vector2( 237.011, 49.7726 )
+texture = ExtResource( 17 )
+
+[node name="persiana d" type="Sprite" parent="Elements"]
+position = Vector2( 283.182, 19.7615 )
+texture = ExtResource( 8 )
+
+[node name="persiana i" type="Sprite" parent="Elements"]
+position = Vector2( 195.457, 20.9157 )
+texture = ExtResource( 9 )
+
+[node name="velador" type="Sprite" parent="Elements"]
+position = Vector2( 283.182, 147.309 )
+texture = ExtResource( 11 )
+
+[node name="lamp" type="Sprite" parent="Elements"]
+position = Vector2( 289.531, 83.2466 )
+texture = ExtResource( 16 )
+
+[node name="archive" type="Sprite" parent="Elements"]
+position = Vector2( 277.411, 115.566 )
+texture = ExtResource( 18 )
+
+[node name="desk" type="Sprite" parent="Elements"]
+position = Vector2( 106.578, 145.577 )
+texture = ExtResource( 14 )
+
+[node name="books" type="Sprite" parent="Elements"]
+position = Vector2( 116.39, 93.6351 )
+texture = ExtResource( 12 )
+
+[node name="calendary" type="Sprite" parent="Elements"]
+position = Vector2( 167.755, 100.561 )
+texture = ExtResource( 13 )
+
+[node name="tv on" type="Sprite" parent="Elements"]
+position = Vector2( 52.3274, 74.0124 )
+texture = ExtResource( 15 )
+
+[node name="portrait" type="Sprite" parent="Elements"]
+position = Vector2( 17.122, 100.561 )
+texture = ExtResource( 7 )
+
+[node name="PCArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PCArea"]
+position = Vector2( 53.0679, 67.7248 )
+shape = SubResource( 1 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -21,43 +94,124 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="pc_screen" type="Sprite" parent="HUD/Popup"]
+[node name="Bg" type="Sprite" parent="HUD/Popup"]
+position = Vector2( 0, 2 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HUD/Popup"]
-margin_left = 22.0
-margin_top = 34.0
-margin_right = 122.0
-margin_bottom = 144.0
+[node name="NewsContainer" type="ScrollContainer" parent="HUD/Popup"]
+margin_left = 13.7959
+margin_top = 38.6881
+margin_right = 113.796
+margin_bottom = 148.688
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Popup/ScrollContainer"]
-margin_bottom = 425.0
-custom_constants/separation = 85
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Popup/NewsContainer"]
+custom_constants/separation = 104
 alignment = 1
 
-[node name="Noticia" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
+[node name="Logo" type="Label" parent="HUD/Popup"]
+margin_left = 34.0
+margin_top = 26.0
+margin_right = 78.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 5 )
+text = "NOTFACEBOOK"
 
-[node name="Noticia2" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 85.0
-margin_bottom = 85.0
+[node name="GoogleSearch" type="ColorRect" parent="HUD/Popup"]
+margin_left = 116.0
+margin_top = 39.0
+margin_right = 220.0
+margin_bottom = 149.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Noticia3" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 170.0
-margin_bottom = 170.0
+[node name="NotGoogle" type="Label" parent="HUD/Popup/GoogleSearch"]
+anchor_right = 1.0
+margin_top = -12.9777
+margin_bottom = -6.97769
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "NOTGOOGLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Noticia4" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 255.0
-margin_bottom = 255.0
+[node name="Control" type="Control" parent="HUD/Popup/GoogleSearch"]
+visible = false
+margin_left = 5.0
+margin_top = 28.3398
+margin_right = 45.0
+margin_bottom = 68.3398
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Noticia5" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 340.0
-margin_bottom = 340.0
+[node name="News_Title" type="Label" parent="HUD/Popup/GoogleSearch/Control"]
+anchor_right = 1.0
+margin_bottom = 6.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.2, 0.227451, 0.894118, 1 )
+text = "NOTICIA #1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Noticia6" parent="HUD/Popup/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 425.0
-margin_bottom = 425.0
+[node name="TextHolder" type="ColorRect" parent="HUD/Popup/GoogleSearch/Control"]
+margin_top = 7.36621
+margin_right = 92.0
+margin_bottom = 12.3662
+color = Color( 0.901961, 0.890196, 0.890196, 1 )
+
+[node name="TextHolder2" type="ColorRect" parent="HUD/Popup/GoogleSearch/Control"]
+margin_top = 14.2771
+margin_right = 92.0
+margin_bottom = 19.2771
+color = Color( 0.901961, 0.890196, 0.890196, 1 )
+
+[node name="TextHolder3" type="ColorRect" parent="HUD/Popup/GoogleSearch/Control"]
+margin_top = 21.5718
+margin_right = 30.0
+margin_bottom = 26.5718
+color = Color( 0.901961, 0.890196, 0.890196, 1 )
+
+[node name="TextInput" type="ColorRect" parent="HUD/Popup"]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+margin_left = 121.374
+margin_top = 42.0
+margin_right = 161.374
+margin_bottom = 82.0
+rect_scale = Vector2( 1.96, 0.320001 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SearcherButton" type="TextureButton" parent="HUD/Popup"]
+margin_left = 200.0
+margin_top = 42.0
+margin_right = 215.0
+margin_bottom = 55.0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TxtSearch" type="Label" parent="HUD/Popup"]
+margin_left = 123.0
+margin_top = 46.3911
+margin_right = 198.0
+margin_bottom = 52.3911
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+text = "SEARCH..."
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="PCArea" to="." method="_on_Area2D_input_event"]
