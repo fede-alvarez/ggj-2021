@@ -1,0 +1,132 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/font/Teeny Tiny Pixls.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/ui/accept_button.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/cancel_button.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/comments-icon.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/hearth-icon.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 5
+font_data = ExtResource( 1 )
+
+[node name="Noticia" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Base" type="ColorRect" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 55.3235
+margin_right = 53.5
+margin_bottom = 80.3235
+rect_scale = Vector2( 1, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 61.0167
+margin_right = 23.5
+margin_bottom = 86.0167
+rect_scale = Vector2( 1, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="ColorRect" parent="Base"]
+margin_left = 4.48288
+margin_top = 3.7064
+margin_right = 54.4828
+margin_bottom = 28.7064
+rect_scale = Vector2( 1.4, 1.12 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="Base"]
+margin_left = 4.0
+margin_top = 34.0
+margin_right = 74.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NOTICIA DE PRUEBA #1"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptButton" type="TextureButton" parent="Base"]
+margin_left = 2.0
+margin_top = 72.0
+margin_right = 37.0
+margin_bottom = 82.0
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RejectButton" type="TextureButton" parent="Base"]
+margin_left = 40.0
+margin_top = 72.0
+margin_right = 75.0
+margin_bottom = 82.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HearthIcon" type="TextureRect" parent="Base"]
+margin_left = 39.591
+margin_top = 61.6151
+margin_right = 47.591
+margin_bottom = 69.6151
+texture = ExtResource( 5 )
+
+[node name="LblLikes" type="Label" parent="Base/HearthIcon"]
+margin_left = 9.0
+margin_top = 1.0
+margin_right = 19.0
+margin_bottom = 7.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CommentsIcon" type="TextureRect" parent="Base"]
+margin_left = 59.9498
+margin_top = 61.0128
+margin_right = 67.9498
+margin_bottom = 69.0128
+texture = ExtResource( 4 )
+
+[node name="LblComments" type="Label" parent="Base/CommentsIcon"]
+margin_left = 9.60346
+margin_top = 2.45938
+margin_right = 19.6035
+margin_bottom = 8.45938
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
