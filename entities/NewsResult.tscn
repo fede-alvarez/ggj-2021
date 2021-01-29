@@ -12,6 +12,7 @@ __meta__ = {
 
 [node name="Titulo" type="Label" parent="."]
 anchor_right = 1.0
+margin_top = 3.0
 margin_right = 80.0
 margin_bottom = 15.0
 custom_fonts/font = ExtResource( 1 )
@@ -22,30 +23,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextHolder" type="ColorRect" parent="."]
-margin_top = 16.1913
+[node name="TextHolder2" type="ColorRect" parent="."]
+margin_top = 80.8963
 margin_right = 80.0
-margin_bottom = 21.1912
+margin_bottom = 85.8963
 color = Color( 0.901961, 0.890196, 0.890196, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextHolder2" type="ColorRect" parent="."]
-margin_top = 23.1021
-margin_right = 80.0
-margin_bottom = 28.1021
+[node name="TextHolder3" type="ColorRect" parent="."]
+margin_top = 88.191
+margin_right = 30.0
+margin_bottom = 93.191
 color = Color( 0.901961, 0.890196, 0.890196, 1 )
 
-[node name="TextHolder3" type="ColorRect" parent="."]
-margin_top = 30.3968
-margin_right = 30.0
-margin_bottom = 35.3968
-color = Color( 0.901961, 0.890196, 0.890196, 1 )
+[node name="Separator" type="ColorRect" parent="."]
+margin_top = 100.0
+margin_right = 80.0
+margin_bottom = 101.0
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LinkButton" type="TextureButton" parent="."]
 margin_right = 80.0
-margin_bottom = 35.0
+margin_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

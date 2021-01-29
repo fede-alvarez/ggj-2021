@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
-[ext_resource path="res://assets/backgrounds/room_bg_mockup.png" type="Texture" id=2]
+[ext_resource path="res://assets/elements/newspaper.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/monitor.png" type="Texture" id=3]
 [ext_resource path="res://assets/ui/goog_search_button.png" type="Texture" id=4]
 [ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=5]
@@ -20,6 +20,13 @@
 [ext_resource path="res://assets/elements/archive.png" type="Texture" id=18]
 [ext_resource path="res://assets/ui/goog_search_button_disabled.png" type="Texture" id=19]
 [ext_resource path="res://assets/music/vuelve_al_suenio.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/elements/news_images/1_capitolio.png" type="Texture" id=21]
+[ext_resource path="res://scripts/NewsDetail.gd" type="Script" id=22]
+[ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=23]
+[ext_resource path="res://assets/backgrounds/base.png" type="Texture" id=24]
+[ext_resource path="res://assets/elements/boxes.png" type="Texture" id=25]
+[ext_resource path="res://assets/backgrounds/ciudad_fondo.png" type="Texture" id=26]
+[ext_resource path="res://assets/elements/silla.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.9977, 31.9723 )
@@ -28,8 +35,27 @@ extents = Vector2( 46.9977, 31.9723 )
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource( 23 )
 centered = false
+
+[node name="base" type="Sprite" parent="."]
+position = Vector2( 0, 160 )
+texture = ExtResource( 24 )
+centered = false
+
+[node name="ciudad_fondo" type="Sprite" parent="."]
+position = Vector2( 237.471, 49.8923 )
+texture = ExtResource( 26 )
+
+[node name="WindowAlpha" type="ColorRect" parent="."]
+margin_left = 157.185
+margin_top = -9.20109
+margin_right = 317.185
+margin_bottom = 90.7989
+color = Color( 0.25098, 0.211765, 0.560784, 0.372549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Elements" type="Position2D" parent="."]
 
@@ -37,16 +63,20 @@ centered = false
 position = Vector2( 122.161, 45.7326 )
 texture = ExtResource( 10 )
 
+[node name="newspaper" type="Sprite" parent="Elements"]
+texture = ExtResource( 2 )
+centered = false
+
 [node name="windows" type="Sprite" parent="Elements"]
 position = Vector2( 237.011, 49.7726 )
 texture = ExtResource( 17 )
 
 [node name="persiana d" type="Sprite" parent="Elements"]
-position = Vector2( 283.182, 19.7615 )
+position = Vector2( 283.182, -12.2184 )
 texture = ExtResource( 8 )
 
 [node name="persiana i" type="Sprite" parent="Elements"]
-position = Vector2( 195.457, 20.9157 )
+position = Vector2( 195.457, -11.0641 )
 texture = ExtResource( 9 )
 
 [node name="velador" type="Sprite" parent="Elements"]
@@ -88,12 +118,53 @@ shape = SubResource( 1 )
 position = Vector2( 17.122, 100.561 )
 texture = ExtResource( 7 )
 
+[node name="boxes" type="Sprite" parent="Elements"]
+position = Vector2( 0, 149.338 )
+texture = ExtResource( 25 )
+centered = false
+
+[node name="silla" type="Sprite" parent="Elements"]
+position = Vector2( 82.6883, 129.629 )
+texture = ExtResource( 27 )
+
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Dialogs" type="Control" parent="HUD"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/Dialogs"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -40.0
+margin_right = -5.0
+margin_bottom = -6.49908
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]ESTO ES UNA PRUEBA DE [wave amp=4]DIALOGO[/wave] PARA EL JUEGO[/center]"
+text = "ESTO ES UNA PRUEBA DE DIALOGO PARA EL JUEGO"
+scroll_active = false
 
 [node name="Popup" type="Popup" parent="HUD"]
 visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Popup"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.290196, 0.0666667, 0.392157, 0.333333 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,7 +185,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Popup/NewsContainer"]
-custom_constants/separation = 104
+custom_constants/separation = 144
 alignment = 1
 
 [node name="Logo" type="Label" parent="HUD/Popup"]
@@ -180,7 +251,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Popup/GoogleSearch/SearchResults/ScrollResults"]
-custom_constants/separation = 42
+custom_constants/separation = 102
 
 [node name="InputBorder" type="ColorRect" parent="HUD/Popup"]
 visible = false
@@ -232,6 +303,209 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NewsDetail" type="Control" parent="HUD/Popup"]
+margin_left = 116.0
+margin_top = 39.0
+margin_right = 220.0
+margin_bottom = 149.0
+script = ExtResource( 22 )
+
+[node name="Base" type="ColorRect" parent="HUD/Popup/NewsDetail"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HUD/Popup/NewsDetail"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 7.62939e-06
+size_flags_horizontal = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="HUD/Popup/NewsDetail/ScrollContainer"]
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="LblTitle" type="Label" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 3.0
+margin_right = 90.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+text = "TITULO DE LA NOTICA SELECCIONADA"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Photo" type="TextureRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 107.952
+margin_right = 90.0
+margin_bottom = 132.952
+texture = ExtResource( 21 )
+
+[node name="Placeholder" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 75.8297
+margin_right = 90.0
+margin_bottom = -119.17
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder2" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 82.8297
+margin_right = 90.0
+margin_bottom = -112.17
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder3" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 89.6145
+margin_right = 90.0
+margin_bottom = -105.385
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder4" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 97.0322
+margin_right = 35.0
+margin_bottom = -97.9678
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder5" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 139.939
+margin_right = 90.0
+margin_bottom = -55.0608
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder6" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 146.939
+margin_right = 90.0
+margin_bottom = -48.0608
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder7" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 153.724
+margin_right = 90.0
+margin_bottom = -41.2759
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder8" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 161.142
+margin_right = 90.0
+margin_bottom = -33.8583
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder9" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 164.841
+margin_right = 90.0
+margin_bottom = -30.1587
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Placeholder10" type="ColorRect" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 171.841
+margin_right = 45.0
+margin_bottom = -23.1587
+color = Color( 0.835294, 0.835294, 0.835294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblDate" type="Label" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_left = 5.0
+anchor_top = 1.0
+anchor_right = 5.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -10.0
+margin_right = 37.0
+margin_bottom = -4.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.4, 0.4, 0.4, 1 )
+text = "01/01/20"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="HUD/Popup/NewsDetail/ScrollContainer/Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 60.0
+margin_top = -10.0
+margin_right = 92.0
+margin_bottom = -4.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.878431, 1 )
+text = "< VOLVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PopupTween" type="Tween" parent="HUD/Popup"]
 
 [node name="TextureButton" type="TextureButton" parent="HUD/Popup"]
@@ -244,7 +518,9 @@ __meta__ = {
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = -5.0
+volume_db = -10.0
+autoplay = true
 [connection signal="input_event" from="Elements/tv on/PCArea" to="." method="_on_Area2D_input_event"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
+[connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/TextureButton" to="." method="_on_TextureButton_pressed"]

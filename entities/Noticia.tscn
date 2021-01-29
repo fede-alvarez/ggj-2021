@@ -24,49 +24,8 @@ __meta__ = {
 
 [node name="Base" type="Panel" parent="."]
 margin_right = 86.0
-margin_bottom = 100.0
+margin_bottom = 140.0
 custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextPlaceholder" type="ColorRect" parent="Base"]
-margin_left = 3.5
-margin_top = 55.7874
-margin_right = 53.5
-margin_bottom = 80.7874
-rect_scale = Vector2( 1.6, 0.16 )
-color = Color( 0.733333, 0.733333, 0.733333, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextPlaceholder4" type="ColorRect" parent="Base"]
-margin_left = 3.5
-margin_top = 82.9763
-margin_right = 53.5
-margin_bottom = 107.976
-rect_scale = Vector2( 1.6, 0.05 )
-color = Color( 0.85098, 0.85098, 0.85098, 1 )
-
-[node name="TextPlaceholder2" type="ColorRect" parent="Base"]
-margin_left = 3.5
-margin_top = 61.4806
-margin_right = 23.5
-margin_bottom = 86.4806
-rect_scale = Vector2( 1, 0.16 )
-color = Color( 0.733333, 0.733333, 0.733333, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextPlaceholder3" type="ColorRect" parent="Base"]
-margin_left = 25.6784
-margin_top = 61.4806
-margin_right = 45.6784
-margin_bottom = 86.4806
-rect_scale = Vector2( 0.680001, 0.16 )
-color = Color( 0.733333, 0.733333, 0.733333, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -95,11 +54,66 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextPlaceholder" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 97.4039
+margin_right = 53.5
+margin_bottom = 117.404
+rect_scale = Vector2( 1.6, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextPlaceholder2" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 103.097
+margin_right = 23.5
+margin_bottom = 123.097
+rect_scale = Vector2( 1, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextPlaceholder3" type="ColorRect" parent="Base"]
+margin_left = 25.6784
+margin_top = 103.097
+margin_right = 45.6784
+margin_bottom = 123.097
+rect_scale = Vector2( 0.680001, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextPlaceholder4" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 108.492
+margin_right = 23.5
+margin_bottom = 128.492
+rect_scale = Vector2( 1, 0.16 )
+color = Color( 0.733333, 0.733333, 0.733333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separator" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 128.061
+margin_right = 53.5
+margin_bottom = 153.061
+rect_scale = Vector2( 1.6, 0.05 )
+color = Color( 0.85098, 0.85098, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Fecha" type="Label" parent="Base"]
 margin_left = 4.86535
-margin_top = 71.791
+margin_top = 119.188
 margin_right = 36.8654
-margin_bottom = 77.791
+margin_bottom = 125.188
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.733333, 0.733333, 0.733333, 1 )
 text = "01/01/21"
@@ -110,9 +124,9 @@ __meta__ = {
 
 [node name="HearthIcon" type="TextureRect" parent="Base"]
 margin_left = 44.5752
-margin_top = 71.1031
+margin_top = 118.5
 margin_right = 52.5752
-margin_bottom = 79.1031
+margin_bottom = 126.5
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -134,9 +148,9 @@ __meta__ = {
 
 [node name="CommentsIcon" type="TextureRect" parent="Base"]
 margin_left = 64.9341
-margin_top = 70.5008
+margin_top = 117.897
 margin_right = 72.9341
-margin_bottom = 78.5008
+margin_bottom = 125.897
 texture = ExtResource( 4 )
 
 [node name="LblComments" type="Label" parent="Base/CommentsIcon"]
@@ -153,11 +167,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Separator2" type="ColorRect" parent="Base"]
+margin_left = 3.5
+margin_top = 114.189
+margin_right = 53.5
+margin_bottom = 139.189
+rect_scale = Vector2( 1.6, 0.05 )
+color = Color( 0.85098, 0.85098, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AcceptButton" type="TextureButton" parent="Base"]
 margin_left = 3.82528
-margin_top = 87.0
+margin_top = 132.084
 margin_right = 23.8253
-margin_bottom = 97.0
+margin_bottom = 142.084
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 2 )
 expand = true
@@ -167,9 +192,9 @@ __meta__ = {
 
 [node name="RejectButton" type="TextureButton" parent="Base"]
 margin_left = 25.8253
-margin_top = 87.0
+margin_top = 132.084
 margin_right = 45.8253
-margin_bottom = 97.0
+margin_bottom = 142.084
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
 expand = true
@@ -179,9 +204,9 @@ __meta__ = {
 
 [node name="SearchButton" type="TextureButton" parent="Base"]
 margin_left = 64.0
-margin_top = 87.0
+margin_top = 132.084
 margin_right = 84.0
-margin_bottom = 97.0
+margin_bottom = 142.084
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
