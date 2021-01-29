@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/elements/newspaper.png" type="Texture" id=2]
@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/elements/posters.png" type="Texture" id=10]
 [ext_resource path="res://assets/elements/velador.png" type="Texture" id=11]
 [ext_resource path="res://assets/elements/books.png" type="Texture" id=12]
-[ext_resource path="res://assets/elements/calendary.png" type="Texture" id=13]
+[ext_resource path="res://assets/elements/calendario_anim.png" type="Texture" id=13]
 [ext_resource path="res://assets/elements/desk.png" type="Texture" id=14]
 [ext_resource path="res://assets/elements/tv on.png" type="Texture" id=15]
 [ext_resource path="res://assets/elements/lamp.png" type="Texture" id=16]
@@ -27,9 +27,43 @@
 [ext_resource path="res://assets/elements/boxes.png" type="Texture" id=25]
 [ext_resource path="res://assets/backgrounds/ciudad_fondo.png" type="Texture" id=26]
 [ext_resource path="res://assets/elements/silla.png" type="Texture" id=27]
+[ext_resource path="res://assets/elements/tv-anim.png" type="Texture" id=28]
+[ext_resource path="res://scripts/Dialogs.gd" type="Script" id=29]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Hover"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 4, 3, 4, 5, 6, 7, 8 ]
+}
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.9977, 31.9723 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Hover"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 5 ]
+}
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -102,21 +136,53 @@ texture = ExtResource( 12 )
 [node name="calendary" type="Sprite" parent="Elements"]
 position = Vector2( 167.755, 100.561 )
 texture = ExtResource( 13 )
+hframes = 11
+frame = 8
 
-[node name="tv on" type="Sprite" parent="Elements"]
-position = Vector2( 52.3274, 74.0124 )
-texture = ExtResource( 15 )
+[node name="MaskButton" type="TextureButton" parent="Elements/calendary"]
+margin_left = -20.9547
+margin_top = -10.4773
+margin_right = 19.0453
+margin_bottom = 9.52265
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="PCArea" type="Area2D" parent="Elements/tv on"]
+[node name="Anim" type="AnimationPlayer" parent="Elements/calendary"]
+anims/Hover = SubResource( 3 )
+
+[node name="tv-anim" type="Sprite" parent="Elements"]
+position = Vector2( 52, 74 )
+texture = ExtResource( 28 )
+hframes = 12
+
+[node name="PCArea" type="Area2D" parent="Elements/tv-anim"]
 position = Vector2( -52.3274, -74.0124 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Elements/tv on/PCArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elements/tv-anim/PCArea"]
 position = Vector2( 53.0679, 67.7248 )
 shape = SubResource( 1 )
+
+[node name="Animator" type="AnimationPlayer" parent="Elements/tv-anim"]
+anims/Hover = SubResource( 2 )
+
+[node name="tv on" type="Sprite" parent="Elements"]
+visible = false
+position = Vector2( 52, 74 )
+texture = ExtResource( 15 )
 
 [node name="portrait" type="Sprite" parent="Elements"]
 position = Vector2( 17.122, 100.561 )
 texture = ExtResource( 7 )
+
+[node name="PortraitButton" type="TextureButton" parent="Elements/portrait"]
+margin_left = -11.4528
+margin_top = -11.4528
+margin_right = 13.5472
+margin_bottom = 13.5472
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="boxes" type="Sprite" parent="Elements"]
 position = Vector2( 0, 149.338 )
@@ -130,30 +196,41 @@ texture = ExtResource( 27 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Dialogs" type="Control" parent="HUD"]
-visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 29 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Dialogs"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -49.2472
+margin_bottom = 0.752827
+color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HUD/Dialogs"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
+margin_left = 20.0
 margin_top = -40.0
-margin_right = -5.0
+margin_right = -20.0
 margin_bottom = -6.49908
+rect_clip_content = false
 custom_fonts/normal_font = ExtResource( 5 )
 bbcode_enabled = true
-bbcode_text = "[center]ESTO ES UNA PRUEBA DE [wave amp=4]DIALOGO[/wave] PARA EL JUEGO[/center]"
-text = "ESTO ES UNA PRUEBA DE DIALOGO PARA EL JUEGO"
+bbcode_text = "[center]Texto de prueba[/center]"
+text = "Texto de prueba"
 scroll_active = false
 
+[node name="DialogTime" type="Timer" parent="HUD/Dialogs"]
+wait_time = 7.0
+
 [node name="Popup" type="Popup" parent="HUD"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -520,7 +597,14 @@ __meta__ = {
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true
-[connection signal="input_event" from="Elements/tv on/PCArea" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_exited"]
+[connection signal="pressed" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_pressed"]
+[connection signal="input_event" from="Elements/tv-anim/PCArea" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_exited"]
+[connection signal="pressed" from="Elements/portrait/PortraitButton" to="." method="_on_PortraitButton_pressed"]
+[connection signal="timeout" from="HUD/Dialogs/DialogTime" to="HUD/Dialogs" method="_on_DialogTime_timeout"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/TextureButton" to="." method="_on_TextureButton_pressed"]

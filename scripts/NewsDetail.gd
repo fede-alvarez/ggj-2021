@@ -19,6 +19,5 @@ func set_data(title, date, image):
 	if news_image:
 		photo.texture = load("res://assets/elements/news_images/" + news_image + ".png")
 
-
 func _on_LinkButton_pressed():
 	visible = false

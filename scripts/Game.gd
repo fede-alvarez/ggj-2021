@@ -26,8 +26,14 @@ func _ready():
 			news_entity.connect("search_news", self, "on_news_searched")
 	pass
 
+func get_news_by_id (news_id):
+	for news in Globals.NEWS:
+		if news_id == news.id:
+			return news
+	return null
+		
 func on_news_searched( id ):
-	var news_detail = Globals.NEWS[id-1]
+	var news_detail = get_news_by_id(id)
 	search_text.text = (news_detail.title).to_upper()
 	$HUD/Popup/InputBorder.visible = true
 	$HUD/Popup/SearcherButton.disabled = false
@@ -38,12 +44,13 @@ func on_news_searched( id ):
 	
 # Item Events
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		$HUD/Popup.rect_position = Vector2(-320,0)
-		$HUD/Popup.show()
-		
-		popup_tween.interpolate_property($HUD/Popup, "rect_position:x", -320, 0, 1, Tween.TRANS_QUAD, Tween.EASE_OUT)
-		popup_tween.start()
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			$HUD/Popup.rect_position = Vector2(-320,0)
+			$HUD/Popup.show()
+			
+			popup_tween.interpolate_property($HUD/Popup, "rect_position:x", -320, 0, 1, Tween.TRANS_QUAD, Tween.EASE_OUT)
+			popup_tween.start()
 
 func _on_SearcherButton_pressed():
 	empty_holder_str = $HUD/Popup/GoogleSearch/EmptyHolder.text
@@ -55,7 +62,7 @@ func load_search_results():
 	$HUD/Popup/GoogleSearch/EmptyHolder.visible = false
 	$HUD/Popup/GoogleSearch/SearchResults.visible = true
 	clean_previous_news()
-	for news in Globals.NEWS:
+	for news in Globals.get_news():
 		var news_entity = preload("res://entities/NewsResult.tscn").instance()
 		if news_entity:
 			news_search_container.add_child(news_entity)
@@ -68,7 +75,9 @@ func clean_previous_news():
 		news.queue_free()
 		
 func on_link_clicked(news_id):
-	var news_detail = Globals.NEWS[news_id-1]
+	var news_detail = get_news_by_id(news_id)
+	if !news_detail:
+		return
 	#print("News title: " + news_detail.title.to_upper())
 	var title = news_detail.title.to_upper()
 	var date = news_detail.date
@@ -84,3 +93,25 @@ func _on_TextureButton_pressed():
 	popup_tween.start()
 	yield(popup_tween, "tween_completed")
 	$HUD/Popup.hide()
+
+
+func _on_PCArea_mouse_entered():
+	$"Elements/tv-anim/Animator".play("Hover")
+
+
+func _on_PCArea_mouse_exited():
+	$"Elements/tv-anim/Animator".play_backwards("Hover")
+
+func _on_MaskButton_mouse_entered():
+	$Elements/calendary/Anim.play("Hover")
+
+func _on_MaskButton_mouse_exited():
+	$Elements/calendary/Anim.stop()
+
+# Pressed elements
+
+func _on_MaskButton_pressed():
+	$HUD/Dialogs.show_dialog("UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]")
+
+func _on_PortraitButton_pressed():
+	$HUD/Dialogs.show_dialog("EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE [color=yellow]CLARA VERDESOTO[/color]")
