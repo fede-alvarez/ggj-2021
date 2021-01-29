@@ -97,6 +97,15 @@ __meta__ = {
 position = Vector2( 122.161, 45.7326 )
 texture = ExtResource( 10 )
 
+[node name="PostersButton" type="TextureButton" parent="Elements/posters"]
+margin_left = -20.0424
+margin_top = -25.7689
+margin_right = 19.9576
+margin_bottom = 24.2311
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="newspaper" type="Sprite" parent="Elements"]
 texture = ExtResource( 2 )
 centered = false
@@ -125,13 +134,49 @@ texture = ExtResource( 16 )
 position = Vector2( 277.411, 115.566 )
 texture = ExtResource( 18 )
 
+[node name="ArchiveButton" type="TextureButton" parent="Elements/archive"]
+margin_left = -18.3245
+margin_top = -9.73489
+margin_right = 21.6755
+margin_bottom = 10.2651
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="desk" type="Sprite" parent="Elements"]
 position = Vector2( 106.578, 145.577 )
 texture = ExtResource( 14 )
 
+[node name="Drawer1" type="TextureButton" parent="Elements/desk"]
+margin_left = 27.4868
+margin_top = -21.7604
+margin_right = 77.4868
+margin_bottom = -1.76038
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Drawer2" type="TextureButton" parent="Elements/desk"]
+margin_left = 27.4868
+margin_top = -3.46924
+margin_right = 77.4868
+margin_bottom = 16.5308
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="books" type="Sprite" parent="Elements"]
 position = Vector2( 116.39, 93.6351 )
 texture = ExtResource( 12 )
+
+[node name="BookButton" type="TextureButton" parent="Elements/books"]
+margin_left = -16.121
+margin_top = -20.1512
+margin_right = 23.879
+margin_bottom = 19.8488
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="calendary" type="Sprite" parent="Elements"]
 position = Vector2( 167.755, 100.561 )
@@ -190,12 +235,13 @@ texture = ExtResource( 25 )
 centered = false
 
 [node name="silla" type="Sprite" parent="Elements"]
-position = Vector2( 82.6883, 129.629 )
+position = Vector2( 64.3638, 129.629 )
 texture = ExtResource( 27 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Dialogs" type="Control" parent="HUD"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -228,7 +274,23 @@ text = "Texto de prueba"
 scroll_active = false
 
 [node name="DialogTime" type="Timer" parent="HUD/Dialogs"]
-wait_time = 7.0
+wait_time = 5.0
+
+[node name="ConfirmButton" type="Button" parent="HUD/Dialogs"]
+margin_left = 88.1868
+margin_top = -16.6066
+margin_right = 140.187
+margin_bottom = -2.6066
+custom_fonts/font = ExtResource( 5 )
+text = "ABRIR"
+
+[node name="DenyButton" type="Button" parent="HUD/Dialogs"]
+margin_left = 191.835
+margin_top = -16.6066
+margin_right = 243.835
+margin_bottom = -2.6066
+custom_fonts/font = ExtResource( 5 )
+text = "NO ABRIR"
 
 [node name="Popup" type="Popup" parent="HUD"]
 anchor_right = 1.0
@@ -597,6 +659,11 @@ __meta__ = {
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true
+[connection signal="pressed" from="Elements/posters/PostersButton" to="." method="_on_PostersButton_pressed"]
+[connection signal="pressed" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_pressed"]
+[connection signal="pressed" from="Elements/desk/Drawer1" to="." method="_on_Drawer1_pressed"]
+[connection signal="pressed" from="Elements/desk/Drawer2" to="." method="_on_Drawer2_pressed"]
+[connection signal="pressed" from="Elements/books/BookButton" to="." method="_on_BookButton_pressed"]
 [connection signal="mouse_entered" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_entered"]
 [connection signal="mouse_exited" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_exited"]
 [connection signal="pressed" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_pressed"]
@@ -605,6 +672,8 @@ autoplay = true
 [connection signal="mouse_exited" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_exited"]
 [connection signal="pressed" from="Elements/portrait/PortraitButton" to="." method="_on_PortraitButton_pressed"]
 [connection signal="timeout" from="HUD/Dialogs/DialogTime" to="HUD/Dialogs" method="_on_DialogTime_timeout"]
+[connection signal="pressed" from="HUD/Dialogs/ConfirmButton" to="HUD/Dialogs" method="_on_ConfirmButton_pressed"]
+[connection signal="pressed" from="HUD/Dialogs/DenyButton" to="HUD/Dialogs" method="_on_DenyButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -110,8 +110,67 @@ func _on_MaskButton_mouse_exited():
 
 # Pressed elements
 
+func father(msg):
+	return "[color=#B6AFE3]" + msg.to_upper() + "[/color]"
+
 func _on_MaskButton_pressed():
-	$HUD/Dialogs.show_dialog("UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]")
+	$HUD/Dialogs.show_dialog([
+		"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]",
+		father("Pronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre."),
+	])
 
 func _on_PortraitButton_pressed():
-	$HUD/Dialogs.show_dialog("EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE [color=yellow]CLARA VERDESOTO[/color]")
+	$HUD/Dialogs.show_dialog([
+		"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE [color=yellow]CLARA VERDESOTO[/color]",
+		father("TIENES A TU MADRE EN LA SONRISA.")
+	])
+
+func _on_ArchiveButton_pressed():
+	$HUD/Dialogs.show_dialog([
+		"Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”".to_upper(),
+		father("Los lirios ahora me parecen más pequeños, más frágiles. ¿Hay lirios en el vacío, CLARA?")
+	])
+
+func _on_Drawer1_pressed():
+	$HUD/Dialogs.show_dialog([
+		"Dentro del cajón hay una carpeta que lleva el nombre de CLARA.".to_upper(),
+		father("¿Descuidaste esto?. Debería estar en el estudio."),
+		"[QUESTION]",
+		"INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.",
+		father("¿Patógenos en masa?"),
+		"[END]",
+		father("Será mejor dejarte descansar.")
+	])
+
+func _on_PostersButton_pressed():
+	$HUD/Dialogs.show_dialog([
+		"Se distinguen un afiche de una película bizarra, un retrato de CLARA  a carboncillo, y una planta pintada en acuarela.".to_upper()
+	])
+
+func _on_Drawer2_pressed():
+	$HUD/Dialogs.show_dialog([
+		"En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA.".to_upper(),
+		"[QUESTION]",
+		"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge".to_upper(),
+		father("¿Pero quién diablos es ese JORGE?"),
+		"[SKIP]",
+		father("No suena tan mal después de todo."),
+		"¿Abro el segundo disco?".to_upper(),
+		"[QUESTION]",
+		"Un trozo de papel cae. Se lee un número : 03- 3365- 428 Thomas Berstein.".to_upper(),
+		father("Berstein... ¿de dónde me suena esto?"),
+		"[END]",
+		father("¿Dónde venderán reproductores de CD´s?")
+	])
+
+
+func _on_BookButton_pressed():
+	$HUD/Dialogs.show_dialog([
+		"En la portada del libro se lee: Diario de CLARA".to_upper(),
+		"[QUESTION]",
+		father("No tiene sentido esconderlo ahora."),
+		"En una de las páginas se puede apreciar: “ T. B se ha enterado de todo, creo que debo cuidarme, me despediré de papá”.".to_upper(),
+		father("¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?"),
+		"[END]",
+		father("Que al menos tus secretos se mantengan en paz")
+	])
