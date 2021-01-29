@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/elements/newspaper.png" type="Texture" id=2]
@@ -12,12 +12,12 @@
 [ext_resource path="res://assets/elements/posters.png" type="Texture" id=10]
 [ext_resource path="res://assets/elements/velador.png" type="Texture" id=11]
 [ext_resource path="res://assets/elements/books.png" type="Texture" id=12]
-[ext_resource path="res://assets/elements/calendario_anim.png" type="Texture" id=13]
+[ext_resource path="res://assets/elements/animations/g1_calendar.png" type="Texture" id=13]
 [ext_resource path="res://assets/elements/desk.png" type="Texture" id=14]
 [ext_resource path="res://assets/elements/tv on.png" type="Texture" id=15]
 [ext_resource path="res://assets/elements/lamp.png" type="Texture" id=16]
 [ext_resource path="res://assets/elements/windows.png" type="Texture" id=17]
-[ext_resource path="res://assets/elements/archive.png" type="Texture" id=18]
+[ext_resource path="res://assets/elements/animations/g2_book.png" type="Texture" id=18]
 [ext_resource path="res://assets/ui/goog_search_button_disabled.png" type="Texture" id=19]
 [ext_resource path="res://assets/music/vuelve_al_suenio.ogg" type="AudioStream" id=20]
 [ext_resource path="res://assets/elements/news_images/1_capitolio.png" type="Texture" id=21]
@@ -27,10 +27,27 @@
 [ext_resource path="res://assets/elements/boxes.png" type="Texture" id=25]
 [ext_resource path="res://assets/backgrounds/ciudad_fondo.png" type="Texture" id=26]
 [ext_resource path="res://assets/elements/silla.png" type="Texture" id=27]
-[ext_resource path="res://assets/elements/tv-anim.png" type="Texture" id=28]
+[ext_resource path="res://assets/elements/animations/g4_tv.png" type="Texture" id=28]
 [ext_resource path="res://scripts/Dialogs.gd" type="Script" id=29]
+[ext_resource path="res://assets/ui/gameover.png" type="Texture" id=30]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
+resource_name = "Hover"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=2]
 resource_name = "Hover"
 loop = true
 tracks/0/type = "value"
@@ -46,12 +63,11 @@ tracks/0/keys = {
 "values": [ 0, 1, 4, 3, 4, 5, 6, 7, 8 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 46.9977, 31.9723 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "Hover"
-length = 0.7
+[sub_resource type="Animation" id=4]
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -59,10 +75,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 5 ]
+"values": [ 0, 1, 2 ]
 }
 
 [node name="Game" type="Node2D"]
@@ -133,6 +149,7 @@ texture = ExtResource( 16 )
 [node name="archive" type="Sprite" parent="Elements"]
 position = Vector2( 277.411, 115.566 )
 texture = ExtResource( 18 )
+hframes = 3
 
 [node name="ArchiveButton" type="TextureButton" parent="Elements/archive"]
 margin_left = -18.3245
@@ -142,6 +159,9 @@ margin_bottom = 10.2651
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Anim" type="AnimationPlayer" parent="Elements/archive"]
+anims/Hover = SubResource( 1 )
 
 [node name="desk" type="Sprite" parent="Elements"]
 position = Vector2( 106.578, 145.577 )
@@ -181,8 +201,8 @@ __meta__ = {
 [node name="calendary" type="Sprite" parent="Elements"]
 position = Vector2( 167.755, 100.561 )
 texture = ExtResource( 13 )
-hframes = 11
-frame = 8
+hframes = 5
+frame = 3
 
 [node name="MaskButton" type="TextureButton" parent="Elements/calendary"]
 margin_left = -20.9547
@@ -194,22 +214,23 @@ __meta__ = {
 }
 
 [node name="Anim" type="AnimationPlayer" parent="Elements/calendary"]
-anims/Hover = SubResource( 3 )
+anims/Hover = SubResource( 2 )
 
 [node name="tv-anim" type="Sprite" parent="Elements"]
-position = Vector2( 52, 74 )
+position = Vector2( 57.2219, 74 )
 texture = ExtResource( 28 )
-hframes = 12
+hframes = 3
 
 [node name="PCArea" type="Area2D" parent="Elements/tv-anim"]
 position = Vector2( -52.3274, -74.0124 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elements/tv-anim/PCArea"]
-position = Vector2( 53.0679, 67.7248 )
-shape = SubResource( 1 )
+visible = false
+position = Vector2( 48.7955, 67.7248 )
+shape = SubResource( 3 )
 
 [node name="Animator" type="AnimationPlayer" parent="Elements/tv-anim"]
-anims/Hover = SubResource( 2 )
+anims/Hover = SubResource( 4 )
 
 [node name="tv on" type="Sprite" parent="Elements"]
 visible = false
@@ -240,59 +261,8 @@ texture = ExtResource( 27 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Dialogs" type="Control" parent="HUD"]
-visible = false
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 29 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="HUD/Dialogs"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -49.2472
-margin_bottom = 0.752827
-color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="HUD/Dialogs"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = -40.0
-margin_right = -20.0
-margin_bottom = -6.49908
-rect_clip_content = false
-custom_fonts/normal_font = ExtResource( 5 )
-bbcode_enabled = true
-bbcode_text = "[center]Texto de prueba[/center]"
-text = "Texto de prueba"
-scroll_active = false
-
-[node name="DialogTime" type="Timer" parent="HUD/Dialogs"]
-wait_time = 5.0
-
-[node name="ConfirmButton" type="Button" parent="HUD/Dialogs"]
-margin_left = 88.1868
-margin_top = -16.6066
-margin_right = 140.187
-margin_bottom = -2.6066
-custom_fonts/font = ExtResource( 5 )
-text = "ABRIR"
-
-[node name="DenyButton" type="Button" parent="HUD/Dialogs"]
-margin_left = 191.835
-margin_top = -16.6066
-margin_right = 243.835
-margin_bottom = -2.6066
-custom_fonts/font = ExtResource( 5 )
-text = "NO ABRIR"
-
 [node name="Popup" type="Popup" parent="HUD"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -329,11 +299,43 @@ alignment = 1
 
 [node name="Logo" type="Label" parent="HUD/Popup"]
 margin_left = 34.0
-margin_top = 26.0
+margin_top = 30.7472
 margin_right = 78.0
-margin_bottom = 32.0
+margin_bottom = 36.7472
 custom_fonts/font = ExtResource( 5 )
-text = "NOTFACEBOOK"
+text = "NOTICIAS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblFakes" type="Label" parent="HUD/Popup"]
+margin_left = 13.1125
+margin_top = 20.8287
+margin_right = 113.112
+margin_bottom = 26.8287
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.945098, 0.913725, 0.0901961, 1 )
+text = "FALSAS FILTRADAS 0 / 5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblErrors" type="Label" parent="HUD/Popup"]
+margin_left = 121.823
+margin_top = 20.8287
+margin_right = 221.823
+margin_bottom = 26.8287
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.945098, 0.913725, 0.0901961, 1 )
+text = "ERRORES 0 / 5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GoogleSearch" type="ColorRect" parent="HUD/Popup"]
 margin_left = 116.0
@@ -346,11 +348,11 @@ __meta__ = {
 
 [node name="NotGoogle" type="Label" parent="HUD/Popup/GoogleSearch"]
 anchor_right = 1.0
-margin_top = -12.9777
-margin_bottom = -6.97769
+margin_top = -8.23053
+margin_bottom = -2.23052
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "NOTGOOGLE"
+text = "BUSCADOR"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -655,11 +657,91 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Dialogs" type="Control" parent="HUD"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Dialogs"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -49.2472
+margin_bottom = 0.752827
+color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/Dialogs"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -40.0
+margin_right = -20.0
+margin_bottom = -6.49908
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]Texto de prueba[/center]"
+text = "Texto de prueba"
+scroll_active = false
+
+[node name="DialogTime" type="Timer" parent="HUD/Dialogs"]
+wait_time = 5.0
+
+[node name="ConfirmButton" type="Button" parent="HUD/Dialogs"]
+margin_left = 88.1868
+margin_top = -16.6066
+margin_right = 140.187
+margin_bottom = -2.6066
+custom_fonts/font = ExtResource( 5 )
+text = "ABRIR"
+
+[node name="DenyButton" type="Button" parent="HUD/Dialogs"]
+margin_left = 191.835
+margin_top = -16.6066
+margin_right = 243.835
+margin_bottom = -2.6066
+custom_fonts/font = ExtResource( 5 )
+text = "NO ABRIR"
+
+[node name="GameOver" type="Popup" parent="HUD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lightbox" type="ColorRect" parent="HUD/GameOver"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.290196, 0.0666667, 0.392157, 0.333333 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="TextureRect" parent="HUD/GameOver"]
+margin_left = 93.0442
+margin_top = 37.5025
+margin_right = 389.044
+margin_bottom = 213.503
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
 volume_db = -10.0
 autoplay = true
 [connection signal="pressed" from="Elements/posters/PostersButton" to="." method="_on_PostersButton_pressed"]
+[connection signal="mouse_entered" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_mouse_exited"]
 [connection signal="pressed" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_pressed"]
 [connection signal="pressed" from="Elements/desk/Drawer1" to="." method="_on_Drawer1_pressed"]
 [connection signal="pressed" from="Elements/desk/Drawer2" to="." method="_on_Drawer2_pressed"]
@@ -671,9 +753,9 @@ autoplay = true
 [connection signal="mouse_entered" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_entered"]
 [connection signal="mouse_exited" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_exited"]
 [connection signal="pressed" from="Elements/portrait/PortraitButton" to="." method="_on_PortraitButton_pressed"]
-[connection signal="timeout" from="HUD/Dialogs/DialogTime" to="HUD/Dialogs" method="_on_DialogTime_timeout"]
-[connection signal="pressed" from="HUD/Dialogs/ConfirmButton" to="HUD/Dialogs" method="_on_ConfirmButton_pressed"]
-[connection signal="pressed" from="HUD/Dialogs/DenyButton" to="HUD/Dialogs" method="_on_DenyButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="HUD/Dialogs/DialogTime" to="HUD/Dialogs" method="_on_DialogTime_timeout"]
+[connection signal="pressed" from="HUD/Dialogs/ConfirmButton" to="HUD/Dialogs" method="_on_ConfirmButton_pressed"]
+[connection signal="pressed" from="HUD/Dialogs/DenyButton" to="HUD/Dialogs" method="_on_DenyButton_pressed"]

@@ -24,7 +24,11 @@ func _ready():
 			news_container.add_child(news_entity)
 			news_entity.set_data(news.id, news.title, news.date, news.image)
 			news_entity.connect("search_news", self, "on_news_searched")
-	pass
+	
+	$HUD/Dialogs.show_dialog([
+		"Hora de ponerse a trabajar. La ".to_upper() + colorize("inspección de internet", "yellow") + ", no se va a hacer sola!".to_upper(),
+		"Cuando estés listo ve a la ".to_upper() + colorize("computadora", "yellow")
+	])
 
 func get_news_by_id (news_id):
 	for news in Globals.NEWS:
@@ -46,11 +50,21 @@ func on_news_searched( id ):
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
+			if $HUD/Dialogs.is_running:
+				return
 			$HUD/Popup.rect_position = Vector2(-320,0)
 			$HUD/Popup.show()
 			
 			popup_tween.interpolate_property($HUD/Popup, "rect_position:x", -320, 0, 1, Tween.TRANS_QUAD, Tween.EASE_OUT)
 			popup_tween.start()
+			
+			yield(popup_tween, "tween_completed")
+			if Globals.first_play:
+				Globals.first_play = false
+				$HUD/Dialogs.show_dialog([
+					"Aquí verás las noticias ".to_upper() + colorize("busca información sobre ellas", "yellow") + " antes de rechazarlas o aceptarlas solo porque si".to_upper(),
+					"Haz click fuera de la pantalla para ".to_upper() + colorize("cerrar", "yellow")
+				])
 
 func _on_SearcherButton_pressed():
 	empty_holder_str = $HUD/Popup/GoogleSearch/EmptyHolder.text
@@ -111,8 +125,11 @@ func _on_MaskButton_mouse_exited():
 # Pressed elements
 
 func father(msg):
-	return "[color=#B6AFE3]" + msg.to_upper() + "[/color]"
+	return "[color=#DDDCE3]" + msg.to_upper() + "[/color]"
 
+func colorize(msg, color):
+	return "[color="+color+"]" + msg.to_upper() + "[/color]"
+	
 func _on_MaskButton_pressed():
 	$HUD/Dialogs.show_dialog([
 		"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]",
@@ -120,6 +137,7 @@ func _on_MaskButton_pressed():
 	])
 
 func _on_PortraitButton_pressed():
+	
 	$HUD/Dialogs.show_dialog([
 		"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE [color=yellow]CLARA VERDESOTO[/color]",
 		father("TIENES A TU MADRE EN LA SONRISA.")
@@ -127,16 +145,16 @@ func _on_PortraitButton_pressed():
 
 func _on_ArchiveButton_pressed():
 	$HUD/Dialogs.show_dialog([
-		"Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”".to_upper(),
-		father("Los lirios ahora me parecen más pequeños, más frágiles. ¿Hay lirios en el vacío, CLARA?")
+		"Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: ".to_upper() + colorize("“Especies indómitas de Latinoamérica y flora salvaje”", "yellow"),
+		father("Los lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?")
 	])
 
 func _on_Drawer1_pressed():
 	$HUD/Dialogs.show_dialog([
-		"Dentro del cajón hay una carpeta que lleva el nombre de CLARA.".to_upper(),
+		"Dentro del cajón hay una carpeta que lleva el nombre de ".to_upper() + colorize("CLARA.", "yellow"),
 		father("¿Descuidaste esto?. Debería estar en el estudio."),
 		"[QUESTION]",
-		"INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.",
+		"INFORME 00034: "+colorize("CORNHEAL INDUSTRIES", "red")+"\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.",
 		father("¿Patógenos en masa?"),
 		"[END]",
 		father("Será mejor dejarte descansar.")
@@ -144,12 +162,12 @@ func _on_Drawer1_pressed():
 
 func _on_PostersButton_pressed():
 	$HUD/Dialogs.show_dialog([
-		"Se distinguen un afiche de una película bizarra, un retrato de CLARA  a carboncillo, y una planta pintada en acuarela.".to_upper()
+		"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.".to_upper()
 	])
 
 func _on_Drawer2_pressed():
 	$HUD/Dialogs.show_dialog([
-		"En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA.".to_upper(),
+		"En el cajón hay ".to_upper() + colorize("dos discos de punk", "yellow") + ", ambos con carátulas garabateadas con la palabra CLARA.".to_upper(),
 		"[QUESTION]",
 		"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge".to_upper(),
 		father("¿Pero quién diablos es ese JORGE?"),
@@ -157,12 +175,11 @@ func _on_Drawer2_pressed():
 		father("No suena tan mal después de todo."),
 		"¿Abro el segundo disco?".to_upper(),
 		"[QUESTION]",
-		"Un trozo de papel cae. Se lee un número : 03- 3365- 428 Thomas Berstein.".to_upper(),
+		"Un trozo de papel cae. Se lee un número :".to_upper() + colorize("03-3365-428 Thomas Berstein.", "yellow"),
 		father("Berstein... ¿de dónde me suena esto?"),
 		"[END]",
 		father("¿Dónde venderán reproductores de CD´s?")
 	])
-
 
 func _on_BookButton_pressed():
 	$HUD/Dialogs.show_dialog([
@@ -174,3 +191,9 @@ func _on_BookButton_pressed():
 		"[END]",
 		father("Que al menos tus secretos se mantengan en paz")
 	])
+
+func _on_ArchiveButton_mouse_entered():
+	$Elements/archive/Anim.play("Hover")
+
+func _on_ArchiveButton_mouse_exited():
+	$Elements/archive/Anim.play_backwards("Hover")

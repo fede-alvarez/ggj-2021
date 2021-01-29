@@ -131,7 +131,7 @@ const NEWS = [
 	},
 	{ 
 		"id" : 17,
-		"title" : "Ecologistas han declarado manifestaciones masivas en los próximos días. 'El agua no se vende, es un derecho natural'", 
+		"title" : "Ecologistas han declarado manifestaciones en los próximos días. 'El agua no se vende, es un derecho natural'", 
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
@@ -171,7 +171,7 @@ const NEWS = [
 	},
 	{ 
 		"id" : 22,
-		"title" : "Francia e Inglaterra no han superado sus diferencias políticas y esto ha complicado el ingreso de dosis en territorio Francés.", 
+		"title" : "Francia e Inglaterra no han superado sus diferencias y esto ha complicado el ingreso de dosis en territorio Francés.", 
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
@@ -196,7 +196,7 @@ const NEWS = [
 	
 	{ 
 		"id" : 25,
-		"title" : "Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica inminente.", 
+		"title" : "Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.", 
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
@@ -243,6 +243,22 @@ const NEWS = [
 		"is_story" : false
 	},
 ]
+
+const TOTAL_FAKE_NEWS = 4
+const MAX_ERRORES = 3
+
+var first_play = true
+var fake_news = 0
+var total_errors = 0
+
+func add_fake_news():
+	fake_news += 1
+	
+func add_error():
+	total_errors += 1
+	if total_errors > MAX_ERRORES:
+		total_errors = MAX_ERRORES
+		print("Game over")
 
 func get_news():
 	randomize()

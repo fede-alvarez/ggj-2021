@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/accept_button.png" type="Texture" id=2]
@@ -9,12 +9,29 @@
 [ext_resource path="res://assets/ui/search_button.png" type="Texture" id=7]
 [ext_resource path="res://assets/elements/news_images/1_capitolio.png" type="Texture" id=8]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.952941, 0.952941, 0.952941, 1 )
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.956863, 0.956863, 0.956863, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.701961, 0.0627451, 0.0627451, 0.784314 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.247059, 0.678431, 0.364706, 0.784314 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
 
 [node name="Noticia" type="Control"]
 script = ExtResource( 6 )
@@ -25,7 +42,7 @@ __meta__ = {
 [node name="Base" type="Panel" parent="."]
 margin_right = 86.0
 margin_bottom = 140.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -100,9 +117,9 @@ __meta__ = {
 
 [node name="Separator" type="ColorRect" parent="Base"]
 margin_left = 3.5
-margin_top = 128.061
+margin_top = 127.117
 margin_right = 53.5
-margin_bottom = 153.061
+margin_bottom = 152.117
 rect_scale = Vector2( 1.6, 0.05 )
 color = Color( 0.85098, 0.85098, 0.85098, 1 )
 __meta__ = {
@@ -111,9 +128,9 @@ __meta__ = {
 
 [node name="Fecha" type="Label" parent="Base"]
 margin_left = 4.86535
-margin_top = 119.188
+margin_top = 118.244
 margin_right = 36.8654
-margin_bottom = 125.188
+margin_bottom = 124.244
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.733333, 0.733333, 0.733333, 1 )
 text = "01/01/21"
@@ -124,9 +141,9 @@ __meta__ = {
 
 [node name="HearthIcon" type="TextureRect" parent="Base"]
 margin_left = 44.5752
-margin_top = 118.5
+margin_top = 117.556
 margin_right = 52.5752
-margin_bottom = 126.5
+margin_bottom = 125.556
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -148,9 +165,9 @@ __meta__ = {
 
 [node name="CommentsIcon" type="TextureRect" parent="Base"]
 margin_left = 64.9341
-margin_top = 117.897
+margin_top = 116.953
 margin_right = 72.9341
-margin_bottom = 125.897
+margin_bottom = 124.953
 texture = ExtResource( 4 )
 
 [node name="LblComments" type="Label" parent="Base/CommentsIcon"]
@@ -169,9 +186,9 @@ __meta__ = {
 
 [node name="Separator2" type="ColorRect" parent="Base"]
 margin_left = 3.5
-margin_top = 114.189
+margin_top = 113.245
 margin_right = 53.5
-margin_bottom = 139.189
+margin_bottom = 138.245
 rect_scale = Vector2( 1.6, 0.05 )
 color = Color( 0.85098, 0.85098, 0.85098, 1 )
 __meta__ = {
@@ -179,10 +196,10 @@ __meta__ = {
 }
 
 [node name="AcceptButton" type="TextureButton" parent="Base"]
-margin_left = 3.82528
-margin_top = 132.084
-margin_right = 23.8253
-margin_bottom = 142.084
+margin_left = 4.76879
+margin_top = 130.589
+margin_right = 24.7688
+margin_bottom = 140.589
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 2 )
 expand = true
@@ -191,10 +208,10 @@ __meta__ = {
 }
 
 [node name="RejectButton" type="TextureButton" parent="Base"]
-margin_left = 25.8253
-margin_top = 132.084
-margin_right = 45.8253
-margin_bottom = 142.084
+margin_left = 26.7688
+margin_top = 130.589
+margin_right = 46.7688
+margin_bottom = 140.589
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
 expand = true
@@ -203,13 +220,58 @@ __meta__ = {
 }
 
 [node name="SearchButton" type="TextureButton" parent="Base"]
-margin_left = 64.0
-margin_top = 132.084
-margin_right = 84.0
-margin_bottom = 142.084
+margin_left = 63.4339
+margin_top = 130.589
+margin_right = 83.4339
+margin_bottom = 140.589
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rejected" type="Panel" parent="."]
+visible = false
+margin_right = 86.0
+margin_bottom = 140.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="Rejected"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_right = 7.62939e-06
+margin_bottom = 10.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]RECHAZADO[/wave][/center]"
+text = "RECHAZADO"
+
+[node name="Passed" type="Panel" parent="."]
+visible = false
+margin_right = 86.0
+margin_bottom = 140.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text2" type="RichTextLabel" parent="Passed"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_right = 7.62939e-06
+margin_bottom = 10.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]APROVADO[/wave][/center]"
+text = "APROVADO"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -8,6 +8,10 @@ var rand = RandomNumberGenerator.new()
 var id = -1
 signal search_news
 
+func _ready():
+	$Rejected.visible = false
+	$Passed.visible = false
+
 func set_data(news_id, title, date, image):
 	id = news_id
 	$Base/Titulo.text = title.to_upper()
@@ -21,12 +25,12 @@ func set_data(news_id, title, date, image):
 	comments.text = String(rand.randi_range(0,30))
 
 func _on_AcceptButton_pressed():
-	tween.interpolate_property($Base, "modulate", Color(1,1,1,1), Color(1,1,1,0), 1.2)
-	tween.start()
+	$Rejected.visible = false
+	$Passed.visible = true
 
 func _on_RejectButton_pressed():
-	tween.interpolate_property($Base, "modulate", Color(1,1,1,1), Color(1,1,1,0), 1.2)
-	tween.start()
+	$Passed.visible = false
+	$Rejected.visible = true
 
 func _on_SearchButton_pressed():
 	emit_signal("search_news", id)

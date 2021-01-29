@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/(Recuerdos song) - Cuando da click en la foto y en el calendario.ogg-646e558aea151b99572dbd14298a1e7d.oggstr"
+
+[deps]
+
+source_file="res://assets/music/(Recuerdos song) - Cuando da click en la foto y en el calendario.ogg"
+dest_files=[ "res://.import/(Recuerdos song) - Cuando da click en la foto y en el calendario.ogg-646e558aea151b99572dbd14298a1e7d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

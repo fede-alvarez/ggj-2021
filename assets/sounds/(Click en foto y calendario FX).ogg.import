@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/(Click en foto y calendario FX).ogg-2d6d7818a3bf43ece5fda41e9a8c49f1.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/(Click en foto y calendario FX).ogg"
+dest_files=[ "res://.import/(Click en foto y calendario FX).ogg-2d6d7818a3bf43ece5fda41e9a8c49f1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

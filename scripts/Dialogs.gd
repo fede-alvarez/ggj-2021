@@ -8,12 +8,16 @@ var dialogs = []
 var current_dialog = 0
 var dialogs_count = 0
 
+var is_running = false
 func _ready():
 	confirm_button.visible = false
 	deny_button.visible = false
 	visible = false
 	
 func show_dialog( dialog_lines ):
+	if is_running:
+		return
+	is_running = true
 	visible = true
 	dialogs_count = dialog_lines.size()
 	dialogs.clear()
@@ -56,6 +60,7 @@ func close_dialog():
 	current_dialog = 0
 	$DialogTime.stop()
 	visible = false
+	is_running = false
 
 func _on_ConfirmButton_pressed():
 	hide_buttons()
