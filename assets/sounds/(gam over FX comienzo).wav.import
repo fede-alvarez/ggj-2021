@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/(gam over FX comienzo).wav-6346b2e07e6613fbeed3c6dc4f18a72f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/(gam over FX comienzo).wav"
+dest_files=[ "res://.import/(gam over FX comienzo).wav-6346b2e07e6613fbeed3c6dc4f18a72f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

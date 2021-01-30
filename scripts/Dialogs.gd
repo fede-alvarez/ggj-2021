@@ -9,6 +9,9 @@ var current_dialog = 0
 var dialogs_count = 0
 
 var is_running = false
+
+signal dialogs_over
+
 func _ready():
 	confirm_button.visible = false
 	deny_button.visible = false
@@ -61,6 +64,7 @@ func close_dialog():
 	$DialogTime.stop()
 	visible = false
 	is_running = false
+	emit_signal("dialogs_over")
 
 func _on_ConfirmButton_pressed():
 	hide_buttons()

@@ -40,7 +40,7 @@ __meta__ = {
 }
 
 [node name="Base" type="Panel" parent="."]
-margin_right = 86.0
+margin_right = 85.0
 margin_bottom = 140.0
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
@@ -48,9 +48,8 @@ __meta__ = {
 }
 
 [node name="Foto" type="TextureRect" parent="Base"]
-margin_left = 1.0
 margin_top = 4.0
-margin_right = 86.0
+margin_right = 85.0
 margin_bottom = 29.0
 texture = ExtResource( 8 )
 __meta__ = {
@@ -196,10 +195,10 @@ __meta__ = {
 }
 
 [node name="AcceptButton" type="TextureButton" parent="Base"]
-margin_left = 4.76879
-margin_top = 130.589
-margin_right = 24.7688
-margin_bottom = 140.589
+margin_left = 4.22019
+margin_top = 129.217
+margin_right = 24.2202
+margin_bottom = 139.217
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 2 )
 expand = true
@@ -208,10 +207,10 @@ __meta__ = {
 }
 
 [node name="RejectButton" type="TextureButton" parent="Base"]
-margin_left = 26.7688
-margin_top = 130.589
-margin_right = 46.7688
-margin_bottom = 140.589
+margin_left = 26.2202
+margin_top = 129.217
+margin_right = 46.2202
+margin_bottom = 139.217
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
 expand = true
@@ -220,10 +219,10 @@ __meta__ = {
 }
 
 [node name="SearchButton" type="TextureButton" parent="Base"]
-margin_left = 63.4339
-margin_top = 130.589
-margin_right = 83.4339
-margin_bottom = 140.589
+margin_left = 62.8853
+margin_top = 129.217
+margin_right = 82.8853
+margin_bottom = 139.217
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
@@ -244,8 +243,9 @@ __meta__ = {
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+margin_top = 6.85748
 margin_right = 7.62939e-06
-margin_bottom = 10.0
+margin_bottom = 16.8575
 rect_clip_content = false
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
@@ -261,17 +261,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Text2" type="RichTextLabel" parent="Passed"]
+[node name="Text" type="RichTextLabel" parent="Passed"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+margin_top = 8.50327
 margin_right = 7.62939e-06
-margin_bottom = 10.0
+margin_bottom = 18.5033
 rect_clip_content = false
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[center][wave]APROVADO[/wave][/center]"
-text = "APROVADO"
+bbcode_text = "[center][wave]APROBADO[/wave][/center]"
+text = "APROBADO"
 __meta__ = {
 "_edit_use_anchors_": false
 }

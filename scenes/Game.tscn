@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/elements/newspaper.png" type="Texture" id=2]
@@ -62,9 +62,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 4, 3, 4, 5, 6, 7, 8 ]
 }
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 46.9977, 31.9723 )
 
 [sub_resource type="Animation" id=4]
 length = 0.4
@@ -221,13 +218,14 @@ position = Vector2( 57.2219, 74 )
 texture = ExtResource( 28 )
 hframes = 3
 
-[node name="PCArea" type="Area2D" parent="Elements/tv-anim"]
-position = Vector2( -52.3274, -74.0124 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Elements/tv-anim/PCArea"]
-visible = false
-position = Vector2( 48.7955, 67.7248 )
-shape = SubResource( 3 )
+[node name="PCButton" type="TextureButton" parent="Elements/tv-anim"]
+margin_left = -43.5953
+margin_top = -35.3765
+margin_right = 46.4047
+margin_bottom = 34.6235
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Animator" type="AnimationPlayer" parent="Elements/tv-anim"]
 anims/Hover = SubResource( 4 )
@@ -283,11 +281,132 @@ position = Vector2( 0, 2 )
 texture = ExtResource( 3 )
 centered = false
 
+[node name="TaskBar" type="ColorRect" parent="HUD/Popup"]
+margin_left = 5.5
+margin_top = 152.0
+margin_right = 229.5
+margin_bottom = 158.0
+color = Color( 0.294118, 0.207843, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="ColorRect" parent="HUD/Popup/TaskBar"]
+margin_right = 40.0
+margin_bottom = 8.0
+color = Color( 0.435294, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon2" type="ColorRect" parent="HUD/Popup/TaskBar"]
+margin_left = 215.292
+margin_top = 2.46262
+margin_right = 219.292
+margin_bottom = 6.46262
+color = Color( 0.792157, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon3" type="ColorRect" parent="HUD/Popup/TaskBar"]
+margin_left = 208.032
+margin_top = 2.46262
+margin_right = 212.032
+margin_bottom = 6.46262
+color = Color( 0.792157, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon4" type="ColorRect" parent="HUD/Popup/TaskBar"]
+margin_left = 201.088
+margin_top = 2.46262
+margin_right = 205.088
+margin_bottom = 6.46262
+color = Color( 0.792157, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotGoogle" type="Label" parent="HUD/Popup/TaskBar"]
+anchor_right = 1.0
+margin_left = 9.20123
+margin_top = 1.5
+margin_right = -5.79878
+margin_bottom = 7.50001
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.909804, 0.701961, 0.960784, 1 )
+text = "INICIO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeaderNoticias" type="ColorRect" parent="HUD/Popup"]
+margin_left = 9.60035
+margin_top = 31.0
+margin_right = 113.6
+margin_bottom = 39.0
+color = Color( 0.294118, 0.207843, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="ColorRect" parent="HUD/Popup/HeaderNoticias"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.435294, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon2" type="ColorRect" parent="HUD/Popup/HeaderNoticias"]
+margin_left = 97.5252
+margin_top = 2.46262
+margin_right = 101.525
+margin_bottom = 6.46262
+color = Color( 0.823529, 0.223529, 0.223529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon3" type="ColorRect" parent="HUD/Popup/HeaderNoticias"]
+margin_left = 90.2652
+margin_top = 2.46262
+margin_right = 94.2652
+margin_bottom = 6.46262
+color = Color( 0.823529, 0.717647, 0.223529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon4" type="ColorRect" parent="HUD/Popup/HeaderNoticias"]
+margin_left = 83.3208
+margin_top = 2.46262
+margin_right = 87.3208
+margin_bottom = 6.46262
+color = Color( 0.223529, 0.823529, 0.470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotGoogle" type="Label" parent="HUD/Popup/HeaderNoticias"]
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 1.5
+margin_bottom = 7.50001
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "NOTICIAS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="NewsContainer" type="ScrollContainer" parent="HUD/Popup"]
-margin_left = 13.7959
-margin_top = 38.6881
-margin_right = 113.796
-margin_bottom = 148.688
+margin_left = 12.0
+margin_top = 40.0
+margin_right = 112.0
+margin_bottom = 150.0
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -296,18 +415,6 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Popup/NewsContainer"]
 custom_constants/separation = 144
 alignment = 1
-
-[node name="Logo" type="Label" parent="HUD/Popup"]
-margin_left = 34.0
-margin_top = 30.7472
-margin_right = 78.0
-margin_bottom = 36.7472
-custom_fonts/font = ExtResource( 5 )
-text = "NOTICIAS"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LblFakes" type="Label" parent="HUD/Popup"]
 margin_left = 13.1125
@@ -346,14 +453,60 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NotGoogle" type="Label" parent="HUD/Popup/GoogleSearch"]
+[node name="WindowHeader" type="ColorRect" parent="HUD/Popup/GoogleSearch"]
+margin_top = -8.0
+margin_right = 104.0
+color = Color( 0.294118, 0.207843, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="ColorRect" parent="HUD/Popup/GoogleSearch/WindowHeader"]
+margin_right = 8.0
+margin_bottom = 8.0
+color = Color( 0.435294, 0.223529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon2" type="ColorRect" parent="HUD/Popup/GoogleSearch/WindowHeader"]
+margin_left = 97.5252
+margin_top = 2.46262
+margin_right = 101.525
+margin_bottom = 6.46262
+color = Color( 0.823529, 0.223529, 0.223529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon3" type="ColorRect" parent="HUD/Popup/GoogleSearch/WindowHeader"]
+margin_left = 90.2652
+margin_top = 2.46262
+margin_right = 94.2652
+margin_bottom = 6.46262
+color = Color( 0.823529, 0.717647, 0.223529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon4" type="ColorRect" parent="HUD/Popup/GoogleSearch/WindowHeader"]
+margin_left = 83.3208
+margin_top = 2.46262
+margin_right = 87.3208
+margin_bottom = 6.46262
+color = Color( 0.223529, 0.823529, 0.470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotGoogle" type="Label" parent="HUD/Popup/GoogleSearch/WindowHeader"]
 anchor_right = 1.0
-margin_top = -8.23053
-margin_bottom = -2.23052
+margin_left = 10.0
+margin_top = 1.5
+margin_bottom = 7.50001
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "BUSCADOR"
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -438,13 +591,14 @@ margin_right = 198.0
 margin_bottom = 52.3911
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.588235, 0.588235, 0.588235, 1 )
-text = "SEARCH..."
+text = "BUSCAR..."
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="NewsDetail" type="Control" parent="HUD/Popup"]
+visible = false
 margin_left = 116.0
 margin_top = 39.0
 margin_right = 220.0
@@ -735,10 +889,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Transition" type="Control" parent="HUD"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="HUD/Transition"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.109804, 0.0156863, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionTween" type="Tween" parent="HUD/Transition"]
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
 volume_db = -10.0
-autoplay = true
+
+[node name="MusicTween" type="Tween" parent="MusicPlayer"]
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
 [connection signal="pressed" from="Elements/posters/PostersButton" to="." method="_on_PostersButton_pressed"]
 [connection signal="mouse_entered" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_mouse_entered"]
 [connection signal="mouse_exited" from="Elements/archive/ArchiveButton" to="." method="_on_ArchiveButton_mouse_exited"]
@@ -749,9 +925,9 @@ autoplay = true
 [connection signal="mouse_entered" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_entered"]
 [connection signal="mouse_exited" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_mouse_exited"]
 [connection signal="pressed" from="Elements/calendary/MaskButton" to="." method="_on_MaskButton_pressed"]
-[connection signal="input_event" from="Elements/tv-anim/PCArea" to="." method="_on_Area2D_input_event"]
-[connection signal="mouse_entered" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_entered"]
-[connection signal="mouse_exited" from="Elements/tv-anim/PCArea" to="." method="_on_PCArea_mouse_exited"]
+[connection signal="mouse_entered" from="Elements/tv-anim/PCButton" to="." method="_on_PCButton_mouse_entered"]
+[connection signal="mouse_exited" from="Elements/tv-anim/PCButton" to="." method="_on_PCButton_mouse_exited"]
+[connection signal="pressed" from="Elements/tv-anim/PCButton" to="." method="_on_PCButton_pressed"]
 [connection signal="pressed" from="Elements/portrait/PortraitButton" to="." method="_on_PortraitButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]

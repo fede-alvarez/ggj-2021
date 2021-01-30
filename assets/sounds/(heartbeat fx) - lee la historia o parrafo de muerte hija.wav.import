@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/(heartbeat fx) - lee la historia o parrafo de muerte hija.wav-ecfdaceda3a1af972925e65162e3fd83.sample"
+
+[deps]
+
+source_file="res://assets/sounds/(heartbeat fx) - lee la historia o parrafo de muerte hija.wav"
+dest_files=[ "res://.import/(heartbeat fx) - lee la historia o parrafo de muerte hija.wav-ecfdaceda3a1af972925e65162e3fd83.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

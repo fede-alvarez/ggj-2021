@@ -27,7 +27,7 @@ const NEWS = [
 	},
 	{ 
 		"id" : 4,
-		"title" : "Familia completa vinculada el acto terrorista contra el capitolio. El gato de la familia también fue procesado.", 
+		"title" : "Familia completa vinculada al acto terrorista contra el capitolio. El gato de la familia también fue procesado.", 
 		"date"  : "01/01/21",
 		"image" : "1_capitolio", 
 		"is_fake" : true,
@@ -242,6 +242,79 @@ const NEWS = [
 		"is_fake" : false,
 		"is_story" : false
 	},
+	
+	{ 
+		"id" : 31,
+		"title" : "Se han detectado síntomas de MST-19 en animales domésticos.",
+		"date"  : "01/04/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	},
+	{ 
+		"id" : 32,
+		"title" : "Las mascotas de todos los distritos centrales serán puestas en cuarentena.",
+		"date"  : "22/09/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	},
+	{ 
+		"id" : 33,
+		"title" : "Se denuncia mal administración en la distribución de vacunas para los centros veterinarios",
+		"date"  : "11/05/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	},
+	{ 
+		"id" : 34,
+		"title" : "Se denuncia mal administración en la distribución de vacunas para los centros veterinarios",
+		"date"  : "11/05/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	},
+	{
+		"id" : 35,
+		"title" : "MST-19 para animales no protege a humanos",
+		"date"  : "12/10/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : false,
+		"is_story" : false
+	},
+	{
+		"id" : 36,
+		"title" : "Thomas Berstein, gerente de CornHeal  ha pactado un acuerdo de inmunidad con países del Sur.",
+		"date"  : "01/10/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : true
+	},
+	{
+		"id" : 37,
+		"title" : "Gobernante de Región Central presenta gotas 'milagrosas' que 'neutralizan' la peste",
+		"date"  : "01/10/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : false,
+		"is_story" : true
+	},
+	{
+		"id" : 38,
+		"title" : "La empresa 'BIOquimik' ha desarrollado una fórmula soluble para tratamiento del MST-19.",
+		"date"  : "01/10/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	},
+	{
+		"id" : 39,
+		"title" : "La siguiente semana empiezan pruebas de medicamento piloto 'Regional Sur'. ¡Altas expectativas!",
+		"date"  : "01/10/19",
+		"image" : "4_virus_covid", 
+		"is_fake" : true,
+		"is_story" : false
+	}
 ]
 
 const TOTAL_FAKE_NEWS = 4

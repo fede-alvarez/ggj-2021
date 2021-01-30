@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/logo/logo_01_completo.png" type="Texture" id=1]
 [ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/backgrounds/base.png" type="Texture" id=5]
 [ext_resource path="res://assets/elements/desk.png" type="Texture" id=6]
 [ext_resource path="res://assets/elements/windows.png" type="Texture" id=7]
-[ext_resource path="res://assets/elements/animations/g4_tv.png" type="Texture" id=8]
+[ext_resource path="res://assets/elements/interface.png" type="Texture" id=8]
 [ext_resource path="res://assets/elements/silla.png" type="Texture" id=9]
 [ext_resource path="res://assets/elements/boxes.png" type="Texture" id=10]
 [ext_resource path="res://assets/elements/velador.png" type="Texture" id=11]
@@ -15,6 +15,23 @@
 [ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=13]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=14]
 [ext_resource path="res://assets/music/(Dubitativo song) Opennin pantalla principal.ogg" type="AudioStream" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 4, 3, 2, 1 ]
+}
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 14 )
@@ -38,7 +55,12 @@ texture = ExtResource( 6 )
 [node name="tv on" type="Sprite" parent="background"]
 position = Vector2( 67.6602, 76.5331 )
 texture = ExtResource( 8 )
-hframes = 3
+hframes = 5
+frame = 1
+
+[node name="Idle" type="AnimationPlayer" parent="background/tv on"]
+autoplay = "Idle"
+anims/Idle = SubResource( 1 )
 
 [node name="portrait" type="Sprite" parent="background"]
 position = Vector2( 16.7727, 102.947 )
@@ -76,7 +98,7 @@ texture = ExtResource( 10 )
 position = Vector2( 102.614, 128.137 )
 texture = ExtResource( 9 )
 
-[node name="logo_01_completo" type="Sprite" parent="."]
+[node name="Logo" type="Sprite" parent="."]
 position = Vector2( 212.942, 92.946 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
@@ -136,7 +158,6 @@ __meta__ = {
 }
 
 [node name="CreditosPopup" type="Popup" parent="Control"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -164,25 +185,27 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CreditosPopup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 19.3073
-margin_bottom = -0.692673
+margin_top = 14.6537
+margin_bottom = -5.34634
 custom_fonts/normal_font = ExtResource( 13 )
 bbcode_enabled = true
 bbcode_text = "[center]
 [wave][color=red]PROGRAMACIÓN[/color][/wave]
 
-FEDERICO ALVAREZ [color=yellow](@FEFOALVAREZ)[/color]
+FEDERICO ALVAREZ 
+[color=yellow]@FEFOALVAREZ[/color]
 
 [wave][color=red]ARTE / DISEÑO[/color][/wave]
 
-[color=yellow]@RAVEN[/color]
+GABRIELA MORENO
 
 GEOVANNY GAVILANES
 [color=yellow]HTTP://VANGALTHER.ITCH.IO[/color]
 
 [wave][color=red]MÚSICA / SONIDOS[/color][/wave]
 
-[color=yellow]@JJ23[/color]
+JJOSUÉ JARAMILLO
+[color=yellow]HTTPS://SOUNDCLOUD.COM/JJSUITU[/color]
 
 [wave][color=red]NARRATIVA[/color][/wave]
 
@@ -191,18 +214,20 @@ GEOVANNY GAVILANES
 text = "
 PROGRAMACIÓN
 
-FEDERICO ALVAREZ (@FEFOALVAREZ)
+FEDERICO ALVAREZ 
+@FEFOALVAREZ
 
 ARTE / DISEÑO
 
-@RAVEN
+GABRIELA MORENO
 
 GEOVANNY GAVILANES
 HTTP://VANGALTHER.ITCH.IO
 
 MÚSICA / SONIDOS
 
-@JJ23
+JJOSUÉ JARAMILLO
+HTTPS://SOUNDCLOUD.COM/JJSUITU
 
 NARRATIVA
 
@@ -224,7 +249,11 @@ __meta__ = {
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+volume_db = -5.0
 autoplay = true
+
+[node name="SoundsPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
 [connection signal="pressed" from="Control/IntroButton" to="." method="_on_IntroButton_pressed"]
 [connection signal="pressed" from="Control/LinkButton" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="Control/CreditosPopup/CloseButton" to="." method="_on_CloseButton_pressed"]
