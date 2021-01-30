@@ -29,7 +29,7 @@ const NEWS = [
 		"id" : 4,
 		"title" : "Familia completa vinculada al acto terrorista contra el capitolio. El gato de la familia también fue procesado.", 
 		"date"  : "01/01/21",
-		"image" : "1_capitolio", 
+		"image" : "9_familiaCapitolio Gato", 
 		"is_fake" : true,
 		"is_story" : false
 	},
@@ -37,7 +37,7 @@ const NEWS = [
 		"id" : 5,
 		"title" : "El presidente saliente Forbes, no habla sobre el asalto al Capitolio, pero admite que no le desagrada.", 
 		"date"  : "05/08/20",
-		"image" : "5_presidentes", 
+		"image" : "13_presidente saliente forbes", 
 		"is_fake" : true,
 		"is_story" : false
 	},
@@ -85,7 +85,7 @@ const NEWS = [
 		"id" : 11,
 		"title" : "CornHeal ha enviado un primer cargamento de ayuda a la frontera británica.", 
 		"date"  : "06/09/20",
-		"image" : "4_virus_covid", 
+		"image" : "14_ corneal ha enviado cargamento", 
 		"is_fake" : true,
 		"is_story" : true
 	},
@@ -93,7 +93,7 @@ const NEWS = [
 		"id" : 12,
 		"title" : "Provisiones Chinas llegan a la frontera británica. ¡Enlatados de Sardina y Arroz blanco!", 
 		"date"  : "06/09/20",
-		"image" : "2_camiones", 
+		"image" : "7_provisionesChinasEnlatados", 
 		"is_fake" : true,
 		"is_story" : true
 	},
@@ -109,7 +109,7 @@ const NEWS = [
 		"id" : 14,
 		"title" : "El agua ahora vale más que el oro. Economistas afirman que el agua se medirá en unidades de venta y consumo.", 
 		"date"  : "06/09/20",
-		"image" : "2_camiones", 
+		"image" : "11_ agua vale mas que el oro", 
 		"is_fake" : true,
 		"is_story" : false
 	},
@@ -165,7 +165,7 @@ const NEWS = [
 		"id" : 21,
 		"title" : "Sudáfrica no ha podido recuperarse de la 2da Cepa de MST-19. CornHeal se ha involucrado en el desarrollo de una cura.", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "16_sudafrica no ha podido recuperarse", 
 		"is_fake" : true,
 		"is_story" : false
 	},
@@ -181,7 +181,7 @@ const NEWS = [
 		"id" : 23,
 		"title" : "En la región oriental primeros vacunados  empiezan a denunciar anomalías clínicas y efectos colaterales.", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "8_regioOrienta_anomaliasClinicas", 
 		"is_fake" : true,
 		"is_story" : false
 	},
@@ -189,7 +189,7 @@ const NEWS = [
 		"id" : 24,
 		"title" : "Personal médico que no atiende covid recibe dosis de vacuna sobrantes", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "12_personal medico vacuna dosis sobrantes", 
 		"is_fake" : false,
 		"is_story" : false
 	},
@@ -214,7 +214,7 @@ const NEWS = [
 		"id" : 27,
 		"title" : "'¿Que no hay gobierno?' que nos gobierne Rusia entonces", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "10_que nos gobierne rusia", 
 		"is_fake" : true,
 		"is_story" : false
 	},

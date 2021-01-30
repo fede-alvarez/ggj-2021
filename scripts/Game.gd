@@ -154,7 +154,7 @@ func on_dialogs_over():
 func _on_PortraitButton_pressed():
 	play_sound("photo_click")
 	$HUD/Dialogs.show_dialog([
-		"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE [color=yellow]CLARA VERDESOTO[/color]",
+		"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color]",
 		father("TÚ:\nTIENES A TU MADRE EN LA SONRISA.")
 	])
 
