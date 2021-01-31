@@ -16,6 +16,7 @@ onready var music_tween = $MusicPlayer/MusicTween
 onready var task_date = $HUD/Popup/TaskBar/Date
 
 onready var consequences = $Consecuencias
+onready var positivas = $Positivas
 
 var empty_holder_str = 'HAZ CLICK EN LA "LUPA" DE LA NOTICIA PARA COMENZAR'
 
@@ -45,6 +46,11 @@ func _ready():
 	
 	$MusicPlayer.play()
 	
+	$HUD/Intro.show()
+	$HUD/Intro.start()
+	yield($HUD/Intro, "intro_over")
+	
+	# INTRO
 	transition_tween.interpolate_property(transition_bg, "modulate", Color(1,1,1,1), Color(1,1,1,0), 1.0, Tween.TRANS_QUAD, Tween.EASE_IN)
 	transition_tween.start()
 	yield(transition_tween, "tween_completed")
@@ -57,8 +63,11 @@ func _ready():
 
 func on_fake_news_filtered():
 	#print("Fake news filtered! :D")
-	play_sound("acierto")
 	Globals.add_fake_news()
+	
+	if Globals.fake_news == 3:
+		positivas.show_random_positive()
+		
 	update_hud()
 
 func on_fake_news_missed():
@@ -130,9 +139,7 @@ func resume_background_music():
 	$MusicPlayer.set_stream_paused(false)
 	music_tween.interpolate_property($MusicPlayer, "volume_db", -80, -10, 1.5)
 	music_tween.start()
-	
-	
-	
+
 # Item Events
 
 func _on_SearcherButton_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/accept_button.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/elements/news_images/1_capitolio.png" type="Texture" id=8]
 [ext_resource path="res://assets/sounds/click_fx.wav" type="AudioStream" id=9]
 [ext_resource path="res://assets/sounds/click_noticia.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/click_acierto.wav" type="AudioStream" id=11]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.956863, 0.956863, 0.956863, 1 )
@@ -283,9 +284,14 @@ __meta__ = {
 
 [node name="FX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+volume_db = -5.0
 
 [node name="Feedback_FX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+volume_db = -5.0
+
+[node name="NiceFeedbackFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 volume_db = -5.0
 [connection signal="pressed" from="Base/AcceptButton" to="." method="_on_AcceptButton_pressed"]
 [connection signal="pressed" from="Base/RejectButton" to="." method="_on_RejectButton_pressed"]

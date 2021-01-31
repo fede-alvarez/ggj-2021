@@ -52,6 +52,7 @@ func _on_AcceptButton_pressed():
 		$Feedback_FX.play()
 	else:
 		emit_signal("fake_news_filtered") # OK
+		$NiceFeedbackFX.play()
 
 func _on_RejectButton_pressed():
 	$FX.play()
@@ -60,6 +61,7 @@ func _on_RejectButton_pressed():
 	
 	if is_fake:
 		emit_signal("fake_news_filtered") # OK
+		$NiceFeedbackFX.play()
 	else:
 		emit_signal("fake_news_missed") # Error
 		$Feedback_FX.play()

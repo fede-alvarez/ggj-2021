@@ -385,3 +385,6 @@ func get_news_by_id(id):
 		if news.id == id:
 			return news
 	return null
+
+func set_cursor():
+	pass
