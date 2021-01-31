@@ -7,6 +7,7 @@ onready var comments = $Base/CommentsIcon/LblComments
 var rand = RandomNumberGenerator.new()
 var id = -1
 var is_fake = true
+var source
 
 signal search_news
 signal fake_news_missed
@@ -19,6 +20,9 @@ func _ready():
 func set_as_fake(state):
 	is_fake = state
 
+func set_source(src):
+	source = src
+	
 func set_data(news_id, title, date, image):
 	id = news_id
 	$Base/Titulo.text = title.to_upper()

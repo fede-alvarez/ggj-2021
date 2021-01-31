@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sinopsis_comienzo.ogg-0feff9f8a1e9da92def936640e4685e2.oggstr"
+
+[deps]
+
+source_file="res://assets/music/sinopsis_comienzo.ogg"
+dest_files=[ "res://.import/sinopsis_comienzo.ogg-0feff9f8a1e9da92def936640e4685e2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

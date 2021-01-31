@@ -5,10 +5,10 @@ const NEWS = [
 		"id" : 1,
 		"title" : "La casa blanca manchada de sangre: El asalto al capitolio con cócteles molotov y armamento blindado", 
 		"date"  : "01/02/19",
-		"image" : "1_capitolio", 
+		"image" : "1_capitolio",
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 6
+		"related_to" : 6,
+		"source" : "notfake.com"
 	},
 	{ 
 		"id" : 2,
@@ -16,8 +16,8 @@ const NEWS = [
 		"date"  : "09/12/20",
 		"image" : "20_lider ultraderechista en boston_ 5 meses", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 6
+		"related_to" : 6,
+		"source" : "alternativenews.com"
 	},
 	{ 
 		"id" : 3,
@@ -25,8 +25,8 @@ const NEWS = [
 		"date"  : "14/02/21",
 		"image" : "1_capitolio", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 6
+		"related_to" : 6,
+		"source" : "notajoke.com"
 	},
 	{ 
 		"id" : 4,
@@ -34,8 +34,8 @@ const NEWS = [
 		"date"  : "01/01/21",
 		"image" : "9_familiaCapitolio Gato", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 6
+		"related_to" : 6,
+		"source" : "funnyvids.com"
 	},
 	{ 
 		"id" : 5,
@@ -43,8 +43,8 @@ const NEWS = [
 		"date"  : "05/08/20",
 		"image" : "13_presidente saliente forbes", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 6
+		"related_to" : 6,
+		"source" : "almostserious.com"
 	},
 	{ 
 		"id" : 6,
@@ -52,8 +52,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "1_capitolio", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 6,
+		"source" : "ccn.com"
 	},
 	{ 
 		"id" : 7,
@@ -61,8 +61,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 10
+		"related_to" : 10,
+		"source" : "nomoretimes.com"
 	},
 	{ 
 		"id" : 8,
@@ -70,8 +70,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 10
+		"related_to" : 10,
+		"source" : "loltimes.com"
 	},
 	{ 
 		"id" : 9,
@@ -79,8 +79,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "17_agua y pan francia", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 10
+		"related_to" : 10,
+		"source" : "justforfun.com"
 	},
 	{ 
 		"id" : 10,
@@ -88,8 +88,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 10,
+		"source" : "timesnewyork.com"
 	},
 	{ 
 		"id" : 11,
@@ -98,7 +98,8 @@ const NEWS = [
 		"image" : "14_ corneal ha enviado cargamento", 
 		"is_fake" : true,
 		"is_story" : true,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "fakeitall.com"
 	},
 	{ 
 		"id" : 12,
@@ -107,7 +108,8 @@ const NEWS = [
 		"image" : "7_provisionesChinasEnlatados", 
 		"is_fake" : true,
 		"is_story" : true,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "noresearch.com"
 	},
 	{ 
 		"id" : 13,
@@ -115,8 +117,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "nontruefacts.com"
 	},
 	{ 
 		"id" : 14,
@@ -124,8 +126,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "11_ agua vale mas que el oro", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "imaginafacts.com"
 	},
 	{ 
 		"id" : 15,
@@ -133,8 +135,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "realorfake.com"
 	},
 	{ 
 		"id" : 16,
@@ -142,8 +144,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "false.com"
 	},
 	{ 
 		"id" : 17,
@@ -151,8 +153,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 18
+		"related_to" : 18,
+		"source" : "failnews.com"
 	},
 	{ 
 		"id" : 18,
@@ -160,8 +162,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 18,
+		"source" : "verified-source.com"
 	},
 	{ 
 		"id" : 19,
@@ -169,8 +171,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "23_vacunas contra mst-19_ marítimo litoral", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 24
+		"related_to" : 24,
+		"source" : "newsfrompast.com"
 	},
 	{ 
 		"id" : 20,
@@ -178,8 +180,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 24
+		"related_to" : 24,
+		"source" : "past-times.com"
 	},
 	{ 
 		"id" : 21,
@@ -187,8 +189,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "16_sudafrica no ha podido recuperarse", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 24
+		"related_to" : 24,
+		"source" : "nonews.com"
 	},
 	{ 
 		"id" : 22,
@@ -196,8 +198,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "27_francia e inglaterra no han superado diferencias", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 24
+		"related_to" : 24,
+		"source" : "inventednews.com"
 	},
 	{ 
 		"id" : 23,
@@ -205,8 +207,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "8_regioOrienta_anomaliasClinicas", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 24
+		"related_to" : 24,
+		"source" : "hehefacts.com"
 	},
 	{ 
 		"id" : 24,
@@ -214,18 +216,18 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "12_personal medico vacuna dosis sobrantes", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 24,
+		"source" : "propernews.com"
 	},
-	
+
 	{ 
 		"id" : 25,
 		"title" : "Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.", 
 		"date"  : "06/02/20",
 		"image" : "18_ingobernabilidad en medio de la crisis", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 30
+		"related_to" : 30,
+		"source" : "loltimes.com"
 	},
 	{ 
 		"id" : 26,
@@ -233,8 +235,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "24_analistas advierten repercusiones importantes en la economia", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 30
+		"related_to" : 30,
+		"source" : "hehefacts.com"
 	},
 	{ 
 		"id" : 27,
@@ -242,8 +244,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "10_que nos gobierne rusia", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 30
+		"related_to" : 30,
+		"source" : "loltimes.com"
 	},
 	{ 
 		"id" : 28,
@@ -251,8 +253,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "19_ si la gente no viene a votar", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 30
+		"related_to" : 30,
+		"source" : "whatthef.com.ru"
 	},
 	{ 
 		"id" : 29,
@@ -260,8 +262,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 30
+		"related_to" : 30,
+		"source" : "nofacts.jp"
 	},
 	{ 
 		"id" : 30,
@@ -269,18 +271,18 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 30,
+		"source" : "trueresearch.com"
 	},
-	
+
 	{ 
 		"id" : 31,
 		"title" : "Se han detectado síntomas de MST-19 en animales domésticos.",
 		"date"  : "01/04/19",
 		"image" : "26_se ha detectado sintomas de mst-19 en animales domesticos", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 35
+		"related_to" : 35,
+		"source" : "jk.com"
 	},
 	{ 
 		"id" : 32,
@@ -288,8 +290,8 @@ const NEWS = [
 		"date"  : "22/09/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 35
+		"related_to" : 35,
+		"source" : "almostserious.com"
 	},
 	{ 
 		"id" : 33,
@@ -297,8 +299,8 @@ const NEWS = [
 		"date"  : "11/05/19",
 		"image" : "25_se denuncia mal administracion_ vacuna centros veterinarios", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 35
+		"related_to" : 35,
+		"source" : "loltimes.com"
 	},
 	{ 
 		"id" : 34,
@@ -306,8 +308,8 @@ const NEWS = [
 		"date"  : "11/05/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 35
+		"related_to" : 35,
+		"source" : "almostserious.com"
 	},
 	{
 		"id" : 35,
@@ -315,8 +317,8 @@ const NEWS = [
 		"date"  : "12/10/19",
 		"image" : "28_mst-19 para animales no protege humanos", 
 		"is_fake" : false,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 35,
+		"source" : "news-trust.com"
 	},
 	{
 		"id" : 36,
@@ -325,16 +327,18 @@ const NEWS = [
 		"image" : "21_Thomas berstein gerente Pacto acuerdo inmunidad", 
 		"is_fake" : true,
 		"is_story" : true,
-		"related_to" : 0
+		"related_to" : 0,
+		"source" : "loltimes.com"
 	},
 	{
 		"id" : 37,
 		"title" : "Gobernante de Región Central presenta gotas 'milagrosas' que 'neutralizan' la peste",
 		"date"  : "01/10/19",
 		"image" : "4_virus_covid", 
-		"is_fake" : false,
+		"is_fake" : true,
 		"is_story" : true,
-		"related_to" : 0
+		"related_to" : 0,
+		"source" : "comedyfacts.com"
 	},
 	{
 		"id" : 38,
@@ -342,8 +346,8 @@ const NEWS = [
 		"date"  : "01/10/19",
 		"image" : "22_La empresa BioRuinik Formula, mst-19", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 0,
+		"source" : "comedyfacts.com"
 	},
 	{
 		"id" : 39,
@@ -351,12 +355,13 @@ const NEWS = [
 		"date"  : "01/10/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false,
-		"related_to" : 0
+		"related_to" : 0,
+		"source" : "justkidding.com.fr"
 	}
 ]
+const MUSIC_FADE_TIME = 2.0
 
-const TOTAL_FAKE_NEWS = 4
+const TOTAL_FAKE_NEWS = 7
 const MAX_ERRORES = 3
 
 var first_play = true
@@ -366,7 +371,12 @@ var total_errors = 0
 func get_time():
 	var timeDict = OS.get_time();
 	var hour = String(timeDict.hour);
-	var minute = String(timeDict.minute);
+	var minute = timeDict.minute;
+	if minute < 10:
+		minute = "0" + String(minute)
+	else:
+		minute = String(minute)
+		
 	return hour + ':' + minute
 
 func add_fake_news():
@@ -379,7 +389,32 @@ func get_news():
 	randomize()
 	NEWS.shuffle()
 	return NEWS
+	
+func get_alternate_news(id):
+	var not_related = get_not_related(id)
+	not_related.shuffle()
+	var final = not_related.slice(0,5)
+	
+	var news_by_id = get_news_by_id(id)
+	var real_news
+	for news in NEWS:
+		if news.related_to == news_by_id.related_to && news.is_fake == false:
+			real_news = news
+			break
 
+	final.append(real_news)
+	final.shuffle()
+	
+	return final
+
+func get_not_related(id):
+	var alt_news = []
+	for news in NEWS:
+		if news.related_to != id:
+			alt_news.append(news)
+	
+	return alt_news
+	
 func get_news_by_id(id):
 	for news in NEWS:
 		if news.id == id:

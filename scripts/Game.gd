@@ -41,6 +41,7 @@ func _ready():
 			news_container.add_child(news_entity)
 			
 			news_entity.set_as_fake(news.is_fake)
+			news_entity.set_source(news.source)
 			news_entity.set_data(news.id, news.title, news.date, news.image)
 			
 			news_entity.connect("search_news", self, "on_news_searched")
@@ -48,9 +49,11 @@ func _ready():
 			news_entity.connect("fake_news_missed", self, "on_fake_news_missed")
 	
 	$MusicPlayer.play()
-	
+	play_music("sinopsis")
 	$HUD/Intro.show()
 	$HUD/Intro.start()
+	yield($HUD/Intro, "almost_over")
+	resume_background_music()
 	yield($HUD/Intro, "intro_over")
 	
 	# INTRO
@@ -72,8 +75,23 @@ func on_fake_news_filtered():
 	#print("Fake news filtered! :D")
 	Globals.add_fake_news()
 	
-	if Globals.fake_news == 3:
+	if Globals.fake_news == 4:
 		positivas.show_random_positive()
+		
+	if Globals.fake_news >= Globals.TOTAL_FAKE_NEWS:
+		print("You Win!")
+		close_popup()
+		yield(get_tree().create_timer(1.0), "timeout")
+		$HUD/GameOver.show()
+		yield(get_tree().create_timer(3.0), "timeout")
+		transition.visible = true
+		transition_tween.interpolate_property(transition_bg, "modulate", Color(1,1,1,0), Color(1,1,1,1), 1.0, Tween.TRANS_QUAD, Tween.EASE_IN)
+		transition_tween.start()
+		yield(transition_tween, "tween_completed")
+		$HUD/FinalBueno.show()
+		$HUD/FinalBueno.start()
+		yield($HUD/FinalBueno, "final_over")
+		get_tree().change_scene("res://scenes/Menu.tscn")
 		
 	update_hud()
 
@@ -91,6 +109,9 @@ func on_fake_news_missed():
 		transition_tween.interpolate_property(transition_bg, "modulate", Color(1,1,1,0), Color(1,1,1,1), 1.0, Tween.TRANS_QUAD, Tween.EASE_IN)
 		transition_tween.start()
 		yield(transition_tween, "tween_completed")
+		$HUD/Final.show()
+		$HUD/Final.start()
+		yield($HUD/Final, "final_over")
 		get_tree().change_scene("res://scenes/Menu.tscn")
 		
 	elif Globals.total_errors == 3:
@@ -99,7 +120,7 @@ func on_fake_news_missed():
 	update_hud()
 		
 func update_hud():
-	$HUD/Popup/LblFakes.text = "FALSAS FILTRADAS " + String(Globals.fake_news) + " / 5" 
+	$HUD/Popup/LblFakes.text = "FALSAS FILTRADAS " + String(Globals.fake_news) + " / 7" 
 	$HUD/Popup/LblErrors.text = "ERRORES " + String(Globals.total_errors) + " / 5"
 	
 func get_news_by_id (news_id):
@@ -107,8 +128,10 @@ func get_news_by_id (news_id):
 		if news_id == news.id:
 			return news
 	return null
-		
+	
+var last_searched_id
 func on_news_searched( id ):
+	last_searched_id = id
 	var news_detail = get_news_by_id(id)
 	search_text.text = (news_detail.title).to_upper()
 	$HUD/Popup/InputBorder.visible = true
@@ -129,22 +152,22 @@ func play_music(msc):
 	# Secondary Music fade start
 	$SecondaryPlayer.stream = MusicManager.get_music(msc)
 	$SecondaryPlayer.play()
-	music_tween.interpolate_property($SecondaryPlayer, "volume_db", -80, -10, 1.5)
+	music_tween.interpolate_property($SecondaryPlayer, "volume_db", -80, -10, Globals.MUSIC_FADE_TIME)
 	music_tween.start()
 
 func pause_background_music():
-	music_tween.interpolate_property($MusicPlayer, "volume_db", -10, -80, 1.5)
+	music_tween.interpolate_property($MusicPlayer, "volume_db", -10, -80, Globals.MUSIC_FADE_TIME)
 	music_tween.start()
 	yield(music_tween, "tween_completed")
 	$MusicPlayer.set_stream_paused(true)
 	
 func resume_background_music():
-	music_tween.interpolate_property($SecondaryPlayer, "volume_db", -10, -80, 1.5)
+	music_tween.interpolate_property($SecondaryPlayer, "volume_db", -10, -80, Globals.MUSIC_FADE_TIME)
 	music_tween.start()
-	$SecondaryPlayer.stop()
 	yield(music_tween, "tween_completed")
+	$SecondaryPlayer.stop()
 	$MusicPlayer.set_stream_paused(false)
-	music_tween.interpolate_property($MusicPlayer, "volume_db", -80, -10, 1.5)
+	music_tween.interpolate_property($MusicPlayer, "volume_db", -80, -10, Globals.MUSIC_FADE_TIME)
 	music_tween.start()
 
 # Item Events
@@ -160,7 +183,8 @@ func load_search_results():
 	$HUD/Popup/GoogleSearch/EmptyHolder.visible = false
 	$HUD/Popup/GoogleSearch/SearchResults.visible = true
 	clean_previous_news()
-	for news in Globals.get_news():
+	#for news in Globals.get_news():
+	for news in Globals.get_alternate_news(last_searched_id):
 		var news_entity = preload("res://entities/NewsResult.tscn").instance()
 		if news_entity:
 			news_search_container.add_child(news_entity)
@@ -182,6 +206,7 @@ func on_link_clicked(news_id):
 	var date = news_detail.date
 	var id = news_detail.id
 	var photo = news_detail.image
+	news_detail_container.set_source(news_detail.source)
 	news_detail_container.set_data(title, date, photo)
 	news_detail_container.visible = true
 

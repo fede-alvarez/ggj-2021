@@ -5,8 +5,7 @@ onready var tween = $StoryTween
 
 var current_step = 0
 
-signal intro_over
-signal almost_over
+signal final_over
 
 func _ready():
 	hide_all()
@@ -35,10 +34,8 @@ func _on_StoryTimer_timeout():
 	
 	current_step += 1
 	
-	if current_step < 3:
+	if current_step < 1:
 		show_next_step()
-		if current_step == 2:
-			emit_signal("almost_over")
 	else:
 		hide()
-		emit_signal("intro_over")
+		emit_signal("final_over")

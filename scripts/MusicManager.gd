@@ -9,7 +9,17 @@ onready var music_list = [
 	{
 		"id": 2,
 		"name": "vuelve_suenio",
-		"sound": preload("res://assets/music/vuelve_al_suenio.ogg")
+		"sound": preload("res://assets/music/vuelve_al_suenio_song.ogg")
+	},
+	{
+		"id": 3,
+		"name": "sinopsis",
+		"sound": preload("res://assets/music/sinopsis_comienzo.ogg")
+	},
+	{
+		"id": 4,
+		"name": "creditos",
+		"sound": preload("res://assets/music/creditos.ogg")
 	},
 ]
 

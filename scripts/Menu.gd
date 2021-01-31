@@ -5,7 +5,12 @@ onready var audio_tween = $Control/AudioTween
 onready var sound_player = $SoundsPlayer
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	pass
+	
+func _process(delta):
+	var mouse_pos = get_viewport().get_mouse_position()
+	$Control/Cursor.position = Vector2(mouse_pos.x + 1.7, mouse_pos.y + 5)
 	
 func play_sound(snd):
 	var sound = SoundsManager.get_sound(snd)

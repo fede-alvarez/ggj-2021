@@ -3,11 +3,15 @@ extends Control
 onready var title_label = $ScrollContainer/Control/LblTitle
 onready var date_label = $ScrollContainer/Control/LblDate
 onready var photo = $ScrollContainer/Control/Photo
+onready var source_label = $ScrollContainer/Control/LblSource
 
 var news_title
 var news_date
 var news_image
 
+func set_source(src):
+	source_label.text = "SOURCE: " + src.to_upper()
+	
 func set_data(title, date, image):
 	news_title = title
 	news_date = date
