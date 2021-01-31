@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/paisaje_fx.wav-b4b0b007042d1d4d3742ee5a45f7f2e7.sample"
+
+[deps]
+
+source_file="res://assets/sounds/paisaje_fx.wav"
+dest_files=[ "res://.import/paisaje_fx.wav-b4b0b007042d1d4d3742ee5a45f7f2e7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

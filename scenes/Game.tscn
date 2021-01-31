@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/elements/newspaper.png" type="Texture" id=2]
@@ -32,6 +32,11 @@
 [ext_resource path="res://assets/ui/gameover.png" type="Texture" id=30]
 [ext_resource path="res://assets/elements/animations/tree.png" type="Texture" id=31]
 [ext_resource path="res://assets/elements/animations/protesta.png" type="Texture" id=32]
+[ext_resource path="res://assets/elements/animations/police.png" type="Texture" id=33]
+[ext_resource path="res://assets/elements/animations/no_mst_19.png" type="Texture" id=34]
+[ext_resource path="res://assets/elements/papelera.png" type="Texture" id=35]
+[ext_resource path="res://scripts/Consecuencias.gd" type="Script" id=36]
+[ext_resource path="res://assets/elements/animations/desfile.png" type="Texture" id=37]
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 31 )
@@ -149,6 +154,86 @@ animations = [ {
 "speed": 3.0
 } ]
 
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 33 )
+region = Rect2( 0, 0, 68, 40 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 33 )
+region = Rect2( 68, 0, 68, 40 )
+
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 1.0
+} ]
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 34 )
+region = Rect2( 0, 0, 73, 77 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 34 )
+region = Rect2( 73, 0, 73, 77 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 35 ), SubResource( 36 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 37 )
+region = Rect2( 0, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 37 )
+region = Rect2( 75, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 37 )
+region = Rect2( 150, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 37 )
+region = Rect2( 225, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 37 )
+region = Rect2( 300, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 37 )
+region = Rect2( 375, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 37 )
+region = Rect2( 450, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 37 )
+region = Rect2( 525, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 37 )
+region = Rect2( 600, 0, 75, 86 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 37 )
+region = Rect2( 675, 0, 75, 86 )
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
 [sub_resource type="Animation" id=1]
 resource_name = "Hover"
 length = 0.4
@@ -203,29 +288,29 @@ script = ExtResource( 1 )
 texture = ExtResource( 23 )
 centered = false
 
-[node name="base" type="Sprite" parent="."]
+[node name="Base" type="Sprite" parent="."]
 position = Vector2( 0, 160 )
 texture = ExtResource( 24 )
 centered = false
 
-[node name="ciudad_fondo" type="Sprite" parent="."]
+[node name="CityBack" type="Sprite" parent="."]
 position = Vector2( 237, 50 )
 texture = ExtResource( 26 )
 
 [node name="Arboles" type="Position2D" parent="."]
 
 [node name="Tree" type="AnimatedSprite" parent="Arboles"]
-position = Vector2( 173.772, 40.3805 )
+position = Vector2( 182.524, 38.478 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 6
+frame = 12
 playing = true
 
 [node name="Tree4" type="AnimatedSprite" parent="Arboles"]
 position = Vector2( 307.618, 49.9085 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 5
+frame = 11
 playing = true
 
 [node name="Tree2" type="AnimatedSprite" parent="Arboles"]
@@ -233,7 +318,7 @@ position = Vector2( 216.421, 40.8342 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 6
+frame = 12
 playing = true
 
 [node name="Tree3" type="AnimatedSprite" parent="Arboles"]
@@ -241,17 +326,53 @@ position = Vector2( 274.95, 40.8342 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 5
+frame = 12
 playing = true
 
-[node name="Contras" type="Position2D" parent="."]
-visible = false
+[node name="Consecuencias" type="Position2D" parent="."]
+script = ExtResource( 36 )
 
-[node name="Protesta" type="AnimatedSprite" parent="Contras"]
+[node name="Protesta" type="AnimatedSprite" parent="Consecuencias"]
+visible = false
 position = Vector2( 278.58, 50.3622 )
 frames = SubResource( 7 )
 animation = "Idle"
 frame = 1
+playing = true
+
+[node name="Police" type="AnimatedSprite" parent="Consecuencias"]
+visible = false
+position = Vector2( 265.422, 56.7142 )
+frames = SubResource( 34 )
+animation = "Idle"
+playing = true
+
+[node name="MST" type="AnimatedSprite" parent="Consecuencias"]
+visible = false
+position = Vector2( 277.673, 56.2605 )
+frames = SubResource( 37 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="Positivas" type="Position2D" parent="."]
+visible = false
+
+[node name="Desfile" type="Position2D" parent="Positivas"]
+visible = false
+
+[node name="Desfile" type="AnimatedSprite" parent="Positivas/Desfile"]
+position = Vector2( 196.316, 47.2907 )
+frames = SubResource( 48 )
+animation = "Idle"
+frame = 8
+playing = true
+
+[node name="Desfile2" type="AnimatedSprite" parent="Positivas/Desfile"]
+position = Vector2( 279.373, 47.2907 )
+frames = SubResource( 48 )
+animation = "Idle"
+frame = 2
 playing = true
 
 [node name="WindowAlpha" type="ColorRect" parent="."]
@@ -300,7 +421,7 @@ position = Vector2( 283.182, 147.309 )
 texture = ExtResource( 11 )
 
 [node name="lamp" type="Sprite" parent="Elements"]
-position = Vector2( 289.531, 83.2466 )
+position = Vector2( 296.337, 93.5202 )
 texture = ExtResource( 16 )
 
 [node name="archive" type="Sprite" parent="Elements"]
@@ -417,9 +538,23 @@ centered = false
 position = Vector2( 64.3638, 129.629 )
 texture = ExtResource( 27 )
 
+[node name="papelera" type="Sprite" parent="Elements"]
+position = Vector2( 220.064, 167.297 )
+texture = ExtResource( 35 )
+
+[node name="PapeleraButton" type="TextureButton" parent="Elements/papelera"]
+margin_left = -19.4726
+margin_top = -24.2414
+margin_right = 20.5274
+margin_bottom = 15.7586
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Popup" type="Popup" parent="HUD"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -450,18 +585,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Icon" type="ColorRect" parent="HUD/Popup/TaskBar"]
-margin_right = 40.0
-margin_bottom = 8.0
-color = Color( 0.435294, 0.223529, 0.823529, 1 )
+[node name="DiffButton" type="ColorRect" parent="HUD/Popup/TaskBar"]
+margin_left = 177.86
+margin_top = -3.0
+margin_right = 222.86
+margin_bottom = 9.0
+color = Color( 0.713726, 0.0117647, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="HUD/Popup/TaskBar/DiffButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.2962
+margin_top = -2.0
+margin_right = 20.7038
+margin_bottom = 4.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.952941, 0.827451, 0.984314, 1 )
+text = "DIFERENCIA"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiffButton" type="TextureButton" parent="HUD/Popup/TaskBar/DiffButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
 [node name="Icon2" type="ColorRect" parent="HUD/Popup/TaskBar"]
-margin_left = 215.292
+margin_left = 45.193
 margin_top = 2.46262
-margin_right = 219.292
+margin_right = 49.193
 margin_bottom = 6.46262
 color = Color( 0.792157, 0.223529, 0.823529, 1 )
 __meta__ = {
@@ -469,9 +627,9 @@ __meta__ = {
 }
 
 [node name="Icon3" type="ColorRect" parent="HUD/Popup/TaskBar"]
-margin_left = 208.032
+margin_left = 37.933
 margin_top = 2.46262
-margin_right = 212.032
+margin_right = 41.933
 margin_bottom = 6.46262
 color = Color( 0.792157, 0.223529, 0.823529, 1 )
 __meta__ = {
@@ -479,24 +637,38 @@ __meta__ = {
 }
 
 [node name="Icon4" type="ColorRect" parent="HUD/Popup/TaskBar"]
-margin_left = 201.088
+margin_left = 30.9886
 margin_top = 2.46262
-margin_right = 205.088
+margin_right = 34.9886
 margin_bottom = 6.46262
 color = Color( 0.792157, 0.223529, 0.823529, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NotGoogle" type="Label" parent="HUD/Popup/TaskBar"]
+[node name="Inicio" type="Label" parent="HUD/Popup/TaskBar"]
+visible = false
 anchor_right = 1.0
 margin_left = 9.20123
 margin_top = 1.5
-margin_right = -5.79878
-margin_bottom = 7.50001
+margin_right = -190.799
+margin_bottom = 7.5
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.909804, 0.701961, 0.960784, 1 )
 text = "INICIO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Date" type="Label" parent="HUD/Popup/TaskBar"]
+anchor_right = 1.0
+margin_left = 3.74931
+margin_top = 1.5
+margin_right = -200.251
+margin_bottom = 7.5
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.909804, 0.701961, 0.960784, 1 )
+text = "99:99"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -757,7 +929,6 @@ __meta__ = {
 }
 
 [node name="NewsDetail" type="Control" parent="HUD/Popup"]
-visible = false
 margin_left = 116.0
 margin_top = 39.0
 margin_right = 220.0
@@ -970,6 +1141,65 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Warning" type="Control" parent="HUD/Popup"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.76881
+margin_top = 17.0532
+margin_right = -90.2312
+margin_bottom = -17.9468
+
+[node name="Lightbox" type="ColorRect" parent="HUD/Popup/Warning"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.27451, 0.0784314, 0.427451, 0.470588 )
+
+[node name="Header" type="ColorRect" parent="HUD/Popup/Warning"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.179
+margin_top = -27.7943
+margin_right = 52.821
+margin_bottom = -19.7943
+color = Color( 0.819608, 0.72549, 0.905882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="ColorRect" parent="HUD/Popup/Warning"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.1786
+margin_top = -20.0
+margin_right = 52.8214
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblWarn" type="Label" parent="HUD/Popup/Warning/Body"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -14.0
+margin_right = -7.62939e-06
+margin_bottom = 11.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.278431, 0.105882, 0.431373, 1 )
+text = "¡CUIDADO! 
+ESTÁS A PUNTO DE PERDER"
+align = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Dialogs" type="Control" parent="HUD"]
 visible = false
 anchor_top = 1.0
@@ -1002,9 +1232,12 @@ bbcode_enabled = true
 bbcode_text = "[center]Texto de prueba[/center]"
 text = "Texto de prueba"
 scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DialogTime" type="Timer" parent="HUD/Dialogs"]
-wait_time = 5.0
+wait_time = 6.0
 
 [node name="ConfirmButton" type="Button" parent="HUD/Dialogs"]
 margin_left = 88.1868
@@ -1021,6 +1254,8 @@ margin_right = 243.835
 margin_bottom = -2.6066
 custom_fonts/font = ExtResource( 5 )
 text = "NO ABRIR"
+
+[node name="CharsTween" type="Tween" parent="HUD/Dialogs"]
 
 [node name="GameOver" type="Popup" parent="HUD"]
 anchor_right = 1.0
@@ -1072,6 +1307,8 @@ volume_db = -10.0
 
 [node name="MusicTween" type="Tween" parent="MusicPlayer"]
 
+[node name="SecondaryPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="Sounds" type="AudioStreamPlayer" parent="."]
 volume_db = -15.0
 [connection signal="pressed" from="Elements/posters/PostersButton" to="." method="_on_PostersButton_pressed"]
@@ -1088,6 +1325,8 @@ volume_db = -15.0
 [connection signal="mouse_exited" from="Elements/tv-anim/PCButton" to="." method="_on_PCButton_mouse_exited"]
 [connection signal="pressed" from="Elements/tv-anim/PCButton" to="." method="_on_PCButton_pressed"]
 [connection signal="pressed" from="Elements/portrait/PortraitButton" to="." method="_on_PortraitButton_pressed"]
+[connection signal="pressed" from="Elements/papelera/PapeleraButton" to="." method="_on_PapeleraButton_pressed"]
+[connection signal="pressed" from="HUD/Popup/TaskBar/DiffButton/DiffButton" to="." method="_on_DiffButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/SearcherButton" to="." method="_on_SearcherButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton" to="HUD/Popup/NewsDetail" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="HUD/Popup/TextureButton" to="." method="_on_TextureButton_pressed"]

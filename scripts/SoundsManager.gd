@@ -4,32 +4,37 @@ onready var sounds = [
 	{
 		"id": 1,
 		"name": "click",
-		"sound": preload("res://assets/sounds/(Click FX).wav")
+		"sound": preload("res://assets/sounds/click_fx.wav")
 	},
 	{
 		"id": 2,
 		"name": "photo_click",
-		"sound": preload("res://assets/sounds/(Click en foto y calendario FX).wav")
+		"sound": preload("res://assets/sounds/click_fondo_calendario.wav")
 	},
 	{
 		"id": 3,
 		"name": "photo_news",
-		"sound": preload("res://assets/sounds/(Click en noticia FX).wav")
+		"sound": preload("res://assets/sounds/click_noticia.wav")
 	},
 	{
 		"id": 4,
 		"name": "game_over_start",
-		"sound": preload("res://assets/sounds/(gam over FX comienzo).wav")
+		"sound": preload("res://assets/sounds/gameover_fx_start.wav")
 	},
 	{
 		"id": 5,
 		"name": "game_over_fx",
-		"sound": preload("res://assets/sounds/(game over FX).wav")
+		"sound": preload("res://assets/sounds/gameover_fx.wav")
 	},
 	{
 		"id": 6,
 		"name": "heartbeat",
-		"sound": preload("res://assets/sounds/(heartbeat fx) - lee la historia o parrafo de muerte hija.wav")
+		"sound": preload("res://assets/sounds/heartbeat_fx.wav")
+	},
+	{
+		"id": 7,
+		"name": "acierto",
+		"sound": preload("res://assets/sounds/click_acierto.wav")
 	},
 ]
 

@@ -7,15 +7,17 @@ const NEWS = [
 		"date"  : "01/02/19",
 		"image" : "1_capitolio", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 6
 	},
 	{ 
 		"id" : 2,
 		"title" : "Líder Ultraderechista en Boston admite que el asalto al capitolio se venía pensando desde hace 5 meses atrás.", 
 		"date"  : "09/12/20",
-		"image" : "1_capitolio", 
+		"image" : "20_lider ultraderechista en boston_ 5 meses", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 6
 	},
 	{ 
 		"id" : 3,
@@ -23,7 +25,8 @@ const NEWS = [
 		"date"  : "14/02/21",
 		"image" : "1_capitolio", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 6
 	},
 	{ 
 		"id" : 4,
@@ -31,7 +34,8 @@ const NEWS = [
 		"date"  : "01/01/21",
 		"image" : "9_familiaCapitolio Gato", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 6
 	},
 	{ 
 		"id" : 5,
@@ -39,7 +43,8 @@ const NEWS = [
 		"date"  : "05/08/20",
 		"image" : "13_presidente saliente forbes", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 6
 	},
 	{ 
 		"id" : 6,
@@ -47,7 +52,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "1_capitolio", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	{ 
 		"id" : 7,
@@ -55,7 +61,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 10
 	},
 	{ 
 		"id" : 8,
@@ -63,15 +70,17 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 10
 	},
 	{ 
 		"id" : 9,
 		"title" : "Agua y pan para el pueblo de Francia: plantón en la Bastilla por Camioneros atrapados en mitad de la peste.", 
 		"date"  : "06/09/20",
-		"image" : "2_camiones", 
+		"image" : "17_agua y pan francia", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 10
 	},
 	{ 
 		"id" : 10,
@@ -79,7 +88,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	{ 
 		"id" : 11,
@@ -87,7 +97,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "14_ corneal ha enviado cargamento", 
 		"is_fake" : true,
-		"is_story" : true
+		"is_story" : true,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 12,
@@ -95,7 +106,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "7_provisionesChinasEnlatados", 
 		"is_fake" : true,
-		"is_story" : true
+		"is_story" : true,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 13,
@@ -103,7 +115,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "2_camiones", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 14,
@@ -111,7 +124,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "11_ agua vale mas que el oro", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 15,
@@ -119,7 +133,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 16,
@@ -127,7 +142,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 17,
@@ -135,7 +151,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 18
 	},
 	{ 
 		"id" : 18,
@@ -143,15 +160,17 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "3_agua", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	{ 
 		"id" : 19,
 		"title" : "Vacunas contra MST-19 no han llegado al puerto marítimo litoral. Las primeras dosis cumplen 1 mes de retraso hoy.", 
 		"date"  : "06/09/20",
-		"image" : "4_virus_covid", 
+		"image" : "23_vacunas contra mst-19_ marítimo litoral", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 24
 	},
 	{ 
 		"id" : 20,
@@ -159,7 +178,8 @@ const NEWS = [
 		"date"  : "06/09/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 24
 	},
 	{ 
 		"id" : 21,
@@ -167,15 +187,17 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "16_sudafrica no ha podido recuperarse", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 24
 	},
 	{ 
 		"id" : 22,
 		"title" : "Francia e Inglaterra no han superado sus diferencias y esto ha complicado el ingreso de dosis en territorio Francés.", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "27_francia e inglaterra no han superado diferencias", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 24
 	},
 	{ 
 		"id" : 23,
@@ -183,7 +205,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "8_regioOrienta_anomaliasClinicas", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 24
 	},
 	{ 
 		"id" : 24,
@@ -191,24 +214,27 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "12_personal medico vacuna dosis sobrantes", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	
 	{ 
 		"id" : 25,
 		"title" : "Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "18_ingobernabilidad en medio de la crisis", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 30
 	},
 	{ 
 		"id" : 26,
 		"title" : "Analistas advierten repercusiones importantes en la economía pública a corto plazo.", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "24_analistas advierten repercusiones importantes en la economia", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 30
 	},
 	{ 
 		"id" : 27,
@@ -216,15 +242,17 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "10_que nos gobierne rusia", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 30
 	},
 	{ 
 		"id" : 28,
 		"title" : "'Si la gente no viene a votar, es porque no sabe a quién votar, no los culpo, hace décadas nadie lo sabe'", 
 		"date"  : "06/02/20",
-		"image" : "4_virus_covid", 
+		"image" : "19_ si la gente no viene a votar", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 30
 	},
 	{ 
 		"id" : 29,
@@ -232,7 +260,8 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 30
 	},
 	{ 
 		"id" : 30,
@@ -240,16 +269,18 @@ const NEWS = [
 		"date"  : "06/02/20",
 		"image" : "4_virus_covid", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	
 	{ 
 		"id" : 31,
 		"title" : "Se han detectado síntomas de MST-19 en animales domésticos.",
 		"date"  : "01/04/19",
-		"image" : "4_virus_covid", 
+		"image" : "26_se ha detectado sintomas de mst-19 en animales domesticos", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 35
 	},
 	{ 
 		"id" : 32,
@@ -257,15 +288,17 @@ const NEWS = [
 		"date"  : "22/09/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 35
 	},
 	{ 
 		"id" : 33,
 		"title" : "Se denuncia mal administración en la distribución de vacunas para los centros veterinarios",
 		"date"  : "11/05/19",
-		"image" : "4_virus_covid", 
+		"image" : "25_se denuncia mal administracion_ vacuna centros veterinarios", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 35
 	},
 	{ 
 		"id" : 34,
@@ -273,23 +306,26 @@ const NEWS = [
 		"date"  : "11/05/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 35
 	},
 	{
 		"id" : 35,
 		"title" : "MST-19 para animales no protege a humanos",
 		"date"  : "12/10/19",
-		"image" : "4_virus_covid", 
+		"image" : "28_mst-19 para animales no protege humanos", 
 		"is_fake" : false,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	{
 		"id" : 36,
-		"title" : "Thomas Berstein, gerente de CornHeal  ha pactado un acuerdo de inmunidad con países del Sur.",
+		"title" : "Thomas Berstein, gerente de CornHeal ha pactado un acuerdo de inmunidad con países del Sur.",
 		"date"  : "01/10/19",
-		"image" : "4_virus_covid", 
+		"image" : "21_Thomas berstein gerente Pacto acuerdo inmunidad", 
 		"is_fake" : true,
-		"is_story" : true
+		"is_story" : true,
+		"related_to" : 0
 	},
 	{
 		"id" : 37,
@@ -297,15 +333,17 @@ const NEWS = [
 		"date"  : "01/10/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : false,
-		"is_story" : true
+		"is_story" : true,
+		"related_to" : 0
 	},
 	{
 		"id" : 38,
 		"title" : "La empresa 'BIOquimik' ha desarrollado una fórmula soluble para tratamiento del MST-19.",
 		"date"  : "01/10/19",
-		"image" : "4_virus_covid", 
+		"image" : "22_La empresa BioRuinik Formula, mst-19", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	},
 	{
 		"id" : 39,
@@ -313,7 +351,8 @@ const NEWS = [
 		"date"  : "01/10/19",
 		"image" : "4_virus_covid", 
 		"is_fake" : true,
-		"is_story" : false
+		"is_story" : false,
+		"related_to" : 0
 	}
 ]
 
@@ -324,16 +363,25 @@ var first_play = true
 var fake_news = 0
 var total_errors = 0
 
+func get_time():
+	var timeDict = OS.get_time();
+	var hour = String(timeDict.hour);
+	var minute = String(timeDict.minute);
+	return hour + ':' + minute
+
 func add_fake_news():
 	fake_news += 1
 	
 func add_error():
 	total_errors += 1
-	if total_errors > MAX_ERRORES:
-		total_errors = MAX_ERRORES
-		print("Game over")
 
 func get_news():
 	randomize()
 	NEWS.shuffle()
 	return NEWS
+
+func get_news_by_id(id):
+	for news in NEWS:
+		if news.id == id:
+			return news
+	return null

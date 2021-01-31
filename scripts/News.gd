@@ -6,11 +6,18 @@ onready var comments = $Base/CommentsIcon/LblComments
 
 var rand = RandomNumberGenerator.new()
 var id = -1
+var is_fake = true
+
 signal search_news
+signal fake_news_missed
+signal fake_news_filtered
 
 func _ready():
 	$Rejected.visible = false
 	$Passed.visible = false
+	
+func set_as_fake(state):
+	is_fake = state
 
 func set_data(news_id, title, date, image):
 	id = news_id
@@ -36,12 +43,27 @@ func random_date():
 	return String(dia) + "/" + String(mes) + "/" + anio
 	
 func _on_AcceptButton_pressed():
+	$FX.play()
 	$Rejected.visible = false
 	$Passed.visible = true
 
+	if is_fake:
+		emit_signal("fake_news_missed") # Error
+		$Feedback_FX.play()
+	else:
+		emit_signal("fake_news_filtered") # OK
+
 func _on_RejectButton_pressed():
+	$FX.play()
 	$Passed.visible = false
 	$Rejected.visible = true
+	
+	if is_fake:
+		emit_signal("fake_news_filtered") # OK
+	else:
+		emit_signal("fake_news_missed") # Error
+		$Feedback_FX.play()
 
 func _on_SearchButton_pressed():
+	$FX.play()
 	emit_signal("search_news", id)

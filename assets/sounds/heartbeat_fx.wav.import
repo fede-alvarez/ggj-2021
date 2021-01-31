@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/heartbeat_fx.wav-43d9abf617f3affa484e574f23ec39ad.sample"
+
+[deps]
+
+source_file="res://assets/sounds/heartbeat_fx.wav"
+dest_files=[ "res://.import/heartbeat_fx.wav-43d9abf617f3affa484e574f23ec39ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

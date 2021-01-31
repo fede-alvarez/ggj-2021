@@ -134,7 +134,7 @@ margin_bottom = -4.99998
 rect_clip_content = false
 custom_fonts/normal_font = ExtResource( 13 )
 bbcode_enabled = true
-bbcode_text = "[center][color=yellow]< EXPERIENCIA [wave]RECOMENDADA CON AUDÍFONOS[/wave] >[/color][/center]"
+bbcode_text = "[center][color=yellow]< [wave amp=11 freq=5]EXPERIENCIA RECOMENDADA CON AUDÍFONOS[/wave] >[/color][/center]"
 text = "< EXPERIENCIA RECOMENDADA CON AUDÍFONOS >"
 
 [node name="IntroButton" type="TextureButton" parent="Control"]

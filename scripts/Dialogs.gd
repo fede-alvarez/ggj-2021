@@ -3,6 +3,7 @@ extends Control
 onready var text_label = $RichTextLabel
 onready var confirm_button = $ConfirmButton
 onready var deny_button = $DenyButton
+onready var tween = $CharsTween
 
 var dialogs = []
 var current_dialog = 0
@@ -29,9 +30,13 @@ func show_dialog( dialog_lines ):
 	
 	update_text(dialogs[current_dialog])
 	$DialogTime.start()
+	text_label.visible_characters = 0
+	tween.interpolate_property(text_label, "percent_visible", 0, 1, $DialogTime.wait_time - 2)
+	tween.start()
 
 func update_text( msg ):
 	text_label.bbcode_text = "[center]"+msg+"[/center]";
+	#text_label.visible_characters = 0
 	
 func _on_DialogTime_timeout():
 	current_dialog += 1
@@ -53,11 +58,16 @@ func _on_DialogTime_timeout():
 					current_dialog = pos+2
 					update_text(dialogs[current_dialog])
 					$DialogTime.start()
-					pass
+					text_label.visible_characters = 0
+					tween.interpolate_property(text_label, "percent_visible", 0, 1, $DialogTime.wait_time - 1)
+					tween.start()
 		else:
 			update_text(dialogs[current_dialog])
 			$DialogTime.stop()
 			$DialogTime.start()
+			text_label.visible_characters = 0
+			tween.interpolate_property(text_label, "percent_visible", 0, 1, $DialogTime.wait_time - 1)
+			tween.start()
 
 func close_dialog():
 	current_dialog = 0
@@ -68,6 +78,8 @@ func close_dialog():
 
 func _on_ConfirmButton_pressed():
 	hide_buttons()
+	current_dialog += 1
+	update_text(dialogs[current_dialog])
 	$DialogTime.start()
 
 func _on_DenyButton_pressed():
