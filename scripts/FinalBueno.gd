@@ -8,6 +8,7 @@ var current_step = 0
 signal final_over
 
 func _ready():
+	$Container/Text_1.text = TranslationServer.translate("KEY_PC_GOOD_FINAL").to_upper()
 	hide_all()
 	show_next_step()
 	

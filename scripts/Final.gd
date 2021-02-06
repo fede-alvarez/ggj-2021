@@ -12,6 +12,7 @@ func _ready():
 	show_next_step()
 	
 func start():
+	$Container/Text_1.text = TranslationServer.translate("KEY_PC_BAD_FINAL").to_upper()
 	$StoryTimer.start()
 	
 func show_next_step():

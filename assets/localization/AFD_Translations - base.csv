@@ -1,0 +1,58 @@
+,es,en
+KEY_MENU_CREDITS,Créditos,Credits
+KEY_MENU_TOUCH_START,Toca para comenzar,Touch to start
+KEY_MENU_SOUND_WARN,Experiencia recomendada con audífonos,Headphones recommended experience
+KEY_MENU_CR_DEV,Programación,Development
+KEY_MENU_CR_DES,Arte / Diseño,Art / Design
+KEY_MENU_CR_SFX,Música / Sonidos,Music / Sounds
+KEY_MENU_CR_NAR,Narrativa,Narrative
+KEY_MENU_CR_CLOSE,Cerrar,Close
+KEY_MENU_LANGS,Idíomas,Languages
+KEY_GAME_INTRO_1,"[center][color=yellow]BARLOVENTO, AÑO 20XX[/color]\n\nTODO MUERE, DESDE LOS PERIÓDICOS HASTA LOS LIRIOS. LA PENUMBRA LLEGÓ SIN FORMA DEFINIDA Y SE ESPARCIÓ POR TODA LA TIERRA MOJADA. AHORA CUBRE BOCAS Y LINTERNAS PARA CAMINAR A PLENA LUZ DEL DÍA SON REQUERIDAS.[/center]","[center][color=yellow]BARLOVENTO, YEAR 20XX[/color]\n\nEVERYTHING DIES, FROM NEWSPAPERS TO LILIES. THE PENUMBRA ARRIVED WITHOUT DEFINED FORM AND SPREAD THROUGHOUT THE WET EARTH. NOW MOUTH COVERS AND FLASHLIGHTS TO WALK IN FULL DAYLIGHT ARE REQUIRED.[/center]"
+KEY_GAME_INTRO_2,[center]¿ES QUE ALGUNA VEZ DEJAMOS DE BUSCAR LO QUE NO SE NOS HA PERDIDO?[/center],[center]DOES WE EVER STOP LOOKING FOR WHAT WE HAVE NOT MISSED?[/center]
+KEY_GAME_INTRO_3,"[center]ESTÁS MUERTO, PERO AÚN NO LO SABES. MIENTRAS TANTO, TU TRABAJO ES ACARICIAR LA VERDAD\n\n- COMO SI REALMENTE EXISTIERA -[/center]","[center]YOU'RE DEAD, BUT YOU DON'T KNOW IT YET. MEANWHILE, YOUR JOB IS TO FEAR THE TRUTH\n\n- AS IF IT REALLY EXISTS -[/center]"
+KEY_GAME_DLG_WRK_1,"Hora de ponerse a trabajar. La [color=yellow]inspección de internet[/color], no se va a hacer sola!",Time to get to work. The [color=yellow]internet inspection[/color] is not going to be done alone!
+KEY_GAME_DLG_WRK_2,Cuando estés listo ve a la [color=yellow]computadora[/color],When you are ready go to the [color=yellow]computer[/color]
+KEY_GAME_CALENDAR_1,"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]","UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]"
+KEY_GAME_CALENDAR_2,TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre.,TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre.
+KEY_GAME_ARCHIVE_1,Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”,Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”
+KEY_GAME_ARCHIVE_2,"TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?","TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?"
+KEY_GAME_TOP_DRW_1,Dentro del cajón hay una carpeta que lleva el nombre de CLARA.,Dentro del cajón hay una carpeta que lleva el nombre de CLARA.
+KEY_GAME_TOP_DRW_2,TÚ:\n¿Descuidaste esto?. Debería estar en el estudio.,TÚ:\n¿Descuidaste esto?. Debería estar en el estudio.
+KEY_GAME_TOP_DRW_3,"INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.","INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA."
+KEY_GAME_TOP_DRW_4,TÚ:\n¿Patógenos en masa?,TÚ:\n¿Patógenos en masa?
+KEY_GAME_TOP_DRW_5,TÚ:\nSerá mejor dejarte descansar.,TÚ:\nSerá mejor dejarte descansar.
+KEY_GAME_BOT_DRW_1,"En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA.","En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA."
+KEY_GAME_BOT_DRW_2,"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge","En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge"
+KEY_GAME_BOT_DRW_3,TÚ:\n¿Pero quién diablos es ese JORGE?,TÚ:\n¿Pero quién diablos es ese JORGE?
+KEY_GAME_BOT_DRW_4,TÚ:\nNo suena tan mal después de todo.,TÚ:\nNo suena tan mal después de todo.
+KEY_GAME_BOT_DRW_5,¿Abro el segundo disco?,¿Abro el segundo disco?
+KEY_GAME_BOT_DRW_6,Un trozo de papel cae. Se lee un número: 03-3365-428 Thomas Berstein.,Un trozo de papel cae. Se lee un número: 03-3365-428 Thomas Berstein.
+KEY_GAME_BOT_DRW_7,TÚ:\nBerstein... ¿de dónde me suena esto?,TÚ:\nBerstein... ¿de dónde me suena esto?
+KEY_GAME_BOT_DRW_8,TÚ:\n¿Dónde venderán reproductores de CD´s?,TÚ:\n¿Dónde venderán reproductores de CD´s?
+KEY_GAME_BOOK_1,En la portada del libro se lee: Diario de CLARA,En la portada del libro se lee: Diario de CLARA
+KEY_GAME_BOOK_2,TÚ:\nNo tiene sentido esconderlo ahora.,TÚ:\nNo tiene sentido esconderlo ahora.
+KEY_GAME_BOOK_3,"En una de las páginas se puede apreciar: “ T.B se ha enterado de todo, creo que debo cuidarme, me despediré de papá","En una de las páginas se puede apreciar: “ T.B se ha enterado de todo, creo que debo cuidarme, me despediré de papá"
+KEY_GAME_BOOK_4,"TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?","TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?"
+KEY_GAME_BOOK_5,TÚ:\nQue al menos tus secretos se mantengan en paz,TÚ:\nQue al menos tus secretos se mantengan en paz
+KEY_GAME_POSTER,"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.","Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela."
+KEY_GAME_PORTRAIT_1,EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color],EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color]
+KEY_GAME_PORTRAIT_2,TÚ:\nTIENES A TU MADRE EN LA SONRISA.,TÚ:\nTIENES A TU MADRE EN LA SONRISA.
+KEY_GAME_BIN_1,Es una simple papelera...,Es una simple papelera...
+KEY_GAME_BIN_2,Tú:\nUno nunca sabe lo que se esconde en la basura,Tú:\nUno nunca sabe lo que se esconde en la basura
+KEY_GAME_BIN_3,"Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”","Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”"
+KEY_GAME_BIN_4,Aparentes...,Aparentes...
+KEY_GAME_BIN_5,¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.,¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.
+KEY_PC_FILTERED,FALSAS FILTRADAS,FILTERED FAKES
+KEY_PC_ERRORS,ERRORES,ERRORS
+KEY_PC_NEWS,NOTICIAS,NEWS
+KEY_PC_SEARCH_ENGINE,NAVEGADOR,BROWSER
+KEY_PC_SEARCH,BUSCAR . . .,SEARCH . . .
+KEY_PC_SEARCHING,BUSCANDO . . .,SEARCHING . . . 
+KEY_PC_INFO_HOLDER,"HAZ CLICK EN LA ""LUPA"" DE LA NOTICIA PARA COMENZAR","CLICK ON THE NEWS ""MAGNIFIER"" ICON TO BEGIN"
+KEY_PC_START_BUTTON,INICIO,START
+KEY_PC_NEWS_SOURCE,FUENTE,SOURCE
+KEY_PC_BAD_FINAL,"LAS FICCIONES SE ESTAMPAN CONTRA TU NARIZ Y TE HACEN SANGRAR. ¿O ES TU NARIZ LA QUE SE ESTAMPA CONTRA LAS FICCIONES?. EN FIN, SIEMPRE PODRÁS LIMPIARTE CON PAÑOS BLANQUECINOS Y FROTAR LOS DOLORES FUTUROS.","LAS FICCIONES SE ESTAMPAN CONTRA TU NARIZ Y TE HACEN SANGRAR. ¿O ES TU NARIZ LA QUE SE ESTAMPA CONTRA LAS FICCIONES?. EN FIN, SIEMPRE PODRÁS LIMPIARTE CON PAÑOS BLANQUECINOS Y FROTAR LOS DOLORES FUTUROS."
+KEY_PC_GOOD_FINAL,"¡PUEDES SENTIR!.\nRESULTA QUE ESTE SER DE HUESOS ESTÁ VIVO… Y HASTA TIENE RECUERDOS.\n¿QUE LO HA DESPERTADO?.  ¿UNA BOFETADA?, ¿LA REALIDAD, ACASO?, ¿UN DOLOR DE MUELAS?","¡PUEDES SENTIR!.\nRESULTA QUE ESTE SER DE HUESOS ESTÁ VIVO… Y HASTA TIENE RECUERDOS.\n¿QUE LO HA DESPERTADO?.  ¿UNA BOFETADA?, ¿LA REALIDAD, ACASO?, ¿UN DOLOR DE MUELAS?"
+KEY_GAME_TUT_1,"Aquí verás las noticias, debes [color=yellow]buscar información sobre ellas[/color] antes de [color=yellow]rechazarlas o aceptarlas[/color] sin razón alguna.","Here you will see the news, you must [color=yellow] look for information about them[/color] before [color=yellow] reject or accept them[/color] without any reason."
+KEY_GAME_TUT_2,Haz click fuera de la [color=yellow]computadora[/color] para [color=yellow]cerrar[/color],Click outside the [color=yellow]computer[/color] to [color=yellow]close[/color]

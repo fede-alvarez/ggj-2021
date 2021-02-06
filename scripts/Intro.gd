@@ -9,8 +9,14 @@ signal intro_over
 signal almost_over
 
 func _ready():
+	set_translated_texts()
 	hide_all()
 	show_next_step()
+	
+func set_translated_texts():
+	$Container/Text_1.bbcode_text = TranslationServer.translate("KEY_GAME_INTRO_1")
+	$Container/Text_2.bbcode_text = TranslationServer.translate("KEY_GAME_INTRO_2")
+	$Container/Text_3.bbcode_text = TranslationServer.translate("KEY_GAME_INTRO_3")
 	
 func start():
 	$StoryTimer.start()

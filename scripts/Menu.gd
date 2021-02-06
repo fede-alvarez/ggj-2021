@@ -4,9 +4,18 @@ onready var transition_rect = $Control/Transition
 onready var audio_tween = $Control/AudioTween
 onready var sound_player = $SoundsPlayer
 
+onready var lang_button = $Control/LangButton
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	pass
+	TranslationServer.set_locale("en")
+	show_translated_text()
+	
+func show_translated_text():
+	$Control/LinkButton.text = TranslationServer.translate("KEY_MENU_CREDITS").to_upper()
+	$Control/LangButton.text = TranslationServer.translate("KEY_MENU_LANGS").to_upper()
+	$Control/Message.text = "- " + TranslationServer.translate("KEY_MENU_TOUCH_START").to_upper() + " -"
+	$Control/Warning.bbcode_text = "[center][color=yellow]< [wave amp=11 freq=5]" + TranslationServer.translate("KEY_MENU_SOUND_WARN").to_upper() + "[/wave] >[/color][/center]"
 	
 func _process(delta):
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -37,3 +46,6 @@ func _on_LinkButton_pressed():
 func _on_CloseButton_pressed():
 	play_sound("click")
 	$Control/CreditosPopup.hide()
+
+func _on_LangButton_language_changed():
+	show_translated_text()

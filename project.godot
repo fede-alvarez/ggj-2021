@@ -35,6 +35,10 @@ window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
+[locale]
+
+translations=PoolStringArray( "res://assets/localization/AFD_Translations - base.es.translation", "res://assets/localization/AFD_Translations - base.en.translation" )
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

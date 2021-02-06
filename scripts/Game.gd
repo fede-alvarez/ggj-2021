@@ -24,6 +24,8 @@ var empty_holder_str = 'HAZ CLICK EN LA "LUPA" DE LA NOTICIA PARA COMENZAR'
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
+	set_translated_texts()
+	
 	$HUD/Popup/InputBorder.visible = false
 	$HUD/Popup/SearcherButton.disabled = true
 	$HUD/Popup/GoogleSearch/EmptyHolder.visible = true
@@ -63,13 +65,24 @@ func _ready():
 	transition.visible = false
 	
 	$HUD/Dialogs.show_dialog([
-		"Hora de ponerse a trabajar. La ".to_upper() + colorize("inspección de internet") + ", no se va a hacer sola!".to_upper(),
-		"Cuando estés listo ve a la ".to_upper() + colorize("computadora")
+		trans_key("KEY_GAME_DLG_WRK_1"),
+		trans_key("KEY_GAME_DLG_WRK_2")
+		#"Hora de ponerse a trabajar. La ".to_upper() + colorize("inspección de internet") + ", no se va a hacer sola!".to_upper(),
+		#"Cuando estés listo ve a la ".to_upper() + colorize("computadora")
 	])
 
 func _process(delta):
 	var mouse_pos = get_viewport().get_mouse_position()
 	cursor.position = Vector2(mouse_pos.x + 1.7, mouse_pos.y + 5)
+	
+func set_translated_texts():
+	empty_holder_str = trans_key("KEY_PC_INFO_HOLDER")
+	$HUD/Popup/GoogleSearch/WindowHeader/NotGoogle.text = trans_key("KEY_PC_SEARCH_ENGINE")
+	$HUD/Popup/TaskBar/DiffButton/LblStart.text = trans_key("KEY_PC_START_BUTTON")
+	$HUD/Popup/TxtSearch.text = trans_key("KEY_PC_SEARCH")
+	$HUD/Popup/HeaderNoticias/NotGoogle.text = trans_key("KEY_PC_NEWS")
+	$HUD/Popup/GoogleSearch/EmptyHolder.text = empty_holder_str
+	update_hud()
 	
 func on_fake_news_filtered():
 	#print("Fake news filtered! :D")
@@ -118,10 +131,17 @@ func on_fake_news_missed():
 		consequences.show_random_consequence()
 		
 	update_hud()
-		
+
+# Get translated text
+func trans_key(key):
+	var translated = TranslationServer.translate(key).to_upper()
+	translated = translated.replacen("[COLOR=YELLOW]", "[color=yellow]")
+	translated = translated.replacen("[/COLOR]", "[/color]")
+	return translated
+	
 func update_hud():
-	$HUD/Popup/LblFakes.text = "FALSAS FILTRADAS " + String(Globals.fake_news) + " / 7" 
-	$HUD/Popup/LblErrors.text = "ERRORES " + String(Globals.total_errors) + " / 5"
+	$HUD/Popup/LblFakes.text = trans_key("KEY_PC_FILTERED") + " " + String(Globals.fake_news) + " / 7" 
+	$HUD/Popup/LblErrors.text = trans_key("KEY_PC_ERRORS") + " " + String(Globals.total_errors) + " / 5"
 	
 func get_news_by_id (news_id):
 	for news in Globals.NEWS:
@@ -175,7 +195,7 @@ func resume_background_music():
 func _on_SearcherButton_pressed():
 	play_sound("click")
 	empty_holder_str = $HUD/Popup/GoogleSearch/EmptyHolder.text
-	$HUD/Popup/GoogleSearch/EmptyHolder.text = "BUSCANDO ..."
+	$HUD/Popup/GoogleSearch/EmptyHolder.text = trans_key("KEY_PC_SEARCHING")
 	yield(get_tree().create_timer(1.0), "timeout")
 	load_search_results()
 	
@@ -242,8 +262,8 @@ func _on_MaskButton_pressed():
 	play_music("recuerdos")
 	
 	$HUD/Dialogs.show_dialog([
-		"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]",
-		father("TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre."),
+		trans_key("KEY_GAME_CALENDAR_1"),
+		father(trans_key("KEY_GAME_CALENDAR_2"))
 	])
 	
 	$HUD/Dialogs.disconnect("dialogs_over", self, "on_dialogs_over")
@@ -259,8 +279,10 @@ func _on_PortraitButton_pressed():
 	play_music("recuerdos")
 	
 	$HUD/Dialogs.show_dialog([
-		"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color]",
-		father("TÚ:\nTIENES A TU MADRE EN LA SONRISA.")
+		trans_key("KEY_GAME_PORTRAIT_1"),
+		father(trans_key("KEY_GAME_PORTRAIT_2"))
+		#"EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color]",
+		#father("TÚ:\nTIENES A TU MADRE EN LA SONRISA.")
 	])
 	$HUD/Dialogs.disconnect("dialogs_over", self, "on_dialogs_over")
 	$HUD/Dialogs.connect("dialogs_over", self, "on_dialogs_over")
@@ -269,59 +291,77 @@ func _on_ArchiveButton_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: ".to_upper() + colorize("“Especies indómitas de Latinoamérica y flora salvaje”"),
-		father("TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?")
+		trans_key("KEY_GAME_ARCHIVE_1"),
+		father(trans_key("KEY_GAME_ARCHIVE_2"))
+		#"Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: ".to_upper() + colorize("“Especies indómitas de Latinoamérica y flora salvaje”"),
+		#father("TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?")
 	])
 
 func _on_Drawer1_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"Dentro del cajón hay una carpeta que lleva el nombre de ".to_upper() + colorize("CLARA."),
-		father("TÚ:\n¿Descuidaste esto?. Debería estar en el estudio."),
+		trans_key("KEY_GAME_TOP_DRW_1"),
+		father(trans_key("KEY_GAME_TOP_DRW_2")),
 		"[QUESTION]",
-		"INFORME 00034: "+colorize("CORNHEAL INDUSTRIES")+"\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE " + colorize("PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA."),
-		father("TÚ:\n¿Patógenos en masa?"),
+		trans_key("KEY_GAME_TOP_DRW_3"),
+		father(trans_key("KEY_GAME_TOP_DRW_4")),
 		"[END]",
-		father("TÚ:\nSerá mejor dejarte descansar.")
+		father(trans_key("KEY_GAME_TOP_DRW_5")),
+		#"Dentro del cajón hay una carpeta que lleva el nombre de ".to_upper() + colorize("CLARA."),
+		#father("TÚ:\n¿Descuidaste esto?. Debería estar en el estudio."),
+		#"[QUESTION]",
+		#"INFORME 00034: "+colorize("CORNHEAL INDUSTRIES")+"\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE " + colorize("PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA."),
+		#father("TÚ:\n¿Patógenos en masa?"),
+		#"[END]",
+		#father("TÚ:\nSerá mejor dejarte descansar.")
 	])
 
 func _on_PostersButton_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.".to_upper()
+		trans_key("KEY_GAME_POSTER")
+		#"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.".to_upper()
 	])
 
 func _on_Drawer2_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"En el cajón hay ".to_upper() + colorize("dos discos de punk") + ", ambos con carátulas garabateadas con la palabra CLARA.".to_upper(),
+		trans_key("KEY_GAME_BOT_DRW_1"),
 		"[QUESTION]",
-		"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge".to_upper(),
-		father("TÚ:\n¿Pero quién diablos es ese JORGE?"),
+		trans_key("KEY_GAME_BOT_DRW_2"),
+		father(trans_key("KEY_GAME_BOT_DRW_3")),
 		"[SKIP]",
-		father("TÚ:\nNo suena tan mal después de todo."),
-		"¿Abro el segundo disco?".to_upper(),
+		father(trans_key("KEY_GAME_BOT_DRW_4")),
+		trans_key("KEY_GAME_BOT_DRW_5"),
 		"[QUESTION]",
-		"Un trozo de papel cae. Se lee un número :".to_upper() + colorize("03-3365-428 Thomas Berstein."),
-		father("TÚ:\nBerstein... ¿de dónde me suena esto?"),
+		trans_key("KEY_GAME_BOT_DRW_6"),
+		father(trans_key("KEY_GAME_BOT_DRW_7")),
 		"[END]",
-		father("TÚ:\n¿Dónde venderán reproductores de CD´s?")
+		father(trans_key("KEY_GAME_BOT_DRW_8"))
 	])
 
 func _on_BookButton_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"En la portada del libro se lee: Diario de CLARA".to_upper(),
+		trans_key("KEY_GAME_BOOK_1"),
 		"[QUESTION]",
-		father("TÚ:\nNo tiene sentido esconderlo ahora."),
-		"En una de las páginas se puede apreciar: “ T. B se ha enterado de todo, creo que debo cuidarme, me despediré de papá”.".to_upper(),
-		father("TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?"),
+		father(trans_key("KEY_GAME_BOOK_2")),
+		trans_key("KEY_GAME_BOOK_3"),
+		father(trans_key("KEY_GAME_BOOK_4")),
 		"[END]",
-		father("TÚ:\nQue al menos tus secretos se mantengan en paz")
+		father(trans_key("KEY_GAME_BOOK_5")),
+		
+		#"En la portada del libro se lee: Diario de CLARA".to_upper(),
+		#"[QUESTION]",
+		#father("TÚ:\nNo tiene sentido esconderlo ahora."),
+		#"En una de las páginas se puede apreciar: “ T. B se ha enterado de todo, creo que debo cuidarme, me despediré de papá”.".to_upper(),
+		#father("TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?"),
+		#"[END]",
+		#father("TÚ:\nQue al menos tus secretos se mantengan en paz")
 	])
 
 func _on_ArchiveButton_mouse_entered():
@@ -345,8 +385,10 @@ func _on_PCButton_pressed():
 	if Globals.first_play:
 		Globals.first_play = false
 		$HUD/Dialogs.show_dialog([
-			"Aquí verás las ".to_upper() + colorize("noticias") + " " + colorize("busca información sobre ellas") + " antes de ".to_upper() + colorize("rechazarlas o aceptarlas") + " sin razón alguna.".to_upper(),
-			"Haz click fuera de la ".to_upper() + colorize("computadora") +" para ".to_upper() + colorize("cerrar")
+			trans_key("KEY_GAME_TUT_1"),
+			trans_key("KEY_GAME_TUT_2"),
+			#"Aquí verás las ".to_upper() + colorize("noticias") + " " + colorize("busca información sobre ellas") + " antes de ".to_upper() + colorize("rechazarlas o aceptarlas") + " sin razón alguna.".to_upper(),
+			#"Haz click fuera de la ".to_upper() + colorize("computadora") +" para ".to_upper() + colorize("cerrar")
 		])
 
 func _on_PCButton_mouse_entered():
@@ -359,15 +401,19 @@ func _on_PapeleraButton_pressed():
 	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
-		"Es una simple papelera...".to_upper(),
+		trans_key("KEY_GAME_BIN_1"),
 		"[QUESTION]",
-		father("Tú:\nUno nunca sabe lo que se esconde en la basura"),
-		"Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”".to_upper(),
-		father("Aparentes..."),
+		father(trans_key("KEY_GAME_BIN_2")),
+		trans_key("KEY_GAME_BIN_3"),
+		father(trans_key("KEY_GAME_BIN_4")),
 		"[END]",
-		father("¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.")
+		father(trans_key("KEY_GAME_BIN_5"))
+		
+		#"Es una simple papelera...".to_upper(),
+		#"[QUESTION]",
+		#father("Tú:\nUno nunca sabe lo que se esconde en la basura"),
+		#"Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”".to_upper(),
+		#father("Aparentes..."),
+		#"[END]",
+		#father("¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.")
 	])
-
-# Botón diferencia
-func _on_DiffButton_pressed():
-	pass # Replace with function body.

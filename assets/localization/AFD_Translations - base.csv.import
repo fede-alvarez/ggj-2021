@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://assets/localization/AFD_Translations - base.es.translation", "res://assets/localization/AFD_Translations - base.en.translation" ]
+
+source_file="res://assets/localization/AFD_Translations - base.csv"
+dest_files=[ "res://assets/localization/AFD_Translations - base.es.translation", "res://assets/localization/AFD_Translations - base.en.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

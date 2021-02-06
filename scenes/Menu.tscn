@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/logo/logo_01_completo.png" type="Texture" id=1]
 [ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=14]
 [ext_resource path="res://assets/music/(Dubitativo song) Opennin pantalla principal.ogg" type="AudioStream" id=15]
 [ext_resource path="res://entities/Cursor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scripts/LangButton.gd" type="Script" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
@@ -120,7 +121,7 @@ anchor_bottom = 0.5
 margin_top = 49.7416
 margin_bottom = 55.7416
 custom_fonts/font = ExtResource( 13 )
-text = "- TOCA PARA COMENZAR -"
+text = "- TOCA PARA EMPEZAR -"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -154,6 +155,40 @@ margin_right = -7.55609
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 13 )
 text = "CRÉDITOS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangButton" type="LinkButton" parent="Control"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 9.0
+custom_fonts/font = ExtResource( 13 )
+text = "IDÍOMAS"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spanish" type="LinkButton" parent="Control/LangButton"]
+visible = false
+margin_top = 12.5451
+margin_right = 59.0
+margin_bottom = 18.5451
+custom_fonts/font = ExtResource( 13 )
+text = "ESPAÑOL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="English" type="LinkButton" parent="Control/LangButton"]
+visible = false
+margin_top = 24.6076
+margin_right = 59.0
+margin_bottom = 30.6076
+custom_fonts/font = ExtResource( 13 )
+text = "ENGLISH"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -261,4 +296,8 @@ autoplay = true
 volume_db = -20.0
 [connection signal="pressed" from="Control/IntroButton" to="." method="_on_IntroButton_pressed"]
 [connection signal="pressed" from="Control/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="language_changed" from="Control/LangButton" to="." method="_on_LangButton_language_changed"]
+[connection signal="pressed" from="Control/LangButton" to="Control/LangButton" method="_on_LangButton_pressed"]
+[connection signal="pressed" from="Control/LangButton/Spanish" to="Control/LangButton" method="_on_Spanish_pressed"]
+[connection signal="pressed" from="Control/LangButton/English" to="Control/LangButton" method="_on_English_pressed"]
 [connection signal="pressed" from="Control/CreditosPopup/CloseButton" to="." method="_on_CloseButton_pressed"]
