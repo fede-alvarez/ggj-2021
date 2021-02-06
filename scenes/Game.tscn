@@ -388,14 +388,14 @@ texture = ExtResource( 26 )
 position = Vector2( 182.524, 38.478 )
 frames = SubResource( 24 )
 animation = "Idle"
-frame = 21
+frame = 20
 playing = true
 
 [node name="Tree4" type="AnimatedSprite" parent="Arboles"]
 position = Vector2( 307.618, 49.9085 )
 frames = SubResource( 24 )
 animation = "Idle"
-frame = 20
+frame = 19
 playing = true
 
 [node name="Tree2" type="AnimatedSprite" parent="Arboles"]
@@ -403,7 +403,7 @@ position = Vector2( 216.421, 40.8342 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 24 )
 animation = "Idle"
-frame = 20
+frame = 19
 playing = true
 
 [node name="Tree3" type="AnimatedSprite" parent="Arboles"]
@@ -411,7 +411,7 @@ position = Vector2( 274.95, 40.8342 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 24 )
 animation = "Idle"
-frame = 20
+frame = 19
 playing = true
 
 [node name="Consecuencias" type="Position2D" parent="."]
@@ -437,7 +437,6 @@ visible = false
 position = Vector2( 277.673, 56.2605 )
 frames = SubResource( 33 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="Positivas" type="Position2D" parent="."]
@@ -450,13 +449,14 @@ visible = false
 position = Vector2( 196.316, 47.2907 )
 frames = SubResource( 44 )
 animation = "Idle"
+frame = 9
 playing = true
 
 [node name="Desfile2" type="AnimatedSprite" parent="Positivas/Desfile"]
 position = Vector2( 279.373, 47.2907 )
 frames = SubResource( 44 )
 animation = "Idle"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Ambulancia" type="AnimatedSprite" parent="Positivas"]

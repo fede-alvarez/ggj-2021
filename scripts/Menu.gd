@@ -8,7 +8,7 @@ onready var lang_button = $Control/LangButton
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	TranslationServer.set_locale("en")
+	TranslationServer.set_locale("es")
 	show_translated_text()
 	
 func show_translated_text():
