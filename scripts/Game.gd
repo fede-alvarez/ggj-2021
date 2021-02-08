@@ -9,7 +9,6 @@ onready var transition_bg = $HUD/Transition/Background
 onready var transition_tween = $HUD/Transition/TransitionTween
 onready var news_detail_container = $HUD/Popup/NewsDetail
 
-onready var cursor = $HUD/Cursor
 onready var popup_tween = $HUD/Popup/PopupTween
 
 onready var sound_player = $Sounds
@@ -22,8 +21,7 @@ onready var positivas = $Positivas
 var empty_holder_str = 'HAZ CLICK EN LA "LUPA" DE LA NOTICIA PARA COMENZAR'
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	set_translated_texts()
 	
 	$HUD/Popup/InputBorder.visible = false
@@ -70,18 +68,19 @@ func _ready():
 		#"Hora de ponerse a trabajar. La ".to_upper() + colorize("inspección de internet") + ", no se va a hacer sola!".to_upper(),
 		#"Cuando estés listo ve a la ".to_upper() + colorize("computadora")
 	])
-
-func _process(delta):
-	var mouse_pos = get_viewport().get_mouse_position()
-	cursor.position = Vector2(mouse_pos.x + 1.7, mouse_pos.y + 5)
 	
 func set_translated_texts():
+	Globals.NEWS = Globals.update_news_lang()
+	
 	empty_holder_str = trans_key("KEY_PC_INFO_HOLDER")
 	$HUD/Popup/GoogleSearch/WindowHeader/NotGoogle.text = trans_key("KEY_PC_SEARCH_ENGINE")
 	$HUD/Popup/TaskBar/DiffButton/LblStart.text = trans_key("KEY_PC_START_BUTTON")
 	$HUD/Popup/TxtSearch.text = trans_key("KEY_PC_SEARCH")
 	$HUD/Popup/HeaderNoticias/NotGoogle.text = trans_key("KEY_PC_NEWS")
 	$HUD/Popup/GoogleSearch/EmptyHolder.text = empty_holder_str
+	$HUD/Dialogs/ConfirmButton.text = trans_key("KEY_GAME_DLG_BUTTON_OP")
+	$HUD/Dialogs/DenyButton.text = trans_key("KEY_GAME_DLG_BUTTON_CL")
+	$HUD/Popup/NewsDetail/ScrollContainer/Control/LinkButton.text = trans_key("KEY_PC_BACK_BUTTON")
 	update_hud()
 	
 func on_fake_news_filtered():
@@ -241,12 +240,10 @@ func close_popup():
 	$HUD/Popup.hide()
 	
 func _on_MaskButton_mouse_entered():
-	$Elements/calendary/Anim.play("Hover")
-	cursor.set_hover()
+	$Elements/calendar/Anim.play("Hover")
 
 func _on_MaskButton_mouse_exited():
-	$Elements/calendary/Anim.stop()
-	cursor.release()
+	$Elements/calendar/Anim.play_backwards("Hover")
 
 # Pressed elements
 
@@ -257,7 +254,6 @@ func colorize(msg, color="yellow"):
 	return "[color="+color+"]" + msg.to_upper() + "[/color]"
 	
 func _on_MaskButton_pressed():
-	cursor.set_press()
 	play_sound("photo_click")
 	play_music("recuerdos")
 	
@@ -274,7 +270,6 @@ func on_dialogs_over():
 	pass
 	
 func _on_PortraitButton_pressed():
-	cursor.set_press()
 	play_sound("photo_click")
 	play_music("recuerdos")
 	
@@ -288,7 +283,6 @@ func _on_PortraitButton_pressed():
 	$HUD/Dialogs.connect("dialogs_over", self, "on_dialogs_over")
 
 func _on_ArchiveButton_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_ARCHIVE_1"),
@@ -298,7 +292,6 @@ func _on_ArchiveButton_pressed():
 	])
 
 func _on_Drawer1_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_TOP_DRW_1"),
@@ -318,7 +311,6 @@ func _on_Drawer1_pressed():
 	])
 
 func _on_PostersButton_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_POSTER")
@@ -326,7 +318,6 @@ func _on_PostersButton_pressed():
 	])
 
 func _on_Drawer2_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_BOT_DRW_1"),
@@ -344,7 +335,6 @@ func _on_Drawer2_pressed():
 	])
 
 func _on_BookButton_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_BOOK_1"),
@@ -371,7 +361,6 @@ func _on_ArchiveButton_mouse_exited():
 	$Elements/archive/Anim.play_backwards("Hover")
 
 func _on_PCButton_pressed():
-	cursor.set_press()
 	if $HUD/Dialogs.is_running:
 		return
 	play_sound("click")
@@ -398,7 +387,6 @@ func _on_PCButton_mouse_exited():
 	$"Elements/tv-anim/Animator".play_backwards("Hover")
 
 func _on_PapeleraButton_pressed():
-	cursor.set_press()
 	play_sound("click")
 	$HUD/Dialogs.show_dialog([
 		trans_key("KEY_GAME_BIN_1"),

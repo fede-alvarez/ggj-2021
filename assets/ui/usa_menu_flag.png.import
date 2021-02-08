@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/28_mst-19 para animales no protege humanos.png-7d13982a2edb7c7f8b46a11d639119ac.stex"
+path="res://.import/usa_menu_flag.png-ec41024fd5c1205a2b60944635b752d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/news_images/28_mst-19 para animales no protege humanos.png"
-dest_files=[ "res://.import/28_mst-19 para animales no protege humanos.png-7d13982a2edb7c7f8b46a11d639119ac.stex" ]
+source_file="res://assets/ui/usa_menu_flag.png"
+dest_files=[ "res://.import/usa_menu_flag.png-ec41024fd5c1205a2b60944635b752d5.stex" ]
 
 [params]
 

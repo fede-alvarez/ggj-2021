@@ -26,9 +26,10 @@ func hide_options():
 func _on_Spanish_pressed():
 	TranslationServer.set_locale("es")
 	hide_options()
-	emit_signal("language_changed")
+	emit_signal("language_changed", "es")
+	
 
 func _on_English_pressed():
 	TranslationServer.set_locale("en")
 	hide_options()
-	emit_signal("language_changed")
+	emit_signal("language_changed", "en")

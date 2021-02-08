@@ -369,6 +369,15 @@ var first_play = true
 var fake_news = 0
 var total_errors = 0
 
+func update_news_lang():
+	var updated_news = []
+	
+	for news in NEWS:
+		news.title = TranslationServer.translate("KEY_NEWS_ID_" + String(news.id))
+		updated_news.append(news)
+	
+	return updated_news
+	
 func get_time():
 	var timeDict = OS.get_time();
 	var hour = String(timeDict.hour);

@@ -48,3 +48,10 @@ func _on_StoryTimer_timeout():
 	else:
 		hide()
 		emit_signal("intro_over")
+
+
+func _on_SkipIntro_pressed():
+	$StoryTimer.stop()
+	emit_signal("almost_over")
+	emit_signal("intro_over")
+	hide()

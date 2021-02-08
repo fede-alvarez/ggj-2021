@@ -10,39 +10,39 @@ KEY_MENU_CR_CLOSE,Cerrar,Close
 KEY_MENU_LANGS,Idíomas,Languages
 KEY_GAME_INTRO_1,"[center][color=yellow]BARLOVENTO, AÑO 20XX[/color]\n\nTODO MUERE, DESDE LOS PERIÓDICOS HASTA LOS LIRIOS. LA PENUMBRA LLEGÓ SIN FORMA DEFINIDA Y SE ESPARCIÓ POR TODA LA TIERRA MOJADA. AHORA CUBRE BOCAS Y LINTERNAS PARA CAMINAR A PLENA LUZ DEL DÍA SON REQUERIDAS.[/center]","[center][color=yellow]BARLOVENTO, YEAR 20XX[/color]\n\nEVERYTHING DIES, FROM NEWSPAPERS TO LILIES. THE PENUMBRA ARRIVED WITHOUT DEFINED FORM AND SPREAD THROUGHOUT THE WET EARTH. NOW MOUTH COVERS AND FLASHLIGHTS TO WALK IN FULL DAYLIGHT ARE REQUIRED.[/center]"
 KEY_GAME_INTRO_2,[center]¿ES QUE ALGUNA VEZ DEJAMOS DE BUSCAR LO QUE NO SE NOS HA PERDIDO?[/center],[center]DOES WE EVER STOP LOOKING FOR WHAT WE HAVE NOT MISSED?[/center]
-KEY_GAME_INTRO_3,"[center]ESTÁS MUERTO, PERO AÚN NO LO SABES. MIENTRAS TANTO, TU TRABAJO ES ACARICIAR LA VERDAD\n\n- COMO SI REALMENTE EXISTIERA -[/center]","[center]YOU'RE DEAD, BUT YOU DON'T KNOW IT YET. MEANWHILE, YOUR JOB IS TO FEAR THE TRUTH\n\n- AS IF IT REALLY EXISTS -[/center]"
-KEY_GAME_DLG_WRK_1,"Hora de ponerse a trabajar. La [color=yellow]inspección de internet[/color], no se va a hacer sola!",Time to get to work. The [color=yellow]internet inspection[/color] is not going to be done alone!
+KEY_GAME_INTRO_3,"[center]ESTÁS MUERTO, PERO AÚN NO LO SABES. MIENTRAS TANTO, TU TRABAJO ES ACARICIAR LA VERDAD\n\n- COMO SI REALMENTE EXISTIERA -[/center]","[center]YOU'RE DEAD, BUT YOU DON'T KNOW IT YET. MEANWHILE, YOUR JOB IS TO CARESS THE TRUTH\n\n- AS IF IT REALLY EXISTS -[/center]"
+KEY_GAME_DLG_WRK_1,"Hora de ponerse a trabajar. La [color=yellow]inspección de internet[/color], no se va a hacer sola!",Time to get to work. The [color=yellow]internet inspection[/color] is not going to be done by itself!
 KEY_GAME_DLG_WRK_2,Cuando estés listo ve a la [color=yellow]computadora[/color],When you are ready go to the [color=yellow]computer[/color]
-KEY_GAME_CALENDAR_1,"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]","UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]"
-KEY_GAME_CALENDAR_2,TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre.,TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre.
-KEY_GAME_ARCHIVE_1,Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”,Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: “Especies indómitas de Latinoamérica y flora salvaje”
-KEY_GAME_ARCHIVE_2,"TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?","TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?"
-KEY_GAME_TOP_DRW_1,Dentro del cajón hay una carpeta que lleva el nombre de CLARA.,Dentro del cajón hay una carpeta que lleva el nombre de CLARA.
-KEY_GAME_TOP_DRW_2,TÚ:\n¿Descuidaste esto?. Debería estar en el estudio.,TÚ:\n¿Descuidaste esto?. Debería estar en el estudio.
-KEY_GAME_TOP_DRW_3,"INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.","INFORME 00034: CORNHEAL INDUSTRIES\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA."
-KEY_GAME_TOP_DRW_4,TÚ:\n¿Patógenos en masa?,TÚ:\n¿Patógenos en masa?
-KEY_GAME_TOP_DRW_5,TÚ:\nSerá mejor dejarte descansar.,TÚ:\nSerá mejor dejarte descansar.
-KEY_GAME_BOT_DRW_1,"En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA.","En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA."
-KEY_GAME_BOT_DRW_2,"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge","En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge"
-KEY_GAME_BOT_DRW_3,TÚ:\n¿Pero quién diablos es ese JORGE?,TÚ:\n¿Pero quién diablos es ese JORGE?
-KEY_GAME_BOT_DRW_4,TÚ:\nNo suena tan mal después de todo.,TÚ:\nNo suena tan mal después de todo.
-KEY_GAME_BOT_DRW_5,¿Abro el segundo disco?,¿Abro el segundo disco?
-KEY_GAME_BOT_DRW_6,Un trozo de papel cae. Se lee un número: 03-3365-428 Thomas Berstein.,Un trozo de papel cae. Se lee un número: 03-3365-428 Thomas Berstein.
-KEY_GAME_BOT_DRW_7,TÚ:\nBerstein... ¿de dónde me suena esto?,TÚ:\nBerstein... ¿de dónde me suena esto?
-KEY_GAME_BOT_DRW_8,TÚ:\n¿Dónde venderán reproductores de CD´s?,TÚ:\n¿Dónde venderán reproductores de CD´s?
-KEY_GAME_BOOK_1,En la portada del libro se lee: Diario de CLARA,En la portada del libro se lee: Diario de CLARA
-KEY_GAME_BOOK_2,TÚ:\nNo tiene sentido esconderlo ahora.,TÚ:\nNo tiene sentido esconderlo ahora.
-KEY_GAME_BOOK_3,"En una de las páginas se puede apreciar: “ T.B se ha enterado de todo, creo que debo cuidarme, me despediré de papá","En una de las páginas se puede apreciar: “ T.B se ha enterado de todo, creo que debo cuidarme, me despediré de papá"
-KEY_GAME_BOOK_4,"TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?","TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?"
-KEY_GAME_BOOK_5,TÚ:\nQue al menos tus secretos se mantengan en paz,TÚ:\nQue al menos tus secretos se mantengan en paz
-KEY_GAME_POSTER,"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.","Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela."
-KEY_GAME_PORTRAIT_1,EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color],EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color]
-KEY_GAME_PORTRAIT_2,TÚ:\nTIENES A TU MADRE EN LA SONRISA.,TÚ:\nTIENES A TU MADRE EN LA SONRISA.
-KEY_GAME_BIN_1,Es una simple papelera...,Es una simple papelera...
-KEY_GAME_BIN_2,Tú:\nUno nunca sabe lo que se esconde en la basura,Tú:\nUno nunca sabe lo que se esconde en la basura
-KEY_GAME_BIN_3,"Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”","Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”"
-KEY_GAME_BIN_4,Aparentes...,Aparentes...
-KEY_GAME_BIN_5,¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.,¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.
+KEY_GAME_CALENDAR_1,"UN SUCÍO Y ARRUGADO CALENDARIO TIENE RESALTADA LA FECHA [color=yellow]25 DE ENERO[/color], JUNTO A LA MARCA SE LEE: [color=yellow]CUMPLEAÑOS - CLARA.[/color]","A DIRTY AND WRINKLED CALENDAR HIGHLIGHTS THE DATE [color=yellow]JANUARY 25[/color], NEXT TO THE BRAND IT READS: [color=yellow]CLARA'S BIRTHDAY[/color] "
+KEY_GAME_CALENDAR_2,TÚ:\nPronto habríamos podido celebrar tus 27... Quizá podría pedir chatarra y comerla en tu nombre.,You:\nSoon we could have celebrated your 27 ... Maybe I could order junk and eat it on your behalf.
+KEY_GAME_ARCHIVE_1,Pequeño libro de pasta gruesa. En la portada se ven plantas. Se lee: [color=yellow]“Especies indómitas de Latinoamérica y flora salvaje”[/color],"Small thick book. Plants are seen on the cover. It reads: [color=yellow]""Indomitable species of Latin America and wild flora""[/color]"
+KEY_GAME_ARCHIVE_2,"TÚ:\nLos lirios ahora me parecen más pequeños, más frágiles.\n¿Hay lirios en el vacío, CLARA?","YOU:\nLilies now seem smaller, more fragile to me.\nAre there lilies in the void, CLARA?"
+KEY_GAME_TOP_DRW_1,Dentro del cajón hay una carpeta que lleva el nombre de CLARA.,Inside the drawer there is a folder that bears CLARA's name.
+KEY_GAME_TOP_DRW_2,TÚ:\n¿Descuidaste esto?. Debería estar en el estudio.,YOU:\nDid you neglect this? It should be in the studio.
+KEY_GAME_TOP_DRW_3,"[color=yellow]INFORME 00034: CORNHEAL INDUSTRIES[/color]\nCLARA VERDESOTO, CONSULTORA BIOQUÍMICA\nIDENTIFICACIÓN DE [color=yellow]PATÓGENOS EN MÉTODO DE PRODUCCIÓN EN MASA.[/color]","[color=yellow]REPORT 00034: CORNHEAL INDUSTRIES[/color]\nCLARA VERDESOTO, BIOCHEMICAL CONSULTANT.\nIDENTIFICATION OF [color=yellow]PATHOGENS IN MASS PRODUCTION METHOD.[/color]"
+KEY_GAME_TOP_DRW_4,TÚ:\n¿Patógenos en masa?,YOU:\nMass pathogens?
+KEY_GAME_TOP_DRW_5,TÚ:\nSerá mejor dejarte descansar.,YOU:\nIt would be better let you rest.
+KEY_GAME_BOT_DRW_1,"En el cajón hay dos discos de punk, ambos con carátulas garabateadas con la palabra CLARA.","In the drawer there are two punk records, both with covers scrawled with the word CLARA."
+KEY_GAME_BOT_DRW_2,"En el reverso de la portada, hay una dedicatoria: “Que este disco manifieste mi pálpito. Te amo” . Att: Jorge","On the back of the cover, there is a dedication: “May this album show my heart. I love you"" . Att: Jorge"
+KEY_GAME_BOT_DRW_3,TÚ:\n¿Pero quién diablos es ese JORGE?,YOU:\nBut who the hell is that JORGE?
+KEY_GAME_BOT_DRW_4,TÚ:\nNo suena tan mal después de todo.,YOU:\nIt doesn't sound so bad after all.
+KEY_GAME_BOT_DRW_5,¿Abrir segundo disco?,Open second disk?
+KEY_GAME_BOT_DRW_6,Un trozo de papel cae. Se lee un número:\n03-3365-428 [color=yellow]Thomas Berstein.[/color],A piece of paper falls. A number is read:\n03-3365-428 [color=yellow]Thomas Berstein.[/color]
+KEY_GAME_BOT_DRW_7,TÚ:\nBerstein... ¿de dónde me suena esto?,YOU:\nBernstein ... how do I know this?
+KEY_GAME_BOT_DRW_8,TÚ:\n¿Dónde venderán reproductores de CD´s?,YOU:\nWhere will they sell CD players?
+KEY_GAME_BOOK_1,En la portada del libro se lee: Diario de CLARA,On the cover of the book it reads: CLARA's Diary
+KEY_GAME_BOOK_2,TÚ:\nNo tiene sentido esconderlo ahora.,YOU:\nThere is no point hiding it now.
+KEY_GAME_BOOK_3,"En una de las páginas se puede apreciar: “T.B se ha enterado de todo, creo que debo cuidarme, me despediré de papá”","In one of the pages you can see: ""T.B has found out everything, I think I should take care of myself, I will say goodbye to dad"""
+KEY_GAME_BOOK_4,"TÚ:\n¿T.B?, ¿Que es un T.B?, ¿Alguna jerga de muchachos?",YOU:\nT.B? What is a T.B? some young people slang?
+KEY_GAME_BOOK_5,TÚ:\nQue al menos tus secretos se mantengan en paz,YOU:\nMay at least your secrets be kept in peace
+KEY_GAME_POSTER,"Se distinguen un afiche de una película bizarra, un retrato de CLARA a carboncillo, y una planta pintada en acuarela.","There is a bizarre movie poster, a charcoal portrait of CLARA, and a plant painted in watercolor."
+KEY_GAME_PORTRAIT_1,EL RETRATO DE UNA JOVEN MUJER. AL PIE DE LA FOTOGRAFÍA SE LEE\n[color=yellow]CLARA VERDESOTO[/color],THE PORTRAIT OF A YOUNG WOMAN. AT PHOTOGRAPH'S BOTTOM\n[color=yellow]CLARA VERDESOTO[/color] IS READ
+KEY_GAME_PORTRAIT_2,TÚ:\nTIENES A TU MADRE EN LA SONRISA.,YOU:\nYOU HAVE YOUR MOTHER IN YOUR SMILE.
+KEY_GAME_BIN_1,Es una simple papelera...,It's a simple trash can ...
+KEY_GAME_BIN_2,Tú:\nUno nunca sabe lo que se esconde en la basura,You:\nYou never know what is hidden in the garbage 
+KEY_GAME_BIN_3,"Un papel arrugado está en la papelera. El papel está medio quemado.\nSe puede leer: “... solicitando a usted, Clara Verdesoto, la inmediata renuncia a su puesto de consultora ocasional por aparentes ...”","A crumpled paper is in the trash can. The paper is half burned.\nIt can be read: ""... requesting from you, Clara Verdesoto, the immediate resignation of her position as occasional consultant for apparent ..."""
+KEY_GAME_BIN_4,Aparentes...,Apparent ...
+KEY_GAME_BIN_5,¿Buscar en el basurero como si fuera una biblioteca?. Cosa de dementes.,Search the garbage can as if it were a library? Insane.
 KEY_PC_FILTERED,FALSAS FILTRADAS,FILTERED FAKES
 KEY_PC_ERRORS,ERRORES,ERRORS
 KEY_PC_NEWS,NOTICIAS,NEWS
@@ -52,46 +52,49 @@ KEY_PC_SEARCHING,BUSCANDO . . .,SEARCHING . . .
 KEY_PC_INFO_HOLDER,"HAZ CLICK EN LA ""LUPA"" DE LA NOTICIA PARA COMENZAR","CLICK ON THE NEWS ""MAGNIFIER"" ICON TO BEGIN"
 KEY_PC_START_BUTTON,INICIO,START
 KEY_PC_NEWS_SOURCE,FUENTE,SOURCE
-KEY_PC_BAD_FINAL,"LAS FICCIONES SE ESTAMPAN CONTRA TU NARIZ Y TE HACEN SANGRAR. ¿O ES TU NARIZ LA QUE SE ESTAMPA CONTRA LAS FICCIONES?. EN FIN, SIEMPRE PODRÁS LIMPIARTE CON PAÑOS BLANQUECINOS Y FROTAR LOS DOLORES FUTUROS.","LAS FICCIONES SE ESTAMPAN CONTRA TU NARIZ Y TE HACEN SANGRAR. ¿O ES TU NARIZ LA QUE SE ESTAMPA CONTRA LAS FICCIONES?. EN FIN, SIEMPRE PODRÁS LIMPIARTE CON PAÑOS BLANQUECINOS Y FROTAR LOS DOLORES FUTUROS."
-KEY_PC_GOOD_FINAL,"¡PUEDES SENTIR!.\nRESULTA QUE ESTE SER DE HUESOS ESTÁ VIVO… Y HASTA TIENE RECUERDOS.\n¿QUE LO HA DESPERTADO?.  ¿UNA BOFETADA?, ¿LA REALIDAD, ACASO?, ¿UN DOLOR DE MUELAS?","¡PUEDES SENTIR!.\nRESULTA QUE ESTE SER DE HUESOS ESTÁ VIVO… Y HASTA TIENE RECUERDOS.\n¿QUE LO HA DESPERTADO?.  ¿UNA BOFETADA?, ¿LA REALIDAD, ACASO?, ¿UN DOLOR DE MUELAS?"
+KEY_PC_BACK_BUTTON,< VOLVER,< BACK
+KEY_GAME_DLG_BUTTON_OP,ABRIR,OPEN
+KEY_GAME_DLG_BUTTON_CL,NO ABRIR,DON'T OPEN
+KEY_PC_BAD_FINAL,"LAS FICCIONES SE ESTAMPAN CONTRA TU NARIZ Y TE HACEN SANGRAR. ¿O ES TU NARIZ LA QUE SE ESTAMPA CONTRA LAS FICCIONES?. EN FIN, SIEMPRE PODRÁS LIMPIARTE CON PAÑOS BLANQUECINOS Y FROTAR LOS DOLORES FUTUROS.","FICTIONS ARE STAMPED AGAINST YOUR NOSE AND MAKE YOU BLEED. OR IS YOUR NOSE THAT STAMPS AGAINST FICTIONS? FINALLY, YOU WILL ALWAYS BE ABLE TO CLEAN YOURSELF WITH WHITE CLOTHS AND RUB THE FUTURE PAINS."
+KEY_PC_GOOD_FINAL,"¡PUEDES SENTIR!.\nRESULTA QUE ESTE SER DE HUESOS ESTÁ VIVO… Y HASTA TIENE RECUERDOS.\n¿QUE LO HA DESPERTADO?.  ¿UNA BOFETADA?, ¿LA REALIDAD, ACASO?, ¿UN DOLOR DE MUELAS?",YOU CAN FEEL!.\nIT TURNS OUT THAT THIS BEING OF BONES IS ALIVE ... AND EVEN HAS MEMORIES.\nWHAT WAKEN YOU UP? A SLAP? REALITY? A TOOTH PAIN?
 KEY_GAME_TUT_1,"Aquí verás las noticias, debes [color=yellow]buscar información sobre ellas[/color] antes de [color=yellow]rechazarlas o aceptarlas[/color] sin razón alguna.","Here you will see the news, you must [color=yellow] look for information about them[/color] before [color=yellow] reject or accept them[/color] without any reason."
 KEY_GAME_TUT_2,Haz click fuera de la [color=yellow]computadora[/color] para [color=yellow]cerrar[/color],Click outside the [color=yellow]computer[/color] to [color=yellow]close[/color]
-KEY_NEWS_ID_1,La casa blanca manchada de sangre: El asalto al capitolio con cócteles molotov y armamento blindado,La casa blanca manchada de sangre: El asalto al capitolio con cócteles molotov y armamento blindado
-KEY_NEWS_ID_2,Líder Ultraderechista en Boston admite que el asalto al capitolio se venía pensando desde hace 5 meses atrás.,Líder Ultraderechista en Boston admite que el asalto al capitolio se venía pensando desde hace 5 meses atrás.
-KEY_NEWS_ID_3,El ministro del interior iniciará inmediatamente una persecución contra todos los 'terroristas infiltrados',El ministro del interior iniciará inmediatamente una persecución contra todos los 'terroristas infiltrados'
-KEY_NEWS_ID_4,Familia completa vinculada al acto terrorista contra el capitolio. El gato de la familia también fue procesado.,Familia completa vinculada al acto terrorista contra el capitolio. El gato de la familia también fue procesado.
-KEY_NEWS_ID_5,"El presidente saliente Forbes, no habla sobre el asalto al Capitolio, pero admite que no le desagrada.","El presidente saliente Forbes, no habla sobre el asalto al Capitolio, pero admite que no le desagrada."
-KEY_NEWS_ID_6,Expertos en extremismo piensan que el asalto al capitolio es  solo el comienzo.,Expertos en extremismo piensan que el asalto al capitolio es  solo el comienzo.
-KEY_NEWS_ID_7,Más de 300 camioneros franceses han muerto en territorio británico a causa del MST-19,Más de 300 camioneros franceses han muerto en territorio británico a causa del MST-20
-KEY_NEWS_ID_8,Familias de camioneros declararon la incompetencia del gobierno ante el abandono de su gente.,Familias de camioneros declararon la incompetencia del gobierno ante el abandono de su gente.
-KEY_NEWS_ID_9,Agua y pan para el pueblo de Francia: plantón en la Bastilla por Camioneros atrapados en mitad de la peste.,Agua y pan para el pueblo de Francia: plantón en la Bastilla por Camioneros atrapados en mitad de la peste.
-KEY_NEWS_ID_10,"No es humano dejar a camioneros estancados, sin poder ir ni venir de Inglaterra","No es humano dejar a camioneros estancados, sin poder ir ni venir de Inglaterra"
-KEY_NEWS_ID_11,CornHeal ha enviado un primer cargamento de ayuda a la frontera británica.,CornHeal ha enviado un primer cargamento de ayuda a la frontera británica.
-KEY_NEWS_ID_12,Provisiones Chinas llegan a la frontera británica. ¡Enlatados de Sardina y Arroz blanco!,Provisiones Chinas llegan a la frontera británica. ¡Enlatados de Sardina y Arroz blanco!
-KEY_NEWS_ID_13,¡El agua será comprada!. Los posibles comerciantes están comenzando a filtrarse en los medios públicos.,¡El agua será comprada!. Los posibles comerciantes están comenzando a filtrarse en los medios públicos.
-KEY_NEWS_ID_14,El agua ahora vale más que el oro. Economistas afirman que el agua se medirá en unidades de venta y consumo.,El agua ahora vale más que el oro. Economistas afirman que el agua se medirá en unidades de venta y consumo.
-KEY_NEWS_ID_15,"¡Los fatalistas anuncian fin de los días! 'No queremos guardar agua como negocio, habría mucha competencia'","¡Los fatalistas anuncian fin de los días! 'No queremos guardar agua como negocio, habría mucha competencia'"
-KEY_NEWS_ID_16,"¿Por qué el agua está en la bolsa de valores, depreciación económica mundial o plan socio-económico sostenible?","¿Por qué el agua está en la bolsa de valores, depreciación económica mundial o plan socio-económico sostenible?"
-KEY_NEWS_ID_17,"Ecologistas han declarado manifestaciones en los próximos días. 'El agua no se vende, es un derecho natural'","Ecologistas han declarado manifestaciones en los próximos días. 'El agua no se vende, es un derecho natural'"
-KEY_NEWS_ID_18,El agua en la bolsa de valores: ¿protección o especulación?,El agua en la bolsa de valores: ¿protección o especulación?
-KEY_NEWS_ID_19,Vacunas contra MST-19 no han llegado al puerto marítimo litoral. Las primeras dosis cumplen 1 mes de retraso hoy.,Vacunas contra MST-19 no han llegado al puerto marítimo litoral. Las primeras dosis cumplen 1 mes de retraso hoy.
-KEY_NEWS_ID_20,"Vacunas contra la peste MST-19, fueron robadas el primer día de su arribo. Guardianes de Barlovento como posibles implicados en el hecho.","Vacunas contra la peste MST-19, fueron robadas el primer día de su arribo. Guardianes de Barlovento como posibles implicados en el hecho."
-KEY_NEWS_ID_21,Sudáfrica no ha podido recuperarse de la 2da Cepa de MST-19. CornHeal se ha involucrado en el desarrollo de una cura.,Sudáfrica no ha podido recuperarse de la 2da Cepa de MST-19. CornHeal se ha involucrado en el desarrollo de una cura.
-KEY_NEWS_ID_22,Francia e Inglaterra no han superado sus diferencias y esto ha complicado el ingreso de dosis en territorio Francés.,Francia e Inglaterra no han superado sus diferencias y esto ha complicado el ingreso de dosis en territorio Francés.
-KEY_NEWS_ID_23,En la región oriental primeros vacunados  empiezan a denunciar anomalías clínicas y efectos colaterales.,En la región oriental primeros vacunados  empiezan a denunciar anomalías clínicas y efectos colaterales.
-KEY_NEWS_ID_24,Personal médico que no atiende covid recibe dosis de vacuna sobrantes,Personal médico que no atiende covid recibe dosis de vacuna sobrantes
-KEY_NEWS_ID_25,Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.,Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.
-KEY_NEWS_ID_26,Analistas advierten repercusiones importantes en la economía pública a corto plazo.,Analistas advierten repercusiones importantes en la economía pública a corto plazo.
-KEY_NEWS_ID_27,¿Que no hay gobierno?' que nos gobierne Rusia entonces,¿Que no hay gobierno?' que nos gobierne Rusia entonces
-KEY_NEWS_ID_28,"Si la gente no viene a votar, es porque no sabe a quién votar, no los culpo, hace décadas nadie lo sabe'","Si la gente no viene a votar, es porque no sabe a quién votar, no los culpo, hace décadas nadie lo sabe'"
-KEY_NEWS_ID_29,La CIPU ( Comisión Internacional de Política Universal) ha empezado investigaciones en el país.,La CIPU ( Comisión Internacional de Política Universal) ha empezado investigaciones en el país.
-KEY_NEWS_ID_30,Récord de candidatos presidenciales.,Récord de candidatos presidenciales.
-KEY_NEWS_ID_31,Se han detectado síntomas de MST-19 en animales domésticos.,Se han detectado síntomas de MST-19 en animales domésticos.
-KEY_NEWS_ID_32,Las mascotas de todos los distritos centrales serán puestas en cuarentena.,Las mascotas de todos los distritos centrales serán puestas en cuarentena.
-KEY_NEWS_ID_33,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios
-KEY_NEWS_ID_34,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios
-KEY_NEWS_ID_35,MST-19 para animales no protege a humanos,MST-19 para animales no protege a humanos
-KEY_NEWS_ID_36,"Thomas Berstein, gerente de CornHeal ha pactado un acuerdo de inmunidad con países del Sur.","Thomas Berstein, gerente de CornHeal ha pactado un acuerdo de inmunidad con países del Sur."
-KEY_NEWS_ID_37,Gobernante de Región Central presenta gotas 'milagrosas' que 'neutralizan' la peste,Gobernante de Región Central presenta gotas 'milagrosas' que 'neutralizan' la peste
-KEY_NEWS_ID_38,La empresa 'BIOquimik' ha desarrollado una fórmula soluble para tratamiento del MST-19.,La empresa 'BIOquimik' ha desarrollado una fórmula soluble para tratamiento del MST-19.
-KEY_NEWS_ID_39,La siguiente semana empiezan pruebas de medicamento piloto 'Regional Sur'. ¡Altas expectativas!,La siguiente semana empiezan pruebas de medicamento piloto 'Regional Sur'. ¡Altas expectativas!
+KEY_NEWS_ID_1,La casa blanca manchada de sangre: El asalto al capitolio con cócteles molotov y armamento blindado,The Bloodstained White House: The Assault on the Capitol with Molotov Cocktails and Armored Weapons
+KEY_NEWS_ID_2,Líder Ultraderechista en Boston admite que el asalto al capitolio se venía pensando desde hace 5 meses atrás.,Right-wing leader in Boston admits that the assault on the capitol had been in the works for 5 months.
+KEY_NEWS_ID_3,El ministro del interior iniciará inmediatamente una persecución contra todos los 'terroristas infiltrados',The interior minister will immediately launch a manhunt against all 'infiltrated terrorists'
+KEY_NEWS_ID_4,Familia completa vinculada al acto terrorista contra el capitolio. El gato de la familia también fue procesado.,Entire family linked to the terrorist act against the capitol. The family cat was also prosecuted.
+KEY_NEWS_ID_5,"El presidente saliente Forbes, no habla sobre el asalto al Capitolio, pero admite que no le desagrada.","Outgoing President Forbes doesn't talk about the Capitol storming, but admits he doesn't dislike it."
+KEY_NEWS_ID_6,Expertos en extremismo piensan que el asalto al capitolio es  solo el comienzo.,Extremism experts think the assault on the capitol is just the beginning.
+KEY_NEWS_ID_7,Más de 300 camioneros franceses han muerto en territorio británico a causa del MST-19,More than 300 French truckers have died on British soil from MST-19
+KEY_NEWS_ID_8,Familias de camioneros declararon la incompetencia del gobierno ante el abandono de su gente.,Truck driver families declare the government's incompetence in the face of the abandonment of its people.
+KEY_NEWS_ID_9,Agua y pan para el pueblo de Francia: plantón en la Bastilla por Camioneros atrapados en mitad de la peste.,Water and bread for the people of France: a sit-in in the Bastille by truckers caught in the middle of the plague.
+KEY_NEWS_ID_10,"No es humano dejar a camioneros estancados, sin poder ir ni venir de Inglaterra","It is not human to leave truckers stuck, unable to come or go from England"
+KEY_NEWS_ID_11,CornHeal ha enviado un primer cargamento de ayuda a la frontera británica.,CornHeal sent a first shipment of aid to the British border.
+KEY_NEWS_ID_12,Provisiones Chinas llegan a la frontera británica. ¡Enlatados de Sardina y Arroz blanco!,Chinas supplies reach the British border. Sardina Canned and white rice!
+KEY_NEWS_ID_13,¡El agua será comprada!. Los posibles comerciantes están comenzando a filtrarse en los medios públicos.,The water will be purchased !. Potential traders are beginning to seep into the public media.
+KEY_NEWS_ID_14,El agua ahora vale más que el oro. Economistas afirman que el agua se medirá en unidades de venta y consumo.,Water is now worth more than gold. Economists say that water is measured in units sold and consumed.
+KEY_NEWS_ID_15,"¡Los fatalistas anuncian fin de los días! 'No queremos guardar agua como negocio, habría mucha competencia'","Fatalists Announce End of Days! 'We do not want to save water as a business, there would be a lot of competition'"
+KEY_NEWS_ID_16,"Agua en bolsa de valores, ¿depreciación económica mundial o plan socio-económico sostenible?","Water stock exchange, ¿global economic depreciation or socio-economic plan sustainable?"
+KEY_NEWS_ID_17,"Ecologistas han declarado manifestaciones en los próximos días. 'El agua no se vende, es un derecho natural'","Environmentalists have held demonstrations in the coming days. ""Water is not sold, is a natural right '"
+KEY_NEWS_ID_18,El agua en la bolsa de valores: ¿protección o especulación?,Water in the stock market: protection or speculation?
+KEY_NEWS_ID_19,Vacunas contra MST-19 no han llegado al puerto marítimo litoral. Las primeras dosis cumplen 1 mes de retraso hoy.,MST-19 vaccines have not reached the coast seaport. The first doses meet 1 month late today.
+KEY_NEWS_ID_20,"Vacunas contra la peste MST-19, fueron robadas el primer día de su arribo. Guardianes de Barlovento como posibles implicados en el hecho.","Plague vaccines MST-19, were stolen the first day of his arrival. Windward guardians as possible involved in the incident."
+KEY_NEWS_ID_21,Sudáfrica no ha podido recuperarse de la 2da Cepa de MST-19. CornHeal se ha involucrado en el desarrollo de una cura.,South Africa has failed to recover from the 2nd Cepa MST-19. CornHeal has been involved in the development of a cure.
+KEY_NEWS_ID_22,Francia e Inglaterra no han superado sus diferencias y esto ha complicado el ingreso de dosis en territorio Francés.,France and England have not overcome their differences and this has complicated the entry of dose in French territory.
+KEY_NEWS_ID_23,En la región oriental primeros vacunados  empiezan a denunciar anomalías clínicas y efectos colaterales.,In the eastern region vaccinated first begin to report clinical abnormalities and side effects.
+KEY_NEWS_ID_24,Personal médico que no atiende covid recibe dosis de vacuna sobrantes,medical personnel who does not attend covid receives doses of vaccine left over
+KEY_NEWS_ID_25,Ingobernabilidad en medio de crisis mundial. País Latinoamericano está al borde de crisis político económica.,Ungovernable in the midst of global crisis. Latin American country is the edge of economic political crisis.
+KEY_NEWS_ID_26,Analistas advierten repercusiones importantes en la economía pública a corto plazo.,Analysts warn a major impact on public economy in the short term.
+KEY_NEWS_ID_27,¿Que no hay gobierno?' que nos gobierne Rusia entonces,What no government? ' Russia to judge us then
+KEY_NEWS_ID_28,"Si la gente no viene a votar, es porque no sabe a quién votar, no los culpo, hace décadas nadie lo sabe'","If people do not come to vote, it is because you do not know who to vote for, do not blame them for decades nobody knows'"
+KEY_NEWS_ID_29,La CIPU ( Comisión Internacional de Política Universal) ha empezado investigaciones en el país.,The CIPU (Commission International Policy Universal) has started investigations in the country.
+KEY_NEWS_ID_30,Récord de candidatos presidenciales.,Record presidential candidates.
+KEY_NEWS_ID_31,Se han detectado síntomas de MST-19 en animales domésticos.,They were detected symptoms of MST-19 in pets.
+KEY_NEWS_ID_32,Las mascotas de todos los distritos centrales serán puestas en cuarentena.,Pets of all central districts be quarantined.
+KEY_NEWS_ID_33,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios,Administration denouncing evil in the distribution of vaccines for veterinary centers
+KEY_NEWS_ID_34,Se denuncia mal administración en la distribución de vacunas para los centros veterinarios,Administration denouncing evil in the distribution of vaccines for veterinary centers
+KEY_NEWS_ID_35,MST-19 para animales no protege a humanos,MST-19 for animals does not protect human
+KEY_NEWS_ID_36,"Thomas Berstein, gerente de CornHeal ha pactado un acuerdo de inmunidad con países del Sur.","Thomas Berstein, CornHeal manager has agreed an immunity agreement with countries in the South."
+KEY_NEWS_ID_37,Gobernante de Región Central presenta gotas 'milagrosas' que 'neutralizan' la peste,Central Region ruling presents 'miraculous' drops 'neutralize' the plague
+KEY_NEWS_ID_38,La empresa 'BIOquimik' ha desarrollado una fórmula soluble para tratamiento del MST-19.,The company 'BIOquimik' has developed a soluble formula for treatment of the MST-19.
+KEY_NEWS_ID_39,La siguiente semana empiezan pruebas de medicamento piloto 'Regional Sur'. ¡Altas expectativas!,The next week begin drug testing pilot 'Regional Southern'. High expectations!

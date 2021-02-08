@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/font/tiny_font.tres" type="DynamicFont" id=13]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=14]
 [ext_resource path="res://assets/music/(Dubitativo song) Opennin pantalla principal.ogg" type="AudioStream" id=15]
-[ext_resource path="res://entities/Cursor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/ui/spain_menu_flag.png" type="Texture" id=16]
 [ext_resource path="res://scripts/LangButton.gd" type="Script" id=17]
 
 [sub_resource type="Animation" id=1]
@@ -159,11 +159,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LangFlags" type="Sprite" parent="Control"]
+position = Vector2( 11.2157, 8.21876 )
+texture = ExtResource( 16 )
+
 [node name="LangButton" type="LinkButton" parent="Control"]
-margin_left = 5.0
+margin_left = 20.4527
 margin_top = 5.0
-margin_right = 64.0
-margin_bottom = 9.0
+margin_right = 79.4528
+margin_bottom = 11.0
 custom_fonts/font = ExtResource( 13 )
 text = "IDÍOMAS"
 script = ExtResource( 17 )
@@ -204,6 +208,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.215686, 0.0235294, 0.32549, 0.941176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CloseButton" type="LinkButton" parent="Control/CreditosPopup"]
 anchor_left = 1.0
@@ -217,20 +224,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/CreditosPopup"]
+[node name="PeopleList" type="RichTextLabel" parent="Control/CreditosPopup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 6.38049
 margin_bottom = -3.61949
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 13 )
 bbcode_enabled = true
 bbcode_text = "[center]
-[wave][color=red]PROGRAMACIÓN[/color][/wave]
+
+
 
 FEDERICO ALVAREZ 
 [color=yellow][TW] @FEFOALVAREZ[/color]
 
-[wave][color=red]ARTE / DISEÑO[/color][/wave]
+
 
 GABRIELA MORENO
 [color=yellow][IG] @RAVEN__CHEST[/color]
@@ -238,22 +247,23 @@ GABRIELA MORENO
 GEOVANNY GAVILANES
 [color=yellow]HTTP://VANGALTHER.ITCH.IO[/color]
 
-[wave][color=red]MÚSICA / SONIDOS[/color][/wave]
+
 
 JJOSUÉ JARAMILLO
 [color=yellow]HTTPS://SOUNDCLOUD.COM/JJSUITU[/color]
 
-[wave][color=red]NARRATIVA[/color][/wave]
+
 
 [color=yellow]JONATHAN VILLAMAR[/color]
 [/center]"
 text = "
-PROGRAMACIÓN
+
+
 
 FEDERICO ALVAREZ 
 [TW] @FEFOALVAREZ
 
-ARTE / DISEÑO
+
 
 GABRIELA MORENO
 [IG] @RAVEN__CHEST
@@ -261,15 +271,71 @@ GABRIELA MORENO
 GEOVANNY GAVILANES
 HTTP://VANGALTHER.ITCH.IO
 
-MÚSICA / SONIDOS
+
 
 JJOSUÉ JARAMILLO
 HTTPS://SOUNDCLOUD.COM/JJSUITU
 
-NARRATIVA
+
 
 JONATHAN VILLAMAR
 "
+
+[node name="LblDev" type="RichTextLabel" parent="Control/CreditosPopup"]
+anchor_right = 1.0
+margin_top = 19.7498
+margin_bottom = 29.7498
+rect_clip_content = false
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center][wave][color=red]PROGRAMACIÓN[/color][/wave][/center]"
+text = "PROGRAMACIÓN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblArt" type="RichTextLabel" parent="Control/CreditosPopup"]
+anchor_right = 1.0
+margin_top = 54.312
+margin_bottom = 64.312
+rect_clip_content = false
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center][wave][color=red]ARTE / DISEÑO[/color][/wave][/center]"
+text = "ARTE / DISEÑO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblMusic" type="RichTextLabel" parent="Control/CreditosPopup"]
+anchor_right = 1.0
+margin_top = 112.215
+margin_bottom = 122.215
+rect_clip_content = false
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center][wave][color=red]MÚSICA / SONIDOS[/color][/wave][/center]"
+text = "MÚSICA / SONIDOS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LblNarrative" type="RichTextLabel" parent="Control/CreditosPopup"]
+anchor_right = 1.0
+margin_top = 146.328
+margin_bottom = 156.328
+rect_clip_content = false
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center][wave][color=red]NARRATIVA[/color][/wave][/center]"
+text = "NARRATIVA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Transition" type="ColorRect" parent="Control"]
 visible = false
@@ -279,9 +345,6 @@ color = Color( 0.109804, 0.0156863, 0.188235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Cursor" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 21.7171, 24.3025 )
 
 [node name="TransitionTween" type="Tween" parent="Control"]
 
